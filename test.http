@@ -1,0 +1,25 @@
+### Send POST request with body as parameters
+POST https://zfwzxx.www.gov.cn/check_web/downloadTemp_downFile.action
+Content-Type: application/x-www-form-urlencoded
+
+downames=bwmh
+
+
+
+
+### GET request with parameter
+GET https://www.similarweb.com/website/baidu.com/
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+{
+ 'Cookie': 'bm_sz=678B0F42007808FD5138653374EA50C1~YAAQ3QvGF27O4SuKAQAAB0pVZBUP7M8/s8mHH/hmWQulColFbQ5wkZI6RARW0CQQmIfjszwSwvLTIKLMM6NH+StPHCAJ5cgXYAUkGPZX6/MHBo8OajnviegHNSpMsgQ4xRYer+KPgYsVHkvoeaJlodNwrWoqfKT6pKKvizT69HH96s7JpATiLeiCeG3uMK6WIUeGj069HkSkLFkRbQqTV2U18hvqUjkX0vHdt9ttz87cxeq4fuaXht2mj6wqokLZGas2Aqpjh7e1QDjF1U7RQlVIuzFfjq+tW06WW/Dii5A0tnMGwVFe~4273222~4274480; bm_mi=B884DD626B855AA4158E7B650748F2D3~YAAQ3QvGF3/O4SuKAQAAFYlVZBUhBnvgPNcK+LD21+r3SKnkb58+lW6izUMtK7anU/p1luSVspdzxO+1//4an4XbGJV17S06ZPkJnoDOAYGfz/KUCjG46gfXbNRrtMDIxSq9FOU/APUq8GiurzLtTT9DBTizdz4q63Yj4tBT8BL2OY8+seWbqtg6yZ+ywSf2c58Oc8qNAKnx4HNhZQpXzjdzAAlN5AnrQ2M6dm6Xw1SeIKuykNVpNwnShbhpMVdI0hiUl01z3m0i4JN9rvpMKYl8uBjMj3utC9qL+5NRmfPWvRhFL8sdpdC2VAlFUkmEhCLssTKBFFhmB92Qj1+f1mIEGhw=~1; sgID=6cd5a64f-07cc-f1a7-b67c-4a222f3c6d3d; loyal-user={%22date%22:%222023-09-05T07:54:03.048Z%22%2C%22isLoyal%22:false}; fsrndid=false; _gcl_au=1.1.510652241.1693900444; ak_bmsc=2277BE53F07B4E675BDDEA077E374EB0~000000000000000000000000000000~YAAQ3QvGF4bO4SuKAQAAKZJVZBXeRx73c1eqhCdwMzHQ/hlTAKrTfJjAhZx5nLZd5hwKPXSmAd5O+WT+uCvKWPV6PlUJnRvFR1gOgQCaUFAzd0Zg6dDCu88RnIWObx9mtAMi9PWUYeSSTq6HL3NiE8pgXptr/lVlFmSuxt1na0OSVnW3ZOXJKZqvVKtEKDGzeATi89Jg7iCmMZII6+szUb0tXuikn2DwCUsDLha5kbdwo8oQNcKX65EFJYr+j/fCPPvro0qcp/hXyDSdR+Y5+hLb4uES0HWEP7iiaS7IHrtjy44U5RPDn+HbrjgyS7QtxvfkOIAQewMWYj3vgzxfSZVieQHvalXAX492s3iVv3bxChx201UJ4xhLltKntspI7mFaDOB+ef6HMABVnFvOMys53NKAjIaXMQ4vQVkXq0t0vAwG52cX9pQ8GnOwsmeNWMClfRNN8I2zFTHjnmREvKzqCgUUOnr9fLiFTJmhHqUgp1Acb0aIaa9t+aLNHoyj2eep11GIz0Y92QEM5QGhH8klWNLtghO02eXzP+BM/rteZuSbMrXVyfm6dA==; _gid=GA1.2.254483672.1693900445; _pk_ref.1.fd33=%5B%22%22%2C%22%22%2C1693900445%2C%22https%3A%2F%2Fnz9aghkb6u.feishu.cn%2F%22%5D; _pk_id.1.fd33=deee7d39c5595d81.1693900445.; _vis_opt_s=1%7C; _vis_opt_test_cookie=1; _vwo_uuid=JBD0BAC02DDE46EE8854BAE5311909479; _vwo_ds=3%241693900447%3A91.87778059%3A%3A; _vwo_uuid_v2=DC825543F298B1CA0B70931C4A79ECE8C|1412e1059df96683e025ef2064272a5e; OptanonAlertBoxClosed=2023-09-05T07:54:10.334Z; PHPSESSID=9pkbt7302in2248rtsnr16qi3t; corp_locale=en-us; cb_user_id=null; cb_group_id=null; cb_anonymous_id=%22b4be973b-5a4d-4078-8a7b-3072e8b4c6b5%22; __q_state_9u7uiM39FyWVMWQF=eyJ1dWlkIjoiYzQwNDNjOWMtOWM5YS00YTA5LTg4NGItMDdlYjUwNDdlMWFkIiwiY29va2llRG9tYWluIjoic2ltaWxhcndlYi5jb20iLCJtZXNzZW5nZXJFeHBhbmRlZCI6ZmFsc2UsInByb21wdERpc21pc3NlZCI6ZmFsc2UsImNvbnZlcnNhdGlvbklkIjoiMTIxNzYzMDE0MDA5NzExMTIxMCJ9; _abck=A5A395F6517684781BBABCCCE9813465~0~YAAQ3QvGF5HO4SuKAQAAUulWZAoR7DNDpiOEJyOoANBGKIMeY5Hj2IbrEYZbAV8kQkGyta6EvjB7SVzbcm+dxlX8MT7wGqhVrsfHNNX3rSe+eb5Dka29Hg4VA6f6goHDoju1MmVw2k6XM6P2nIy9eez+zetWGeBTLpAPjfGUpvddl41KD6NN9X7lr+kXJGWGLhjtcSL9P56gvuX8HlH6MTzxFNxmDUXxsclTpZxQETarstDqvr5ukPhB1J421HPYEr2mVvebmD4QtOrwIhI7i9TM6YdFPJAoDvRBssmytdusIaaO3VOrTFvNMSSx1tcAf7Xb063t46XUOY/dOcY3xwxDlD55FmbygMmqjnGNe6a7fL3tTEC6yZqMrF0cfHECI3qEMwqHNTEhCekjVQ7/rlG1pf0XE1HvfInZ~-1~-1~-1; _ga_XGRRHHKH0P=GS1.1.1693900444.1.1.1693900533.60.0.0; _ga=GA1.1.1307355363.1693900445; _ga_5M34ZH84YZ=GS1.1.1693900445.1.1.1693900533.0.0.0; bm_sv=6E43B02ACD23F7CD0FC8FA91E9E6116A~YAAQ3QvGF5PO4SuKAQAAAvRWZBV6eZoPmt85uYJXkV1OM10TxjNwQUvhafUQ1nkULmu5Heau8zjoAEpLnF1G1z4J/0bOkIsz1RFXGPbBwyPDgYG2jFAN25ecVMFY3rKz/rTQ+94Tc8VGZ2bQTfhhz4QcPRLNQoVlzOiitn9QUTxKyV4xyqUCJG3Vg44yOWoCQ+dVFRpLDbvzJF9XKbjzf2/TBUeRPv6obzPV2jcnxWmi7GBr0Mj2PBjyY13L7dY4ZG9Pxj0=~1; OptanonConsent=isGpcEnabled=0&datestamp=Tue+Sep+05+2023+15%3A55%3A37+GMT%2B0800+(China+Standard+Time)&version=202306.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=17ef0dbd-a363-4e56-9857-b293f1de581f&interactionCount=1&landingPath=NotLandingPage&groups=C0003%3A1%2CC0004%3A0%2CC0002%3A1%2CC0001%3A1&geolocation=HK%3B&AwaitingReconsent=false; _vwo_sn=3408%3A1; RT="z=1&dm=www.similarweb.com&si=419b9957-fad2-4c75-96f4-6de58bb3a01e&ss=lm60ktqn&sl=7&tt=6ys&obo=4&rl=1&ld=21sks&r=1h59hg6x&ul=21sks"'
+}
+
+
+### GET request with parameter
+GET https://seo.chinaz.com/www.cas.cn
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Content-Length: 20623
+
+Cookie: qHistory=aHR0cDovL3Nlby5jaGluYXouY29tX1NFT+e7vOWQiOafpeivog==; cz_statistics_visitor=034108b9-2453-a54e-bc34-bd4dcd0c7779; Hm_lvt_ca96c3507ee04e182fb6d097cb2a1a4c=1693914459; toolbox_urls=www.ynfq.gov.cn; Hm_lpvt_ca96c3507ee04e182fb6d097cb2a1a4c=1693914475
