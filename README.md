@@ -36,8 +36,10 @@ python3 unzip_sheng.py
 
 
 After that, we will further process these file. I have download and unzip all of them.
-
-
+```shell
+python3 merger_csv.py
+```
+It will merger all file under the directory of /total_csv and output the result to /mergerd_csv
 
 ## ToDo
 二、研究内容
