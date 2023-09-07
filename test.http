@@ -23,3 +23,15 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/w
 Content-Length: 20623
 
 Cookie: qHistory=aHR0cDovL3Nlby5jaGluYXouY29tX1NFT+e7vOWQiOafpeivog==; cz_statistics_visitor=034108b9-2453-a54e-bc34-bd4dcd0c7779; Hm_lvt_ca96c3507ee04e182fb6d097cb2a1a4c=1693914459; toolbox_urls=www.ynfq.gov.cn; Hm_lpvt_ca96c3507ee04e182fb6d097cb2a1a4c=1693914475
+
+
+
+### GET request with parameter
+GET https://jr.xuancheng.gov.cn/
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+
+
+{
+  'Connection': 'close',
+  'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
+}

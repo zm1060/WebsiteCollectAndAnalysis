@@ -41,6 +41,13 @@ python3 merger_csv.py
 ```
 It will merger all file under the directory of /total_csv and output the result to /mergerd_csv
 
+
+## Dependency
+
+```shell
+pip freeze > requirements.txt
+```
+
 ## ToDo
 二、研究内容
 1. 关系图
