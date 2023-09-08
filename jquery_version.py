@@ -47,7 +47,7 @@ file_extension = ".txt"  # File extension to filter
 for filename in os.listdir(response_directory):
     if filename.endswith(file_extension):
         file_path = os.path.join(response_directory, filename)
-        with open(file_path, "r") as file:
+        with open(file_path, "r", encoding='utf-8') as file:
             html_content = file.read()
             result = check_jquery_vulnerabilities(html_content)
 
