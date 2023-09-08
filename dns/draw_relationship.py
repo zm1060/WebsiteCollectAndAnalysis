@@ -1,4 +1,3 @@
-
 # i have a directory called domain_directory, in the directory have a lot directory, for the file in the same directory,
 # the files are a lot of request's response as txt file, Only draw the home page relationship diagram
 # According to the out-degree and in-degree, draw a map of the relationship between provinces and cities across the country. Analyze which types of nodes are more important.
@@ -15,6 +14,7 @@ import os
 import re
 import networkx as nx
 import matplotlib.pyplot as plt
+
 
 def draw_relationship_diagram(domain_directory):
     # Iterate over the subdirectories in the domain directory
@@ -55,8 +55,6 @@ def draw_relationship_diagram(domain_directory):
                             # Add an edge to the graph connecting the domain to the home page URL
                             G.add_edge(domain, url_domain)
                             G.add_node(url_domain)
-
-
 
             # Calculate the in-degree and out-degree centrality measures
             in_degree_centrality = nx.in_degree_centrality(G)
@@ -101,7 +99,7 @@ def draw_relationship_diagram(domain_directory):
 
             # Save the diagram as PNG in the subdirectory with the same name as the subdirectory
             output_filename = os.path.join('relationship_result', f"{domain_name}.png")
-            plt.savefig(output_filename, dpi=300 if len(subgraph) > 10 else 100)
+            plt.savefig(output_filename, dpi=300)
 
 
 # Specify the directory where the domain subdirectories are stored
