@@ -51,26 +51,32 @@ def get_domain():
 
     # List all CSV files in the directory
     csv_files = [file for file in os.listdir(directory) if file.endswith('.csv')]
+    # csv_files = [file for file in os.listdir(directory) if file == '地方所属网站.csv']
     all_domain = []
-    failed_domains = []
+
+    print(csv_files)
+    print(len(csv_files))
     for file in csv_files:
         file_path = os.path.join(directory, file)
-        df = pd.read_csv(file_path, skiprows=1)
+        df = pd.read_csv(file_path)
 
         # Extract the fourth column as the domain name
         domain_column = df.iloc[:, 3]  # Assuming the fourth column is at index 3 (zero-based)
-
+        directory_name = file.split('.csv')[0]
+        print(directory_name)
         # Process each domain name
         for domain in domain_column:
             processed_domain = process_domain(domain)
             filename = f"./response/{processed_domain.split('//')[1]}.txt"
             if os.path.isfile(filename):
                 print(f"File already exists: {filename}")
-                # Move the file to the destination directory
-                source_path = os.path.join(filename, filename)
-                # Todo
-                destination_path = os.path.join(file.split('.csv')[0], filename)
-                shutil.copy(source_path, destination_path)
+
+                destination_dir = os.path.join('./class', directory_name)
+                os.makedirs(destination_dir, exist_ok=True)
+
+                destination_path = os.path.join(destination_dir, f"{processed_domain.split('//')[1]}.txt")
+                shutil.copy(filename, destination_path)
+
 
             all_domain.append(processed_domain)
     return all_domain
@@ -86,3 +92,5 @@ def process_domain(domain):
     base_url = parsed_url.scheme + "://" + parsed_url.netloc
 
     return base_url
+
+get_domain()
