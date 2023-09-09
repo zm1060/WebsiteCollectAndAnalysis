@@ -1,7 +1,7 @@
 # i have a directory called domain_directory, in the directory have a lot directory, for the file in the same directory,
 # the files are a lot of request's response as txt file, Only draw the home page relationship diagram
 # According to the out-degree and in-degree, draw a map of the relationship between provinces and cities across the country. Analyze which types of nodes are more important.
-#
+# #
 
 
 # i have store a lot of request's response as txt file, Analyze the inefficiency of website links

@@ -1,10 +1,10 @@
+import json
+
 import requests
 from concurrent.futures import ThreadPoolExecutor
 
 from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter, Retry
-
-url = "https://zfwzxx.www.gov.cn/check_web/databaseInfo/download"
 
 # Set the cookies
 cookies = {
@@ -13,13 +13,12 @@ cookies = {
     'Hm_lpvt_3a125f686abed6dc0209db1fb2efac2b': '1693895491'
 }
 
+
 # Function to download a file
 def download_file(item):
     payload = {
-        "downames": item[0]
+        'downames': item[0]
     }
-    print(payload)
-    print(item)
     download_url = "https://zfwzxx.www.gov.cn/check_web/downloadTemp_downFile.action"
 
     headers = {
@@ -48,29 +47,22 @@ def download_file(item):
 
 # Main function
 def main():
-    # Make the GET request with cookies
-    # response = requests.get(url)
-    # html_content = response.text
+    with open('../result.json', "r") as f:
+        data_from_json = json.load(f)
+    print(data_from_json)
+    data = [("alldistrict", "地方所属网站"), ("shengmh", "省级门户")]
 
-    file_path = "government.html"
-    with open(file_path, 'r') as file:
-        html_content = file.read()
-
-    # Create a BeautifulSoup object to parse the HTML
-    # soup = BeautifulSoup(response.text, "html.parser")
-    soup = BeautifulSoup(html_content, "html.parser")
-    # Find the <ul> element with the class 'dpage_ul'
-    ul_element = soup.find("ul", class_="dpage_ul")
-
-    # Extract the id and text values from the <li> elements within the <ul>
-    li_elements = ul_element.find_all("li")
-    data = []
-    for li in li_elements:
-        div_element = li.find("div", class_="dpage_btn_click")
-        id_value = div_element.get("id")
-        text_value = div_element.get_text()
-        data.append((id_value, text_value))
-
+    for record in data_from_json:
+        print(record)
+        if record['cityName'] == record['province']:
+            data.append((record['siteCode'], record['province']+"_"+"市级单位"))
+        else:
+            if record['cityCode'] == record['siteCode']:
+                # xxx + "区县级单位"
+                data.append((record['siteCode'], record['province']+"_"+record['cityName']))
+            else:
+                data.append((record['cityCode'], record['province']+"_"+record['cityName']+"_"+"市级单位"))
+                data.append((record['siteCode'], record['province']+"_"+record['cityName']+"_"+"区县级单位"))
     # Print the extracted data
     for id_value, text_value in data:
         print("ID:", id_value)
