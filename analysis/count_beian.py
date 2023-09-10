@@ -4,10 +4,12 @@
 import os
 import re
 import time
+from telnetlib import EC
 from urllib.parse import urlparse
 
 import pandas as pd
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -20,7 +22,8 @@ def process_domain(domain):
     # Parse the URL and extract the base domain
     parsed_url = urlparse(domain)
     base_url = parsed_url.scheme + "://" + parsed_url.netloc
-
+    if not parsed_url.scheme or not parsed_url.netloc:
+        return
     return base_url
 
 
@@ -31,8 +34,7 @@ def check_beian_info(url):
         # 加载网站
         driver.get(url)
         # Wait for the page to load completely
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, 'body')))
-
+        time.sleep(5)
 
         # 获取整个页面的源代码
         page_source = driver.page_source
@@ -108,7 +110,7 @@ def process_files():
 
             # 判断是否有无障碍模式
             if content[2] is True:
-                province_result['无障碍模式'] += 1
+                province_result['无障碍'] += 1
                 print(domain, " 支持无障碍模式!")
             else:
                 print(domain, " 不支持无障碍模式!")
@@ -120,6 +122,7 @@ def process_files():
             with open(output_file_path, 'w', encoding='utf-8') as output_file:
                 for key, value in province_result.items():
                     output_file.write(f'{key}: {value}\n')
+
 
 # 运行处理文件函数
 process_files()

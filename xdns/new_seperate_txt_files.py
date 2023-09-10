@@ -9,8 +9,9 @@ def process_url(url):
     return domains
 
 def save_failed_domains(failed_domains):
-    with open("../class/failed_domains.txt", "w", encoding="utf-8") as file:
-        file.write("\n".join(failed_domains))
+    for domain in failed_domains:
+        with open("./class/failed_domains.txt", "a", encoding="utf-8") as file:
+            file.write(f"{domain}\n")
 
 
 directory = '../domain_txt/'
@@ -32,12 +33,13 @@ for filename in os.listdir(directory):
                 if os.path.isfile(sfilename):
                     print(f"File exists: {sfilename}")
 
-                    destination_dir = os.path.join('../class', unit_name)
+                    destination_dir = os.path.join('./class', unit_name)
                     os.makedirs(destination_dir, exist_ok=True)
 
                     destination_path = os.path.join(destination_dir, f"{sdomain}.txt")
                     shutil.copy(sfilename, destination_path)
                 else:
                     print(f"File not exists: {sfilename}")
-                    failed_domains.append(sdomain)
+                    if sdomain:
+                        failed_domains.append(url)
 save_failed_domains(failed_domains)

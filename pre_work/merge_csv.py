@@ -85,7 +85,7 @@ for csv_file in csv_files:
 for key, df in merged_dataframes.items():
     if not key.endswith(".csv"):
         key += ".csv"
-    output_file = os.path.join('./merged_csv', key)
+    output_file = os.path.join('../merged_csv', key)
     df.to_csv(output_file, index=False)
     print(f"Merged CSV file '{output_file}' created.")
 

@@ -3,7 +3,7 @@ from urllib.parse import urlparse
 import requests
 import concurrent.futures
 import urllib3
-
+import chardet
 
 def process_url(url):
     parsed_url = urlparse(url)
@@ -26,8 +26,9 @@ def get_domain():
                 url = url.strip()  # Remove leading/trailing whitespace and newlines
                 if url:
                     sdomain = process_domain(url)
-                    all_domain.append(sdomain)
-                    print(sdomain)
+                    if sdomain:
+                        all_domain.append(sdomain)
+                        print(sdomain)
 
     # Request and store the website responses using multi-threading
     with concurrent.futures.ThreadPoolExecutor() as executor:
@@ -52,13 +53,16 @@ def process_domain(domain):
     # Parse the URL and extract the base domain
     parsed_url = urlparse(domain)
     base_url = parsed_url.scheme + "://" + parsed_url.netloc
-
+    if  not parsed_url.scheme or not parsed_url.netloc:
+        return
     return base_url
+
 
 
 def store_response(domain):
     try:
         headers = {
+            'contentType' 'text/html;charset=utf-8'
             'Connection': 'close',
             'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
         }
@@ -69,6 +73,14 @@ def store_response(domain):
 
         # response = requests.get(domain, stream=True, headers=headers, verify='../venv/lib/python3.10/site-packages/certifi/cacert.pem', timeout=5, allow_redirects=True)
         response = requests.get(domain, stream=True, headers=headers, verify=False, timeout=5, allow_redirects=True)
+        # Determine the encoding
+        encoding = response.encoding
+        if not encoding:
+            # If encoding is not specified, use chardet to detect it
+            encoding = chardet.detect(response.content)['encoding']
+
+        # Set the correct encoding
+        response.encoding = encoding
 
         if response.status_code == 200:
             with open(filename, "w", encoding="utf-8") as file:
