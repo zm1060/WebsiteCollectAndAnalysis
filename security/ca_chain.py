@@ -1,7 +1,8 @@
-import os
-import socket
-import ssl
 import json
+import ssl
+import socket
+import os
+
 
 def fetch_certificates(hostname, unit_name):
     # Check if the website supports HTTPS
@@ -64,56 +65,6 @@ def fetch_certificates(hostname, unit_name):
         # Handle the socket error
         print(f"Socket error occurred while connecting to {hostname}: {e}")
 
-#
-# def fetch_certificates(hostname, unit_name):
-#     # Check if the website supports HTTPS
-#     os.makedirs(f'./ca/{unit_name}', exist_ok=True)
-#
-#     if os.path.exists(f'./ca/{unit_name}/{hostname}.json'):
-#         # If the file already exists, return
-#         return
-#
-#     try:
-#         # Send SYN on TCP port 443
-#         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-#             s.settimeout(10)  # Set a timeout in case the connection takes too long
-#             s.connect((hostname, 443))
-#     except Exception as e:
-#         # Write the hostname into a file within the unit_name directory
-#         error_filename = f'./ca/{unit_name}/error.txt'
-#         with open(error_filename, 'a') as error_file:
-#             error_file.write(hostname + "\n")
-#         print(f"The website {hostname} does not support HTTPS. Error written to {error_filename}.")
-#         return
-#
-#     # Initiate an HTTPS connection and fetch SSL certificates
-#     try:
-#         context = ssl.create_default_context()
-#         with socket.create_connection((hostname, 443)) as sock:
-#             with context.wrap_socket(sock, server_hostname=hostname) as ssock:
-#                 # Get the certificate
-#                 cert = ssock.getpeercert()
-#                 # Create a dictionary with certificate details
-#                 certificate_info = {
-#                     'hostname': hostname,
-#                     'issuer': cert['issuer'],
-#                     'subject': cert['subject'],
-#                     'valid_from': cert['notBefore'],
-#                     'valid_until': cert['notAfter']
-#                 }
-#
-#                 # Write the certificate information to a JSON file
-#                 output_filename = f"./ca/{unit_name}/{hostname}.json"
-#                 with open(output_filename, 'w', encoding='utf-8') as json_file:
-#                     json.dump(certificate_info, json_file, ensure_ascii=False, indent=4)
-#                 print(f"Certificate information for {hostname} has been saved to {output_filename}.")
-#
-#     except ssl.SSLError as e:
-#         # Write the hostname into a file within the unit_name directory
-#         with open(f'./ca/{unit_name}/error.txt', 'a') as error_file:
-#             error_file.write(hostname + "\n")
-#         print(f"An error occurred while fetching the certificate: {e}. Error written to ./ca/{unit_name}/error.txt.")
-#
 
-# Example usage
-# fetch_certificates("www.bpf.cas.cn", "中科院")
+# fetch_certificates("www.baidu.com", "test")
+

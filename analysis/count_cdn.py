@@ -40,8 +40,10 @@ def main():
                 with open('./failed_nslookup.txt', 'w', encoding='utf-8') as file:
                     file.write(f"{domain}\n")
                 continue
+        
+        os.makedirs(f'./cdn/{province_directory}', exist_ok=True)
 
-        with open(os.path.join(province_directory_path, 'ip_cdn_info.txt'), 'w', encoding='utf-8') as file:
+        with open(f'./cdn/{province_directory}/ip_cdn_info.txt', 'w', encoding='utf-8') as file:
             for info in result_list:
                 file.write(f"{info}\n")
             file.write("\n")

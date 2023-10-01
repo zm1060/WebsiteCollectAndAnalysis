@@ -4,6 +4,8 @@ from urllib.parse import urlparse
 
 
 def process_url(url):
+    if not url.startswith("http"):
+        url = "http://" + url
     parsed_url = urlparse(url)
     domains = parsed_url.netloc
     return domains

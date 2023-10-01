@@ -58,71 +58,144 @@ def check_beian_info(url):
         driver.quit()
 
 
-def process_files():
-    base_dir = '../merged_csv'
+def get_domain():
+    directory = '../domain_txt'
     output_dir = './beian'
-    csv_files = [file for file in os.listdir(base_dir) if file.endswith('.csv')]
-
     # 创建输出目录
     os.makedirs(output_dir, exist_ok=True)
 
     all_domain = []
-    # 遍历csv
-    for file in csv_files:
-        file_path = os.path.join(base_dir, file)
-        province_name = file.split('.csv')[0]
-        df = pd.read_csv(file_path, skiprows=0)
+    failed_domains = []
 
-        domain_column = df.iloc[:, 3]
-
+    for filename in os.listdir(directory):
         province_result = {
             'ICP备案': 0,
             '公安备案': 0,
             '无障碍': 0,
         }
-        # Process each domain name
-        for domain in domain_column:
-            processed_domain = process_domain(domain)
-            # all_domain.append(processed_domain)
-
-            print(processed_domain)
-            all_domain.append(processed_domain)
-
-            content = check_beian_info(processed_domain)
-
-            # 判断是否有ICP备案信息
-            if content[0] is True:
-                province_result['ICP备案'] += 1
-                print(domain, " 完成ICP备案!")
-            else:
-                print(domain, " 未进行ICP备案!")
-                with open(os.path.join(output_dir, '未进行ICP备案.txt'), 'w', encoding='utf-8') as out_file:
-                    out_file.write(f'{domain}\n')
-
-            # 判断是否有公安备案信息
-            if content[1] is True:
-                province_result['公安备案'] += 1
-                print(domain, " 完成公安备案!")
-            else:
-                print(domain, " 未完成公安备案!")
-                with open(os.path.join(output_dir, '未进行公安备案.txt'), 'a', encoding='utf-8') as out_file:
-                    out_file.write(f'{domain}\n')
-
-            # 判断是否有无障碍模式
-            if content[2] is True:
-                province_result['无障碍'] += 1
-                print(domain, " 支持无障碍模式!")
-            else:
-                print(domain, " 不支持无障碍模式!")
-                with open(os.path.join(output_dir, '不支持无障碍模式.txt'), 'a', encoding='utf-8') as out_file:
-                    out_file.write(f'{domain}\n')
-
-            # 将统计结果写入省份的txt文件
-            output_file_path = os.path.join(output_dir, f'{province_name}.txt')
-            with open(output_file_path, 'w', encoding='utf-8') as output_file:
-                for key, value in province_result.items():
-                    output_file.write(f'{key}: {value}\n')
 
 
-# 运行处理文件函数
-process_files()
+        if filename.endswith('.txt'):
+            unit_name = filename.split('.txt')[0]
+            if os.path.isfile(f'{unit_name}.txt'):
+                print(f"File already exists: f{unit_name}.txt")
+                continue
+
+            urls = []
+            with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
+                urls = file.readlines()
+            for url in urls:
+                url = url.strip()  # Remove leading/trailing whitespace and newlines
+                if url:
+                    sdomain = process_domain(url)
+                    if sdomain:
+
+                        content = check_beian_info(sdomain)
+
+                        # 判断是否有ICP备案信息
+                        if content[0] is True:
+                            province_result['ICP备案'] += 1
+                            print(sdomain, " 完成ICP备案!")
+                        else:
+                            print(sdomain, " 未进行ICP备案!")
+                            with open(os.path.join(output_dir, '未进行ICP备案.txt'), 'w', encoding='utf-8') as out_file:
+                                out_file.write(f'{sdomain}\n')
+
+                        # 判断是否有公安备案信息
+                        if content[1] is True:
+                            province_result['公安备案'] += 1
+                            print(sdomain, " 完成公安备案!")
+                        else:
+                            print(sdomain, " 未完成公安备案!")
+                            with open(os.path.join(output_dir, '未进行公安备案.txt'), 'a',
+                                      encoding='utf-8') as out_file:
+                                out_file.write(f'{sdomain}\n')
+
+                        # 判断是否有无障碍模式
+                        if content[2] is True:
+                            province_result['无障碍'] += 1
+                            print(sdomain, " 支持无障碍模式!")
+                        else:
+                            print(sdomain, " 不支持无障碍模式!")
+                            with open(os.path.join(output_dir, '不支持无障碍模式.txt'), 'a',
+                                      encoding='utf-8') as out_file:
+                                out_file.write(f'{sdomain}\n')
+
+                        # 将统计结果写入省份的txt文件
+                        output_file_path = os.path.join(output_dir, f'{unit_name}.txt')
+                        with open(output_file_path, 'w', encoding='utf-8') as output_file:
+                            for key, value in province_result.items():
+                                output_file.write(f'{key}: {value}\n')
+
+    return all_domain
+#
+# def process_files():
+#     base_dir = '../xdns/class'
+#     output_dir = './beian'
+#     csv_files = [file for file in os.listdir(base_dir) if file.endswith('.csv')]
+#
+#     # 创建输出目录
+#     os.makedirs(output_dir, exist_ok=True)
+#
+#     all_domain = []
+#     # 遍历csv
+#     for file in csv_files:
+#         file_path = os.path.join(base_dir, file)
+#         province_name = file.split('.csv')[0]
+#         df = pd.read_csv(file_path, skiprows=0)
+#
+#         domain_column = df.iloc[:, 3]
+#
+#         province_result = {
+#             'ICP备案': 0,
+#             '公安备案': 0,
+#             '无障碍': 0,
+#         }
+#         # Process each domain name
+#         for domain in domain_column:
+#             processed_domain = process_domain(domain)
+#             # all_domain.append(processed_domain)
+#
+#             print(processed_domain)
+#             all_domain.append(processed_domain)
+#
+#             content = check_beian_info(processed_domain)
+#
+#             # 判断是否有ICP备案信息
+#             if content[0] is True:
+#                 province_result['ICP备案'] += 1
+#                 print(domain, " 完成ICP备案!")
+#             else:
+#                 print(domain, " 未进行ICP备案!")
+#                 with open(os.path.join(output_dir, '未进行ICP备案.txt'), 'w', encoding='utf-8') as out_file:
+#                     out_file.write(f'{domain}\n')
+#
+#             # 判断是否有公安备案信息
+#             if content[1] is True:
+#                 province_result['公安备案'] += 1
+#                 print(domain, " 完成公安备案!")
+#             else:
+#                 print(domain, " 未完成公安备案!")
+#                 with open(os.path.join(output_dir, '未进行公安备案.txt'), 'a', encoding='utf-8') as out_file:
+#                     out_file.write(f'{domain}\n')
+#
+#             # 判断是否有无障碍模式
+#             if content[2] is True:
+#                 province_result['无障碍'] += 1
+#                 print(domain, " 支持无障碍模式!")
+#             else:
+#                 print(domain, " 不支持无障碍模式!")
+#                 with open(os.path.join(output_dir, '不支持无障碍模式.txt'), 'a', encoding='utf-8') as out_file:
+#                     out_file.write(f'{domain}\n')
+#
+#             # 将统计结果写入省份的txt文件
+#             output_file_path = os.path.join(output_dir, f'{province_name}.txt')
+#             with open(output_file_path, 'w', encoding='utf-8') as output_file:
+#                 for key, value in province_result.items():
+#                     output_file.write(f'{key}: {value}\n')
+#
+#
+# # 运行处理文件函数
+# process_files()
+
+get_domain()

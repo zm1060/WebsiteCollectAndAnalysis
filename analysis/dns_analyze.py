@@ -147,9 +147,6 @@ def get_ip_address_isp(ip):
     return res[0], res[1]
 
 
-
-
-
 # 解析NS记录
 def get_ns_info(domain):
     try:
@@ -187,7 +184,6 @@ def process_csv_data(data):
 
 # 主函数
 def main():
-    1
     # 设置DNS解析器的名称服务器
     # resolver = dns.resolver.Resolver()
     # resolver.nameservers = ['223.5.5.5', '1.2.4.8', '180.76.76.76', '101.226.4.6', '114.114.114.114', '172.26.26.3']  # 替换为你的名称服务器列表
@@ -209,51 +205,51 @@ def main():
     ####################################################################################################################
     #  ISP  and Address information collection
     ####################################################################################################################
-    # root_directory = '../xdns/class'
-    # ip_address_info_list = []
-    #
-    # for province_directory in os.listdir(root_directory):
-    #     # province_directory_path = os.path.join(root_directory, '/'+province_directory)
-    #     province_directory_path = f"{root_directory}/{province_directory}"
-    #     if not os.path.isdir(province_directory_path):
-    #         continue
-    #
-    #     count_ipv4 = 0
-    #     count_ipv6 = 0
-    #
-    #     for filename in os.listdir(province_directory_path):
-    #         if not filename.endswith('.txt'):
-    #             continue
-    #         domain = filename.split('.txt')[0]
-    #         # file_path = os.path.join(province_directory_path, filename)
-    #         # with open(file_path, 'r', encoding='utf-8') as file:
-    #         #     response = file.read().strip()  # Assuming the response is stored as text in the file
-    #
-    #         try:
-    #             ip, version = get_ip_info(domain)
-    #             address, isp = get_ip_address_isp(ip)
-    #             ip_address_info_list.append((domain, ip, version, address, isp))
-    #             if version == 4:
-    #                 count_ipv4 += 1
-    #             elif version == 6:
-    #                 count_ipv6 += 1
-    #
-    #         except Exception:
-    #             print(f"Failed to resolve IP address for domain: {domain}")
-    #             with open('./failed_ip.txt', 'w', encoding='utf-8') as file:
-    #                 file.write(f"{domain}\n")
-    #             continue
-    #
-    #     with open(os.path.join(province_directory_path, 'ip_address_info.txt'), 'w', encoding='utf-8') as file:
-    #         for info in ip_address_info_list:
-    #             file.write(f"{info}\n")
-    #         file.write("\n")
-    #
-    #         file.write(f"Province: {province_directory}")
-    #         file.write(f"IPv4 count: {count_ipv4}")
-    #         file.write(f"IPv6 count: {count_ipv6}")
-    #     ip_address_info_list = []
+    root_directory = '../xdns/class'
+    ip_address_info_list = []
 
+    for province_directory in os.listdir(root_directory):
+        # province_directory_path = os.path.join(root_directory, '/'+province_directory)
+        province_directory_path = f"{root_directory}/{province_directory}"
+        if not os.path.isdir(province_directory_path):
+            continue
+
+        count_ipv4 = 0
+        count_ipv6 = 0
+
+        for filename in os.listdir(province_directory_path):
+            if not filename.endswith('.txt'):
+                continue
+            domain = filename.split('.txt')[0]
+            # file_path = os.path.join(province_directory_path, filename)
+            # with open(file_path, 'r', encoding='utf-8') as file:
+            #     response = file.read().strip()  # Assuming the response is stored as text in the file
+
+            try:
+                ip, version = get_ip_info(domain)
+                address, isp = get_ip_address_isp(ip)
+                print(ip, version, address, isp)
+                ip_address_info_list.append((domain, ip, version, address, isp))
+                if version == 4:
+                    count_ipv4 += 1
+                elif version == 6:
+                    count_ipv6 += 1
+
+            except Exception:
+                print(f"Failed to resolve IP address for domain: {domain}")
+                with open('./failed_ip.txt', 'w', encoding='utf-8') as file:
+                    file.write(f"{domain}\n")
+                continue
+        os.makedirs(f'./ip/{province_directory}', exist_ok=True)
+        with open(f'./ip/{province_directory}/ip_address_info.txt', 'w', encoding='utf-8') as file:
+            for info in ip_address_info_list:
+                file.write(f"{info}\n")
+            file.write("\n")
+
+            file.write(f"Province: {province_directory}")
+            file.write(f"IPv4 count: {count_ipv4}")
+            file.write(f"IPv6 count: {count_ipv6}")
+        ip_address_info_list = []
 
 
 # 运行主函数

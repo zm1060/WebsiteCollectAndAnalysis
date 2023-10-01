@@ -27,11 +27,14 @@ Cookie: qHistory=aHR0cDovL3Nlby5jaGluYXouY29tX1NFT+e7vOWQiOafpeivog==; cz_statis
 
 
 ### GET request with parameter
-GET https://jr.xuancheng.gov.cn/
+GET https://chongqing.customs.gov.cn/
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
 
 
 {
-  'Connection': 'close',
+  'Referer': 'http://chongqing.customs.gov.cn/'
+  'Cookie': 'AV7KYchI7HHaS=5n8utLDVM.tJzAO3IpD1sM0S7MCph_yN75QP7L8ZwoMc8zaEcMFamyjcUW620GtrBKMxfd4KMwm7HddHMQ0z.0a; __jsluid_h=14da6277659abfdfeaa99e00e16dc3d1; EPORTALJSESSIONID=j8GBynG_89C4L1SFeleJfMX0J3QE2WF3b5M9Ptm84OxLA_9TckI5!-1914814962; AV7KYchI7HHaT=3USuKBAVTWmj37derTcHW73EGHAQXFpFcIHhc_VUt9eM_34j4kw5gu.MgDoIAqJIjEQaL4N5QaXAIsJagYrX7xE..pIUkjj7Fblh0kSlljQFri.sU9pNoR9ciXPORgDj4xfpuEhYgDP7WMsePgZ29.h6RsOqVQzjl6rPEI4g3Ow9qvCLsdxXR21sY.Cq7EF3cvsmEtDuOtCWHyvKvYLd0q',
+  'DNT': 1,
+  'Connection': 'keep-alive',
   'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
 }
