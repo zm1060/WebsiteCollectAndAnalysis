@@ -21,8 +21,8 @@ with Diagram(
     filename="diagram",
     outformat="png",
     graph_attr={"width": "8000", "height": "6000"},
-    node_attr={"fontsize": "18", "fontname":"Microsoft YaHei"},
-    edge_attr={"fontsize": "18", "fontname":"Microsoft YaHei"}
+    node_attr={"fontsize": "25", "fontname":"Microsoft YaHei"},
+    edge_attr={"fontsize": "25", "fontname":"Microsoft YaHei"}
 ):
 
 

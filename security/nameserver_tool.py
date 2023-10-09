@@ -9,13 +9,15 @@ def classify_nameserver(domain, ns_domain):
     ns_parts = ns_domain.split('.')
     domain_sld_tld = '.'.join(domain_parts[-2:])
     ns_sld_tld = '.'.join(ns_parts[-2:])
-
+    print(domain_sld_tld)
+    print(ns_sld_tld)
     # Check if the SLD+TLD of the website and NS match
     if domain_sld_tld == ns_sld_tld:
         return "Private"
 
     # Check if the SLD+TLD of the NS exists in the SAN list of the website
     w = whois.whois(domain)
+    print(w)
     if w and 'subject_alt_name' in w:
         san_list = w['subject_alt_name']
         if ns_sld_tld in san_list:
@@ -43,7 +45,7 @@ def calculate_nameserver_concentration(domain, ns_domain):
 
 
 # Example usage
-website_domain = "example.com"
-ns_domain = "ns1.example.com"
+website_domain = "sh.gov.cn"
+ns_domain = "ns2.shanghai.gov.cn"
 classification = classify_nameserver(website_domain, ns_domain)
 print(f"The nameserver {ns_domain} is classified as: {classification}")
