@@ -13,9 +13,12 @@ def process_cdn_file(file_path):
     data = []
     current_entry = None
 
-    iterator = iter(filtered_lines)
+    line_index = 0
+    total_lines = len(filtered_lines)
 
-    for line in iterator:
+    while line_index < total_lines:
+        line = filtered_lines[line_index]
+
         if line.startswith('名称:'):
             if current_entry:
                 data.append(current_entry)
@@ -26,28 +29,56 @@ def process_cdn_file(file_path):
             while line.startswith('Addresses:') or not line.strip():
                 address_part = line.split('Addresses:')[1].strip()
                 addresses.extend(addr.strip() for addr in address_part.split())
-                try:
-                    line = next(iterator)
-                except StopIteration:
+                line_index += 1
+                if line_index < total_lines:
+                    line = filtered_lines[line_index]
+                    if line.startswith(('名称:', 'Aliases:', 'Addresses:')):
+                        line_index -= 1
+                else:
                     break
-            # Continue extracting addresses from subsequent lines until a line without leading whitespace or end of file
-            while line.strip() and not line.startswith(('服务器:', 'Address:', 'Aliases:')):
-                addresses.extend(addr.strip() for addr in line.split())
-                try:
-                    line = next(iterator)
-                except StopIteration:
+            # Continue extracting addresses from subsequent lines until a line without leading whitespace, end of file, or a line starting with 'Addresses:', 'Aliases:', or '名称:'
+            while line.strip() and not line.startswith(('Addresses:', '名称:')):
+                # Skip lines starting with 'Aliases:' in the 'Addresses' extraction loop
+                if not line.startswith('Aliases:'):
+                    addresses.extend(addr.strip() for addr in line.split())
+                    line_index += 1
+                    if line_index < total_lines:
+                        line = filtered_lines[line_index]
+                        if line.startswith(('名称:', 'Aliases:', 'Addresses:')):
+                            line_index -= 1
+                    else:
+                        break
+                else:
+                    print('befor: ', filtered_lines[line_index])
+                    line_index -= 1
+                    print('after: ', filtered_lines[line_index])
                     break
             current_entry['Addresses'].extend(addresses)
         elif line.startswith('Aliases:'):
-            # Extract aliases from the current line and subsequent lines
             aliases = []
             while line.startswith('Aliases:') or not line.strip():
-                aliases.extend(alias.strip() for alias in line.split()[1:])
-                try:
-                    line = next(iterator)
-                except StopIteration:
+                if 'Aliases:' in line:
+                    aliases_part = line.split('Aliases:')[1].strip()
+                    aliases.extend(addr.strip() for addr in aliases_part.split())
+                line_index += 1
+                if line_index < total_lines:
+                    line = filtered_lines[line_index]
+                    if line.startswith(('名称:', 'Aliases:', 'Addresses:')):
+                        line_index -= 1
+                else:
+                    break
+            while line.strip() and not line.startswith(('服务器:', '名称:', 'Aliases:', 'Addresses:')):
+                aliases.extend(addr.strip() for addr in line.split())
+                line_index += 1
+                if line_index < total_lines:
+                    line = filtered_lines[line_index]
+                    if line.startswith(('名称:', 'Aliases:', 'Addresses:')):
+                        line_index -= 1
+                else:
                     break
             current_entry['Aliases'].extend(aliases)
+
+        line_index += 1
 
     if current_entry:
         data.append(current_entry)
