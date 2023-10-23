@@ -34,6 +34,9 @@ for filename in os.listdir(directory):
                 sdomain = process_domain(url)
                 if sdomain:
                     parsed_sdomain = urlparse(sdomain)
+                    if os.path.exists(f'./ca/{unit_name}/{parsed_sdomain.netloc}.json'):
+                        print(f'{unit_name}/{parsed_sdomain.netloc}')
+                        continue
                     fetch_certificates(parsed_sdomain.netloc, unit_name)
 
 # # 遍历每个单位目录

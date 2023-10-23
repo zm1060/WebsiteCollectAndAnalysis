@@ -47,12 +47,20 @@ def fetch_certificates(hostname, unit_name):
                     print(f"Certificate information for {hostname} has been saved to {output_filename}.")
                     print(f"The TLS version used by {hostname} is: {tls_version}")
 
-            except ssl.SSLError as e:
-                # Write the hostname into a file within the unit_name directory
-                error_filename = f'./ca/{unit_name}/rerror.txt'
+            except ssl.CertificateError as ce:
+                # Handle certificate verification errors
+                error_filename = f'./ca/{unit_name}/certificate_errors.txt'
                 with open(error_filename, 'a') as error_file:
-                    error_file.write(hostname + "\n")
-                print(f"An error occurred while fetching the certificate: {e}. Error written to {error_filename}.")
+                    error_file.write(f"{hostname}: Certificate error - {str(ce)}\n")
+                print(f"Certificate verification failed for {hostname}: {ce}. Error written to {error_filename}.")
+
+            except ssl.SSLError as e:
+                # Handle other SSL errors
+                error_filename = f'./ca/{unit_name}/ssl_errors.txt'
+                with open(error_filename, 'a') as error_file:
+                    error_file.write(f"{hostname}: SSL error - {str(e)}\n")
+                print(f"An SSL error occurred for {hostname}: {e}. Error written to {error_filename}.")
+
 
     except (socket.timeout, socket.gaierror) as e:
         # Write the hostname into a file within the unit_name directory
@@ -65,6 +73,4 @@ def fetch_certificates(hostname, unit_name):
         # Handle the socket error
         print(f"Socket error occurred while connecting to {hostname}: {e}")
 
-
 # fetch_certificates("www.baidu.com", "test")
-

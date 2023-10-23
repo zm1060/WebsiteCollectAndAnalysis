@@ -1,10 +1,14 @@
 import os
 import json
+import csv
 import random
 import re
 import socket
 import time
+import pandas as pd
+
 import folium
+
 from collections import Counter, defaultdict
 
 import matplotlib
@@ -13,7 +17,6 @@ from matplotlib import pyplot as plt
 from matplotlib.font_manager import FontProperties
 
 import seaborn as sns
-import pandas as pd
 from qqwry import QQwry
 
 IPDB_FILE = "qqwry.dat"
@@ -80,8 +83,19 @@ def process_province_directories(class_directory):
                 json.dump(location_data, json_output, ensure_ascii=False, indent=2)
 
 
+def save_isp_data_to_csv(region_isp_data, output_path):
+    with open(output_path, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['Region', 'ISP', 'Count']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+        writer.writeheader()
+        for region, isp_count in region_isp_data.items():
+            for isp, count in isp_count.items():
+                writer.writerow({'Region': region, 'ISP': isp, 'Count': count})
+
+
 region_data = [
-    {"name": '中国', "value": [116.3979471, 39.9081726, 0]},
+    {"name": '中国', "value": [114.3979471, 37.9081726, 0]},
     {"name": '北京', "value": [116.3979471, 39.9081726, 78]},
     {"name": '上海', "value": [121.4692688, 31.2381763, 75]},
     {"name": '天津', "value": [117.2523808, 39.1038561, 95]},
@@ -121,7 +135,8 @@ region_data = [
     {"name": "美国", "value": [37.7749, -122.4194, 1]},
     {"name": "法国", "value": [48.8566, 2.3522, 1]},
     {"name": "局域网", "value": [0, 0, 1]},
-    {"name": "巴西圣保罗", "value": [-23.5505, -46.6333, 1]}
+    {"name": "巴西圣保罗", "value": [-23.5505, -46.6333, 1]},
+    {"name": "马来西亚", "value": [4.2105, 101.9758, 1]},
 ]
 
 
@@ -133,35 +148,70 @@ def get_coordinates(region_name, region_data):
 
 
 def geospatial_analysis(nameservers, province_dir, output_dir):
+    # 创建一个字典来跟踪每个区域的ISP计数
+    region_isp_count = defaultdict(Counter)
     # Creating a colormap for ISPs
     isp_colors = {
         '移动': 'blue',
         '电信': 'red',
         '联通': 'green',
+        '联通IDC机房': 'green',
         '阿里云': 'purple',
+        '阿里云BGP数据中心': 'purple',
+        '阿里云VIPDNS Anycast节点': 'purple',
         '腾讯云': 'orange',
+        '公司': 'black',
+        'local_or_error': 'red',
         # Add more ISPs and their respective colors as needed
+    }
+    isp_rgb_colors = {
+        '移动': (0, 0, 255),  # Blue
+        '电信': (255, 0, 0),  # Red
+        '联通': (0, 128, 0),  # Green
+        '阿里云': (128, 0, 128),  # Purple
+        '腾讯云': (255, 165, 0),  # Orange
+        '公司': (0, 0, 0),  # Black
+        'local_or_error': (255, 0, 0),
+        # Add more ISPs and their respective RGB values as needed
     }
 
     # 创建地图
-    m = folium.Map(location=[35, 105], zoom_start=5)
+    m = folium.Map(location=[35, 105], zoom_start=5,
+                   tiles='http://webst02.is.autonavi.com/appmaptile?lang=en&size=1&scale=1&style=7&x={x}&y={y}&z={z}',
+                   attr='default')
 
     # Creating a dictionary to store MarkerClusters for each province
     province_clusters = defaultdict(MarkerCluster)
+
+    china_sea_center = [30.0, 125.0]
+
+    # 保存每个nameserver负责解析域名的数量
+    nameserver_domain_map = {}
+    # 保存发生错误的nameserver
+    error_nameservers = []
 
     for nameserver in nameservers:
         if is_valid_domain(nameserver):
             try:
                 ip = socket.gethostbyname(nameserver)
                 region, isp = get_ip_address_isp(ip)
+                # 更新区域的ISP计数
+                region_isp_count[region][isp] += 1
+
+                # 记录nameserver负责解析的域名数量
+                if region in nameserver_domain_map:
+                    nameserver_domain_map[region][nameserver] = nameserver_domain_map[region].get(nameserver, 0) + 1
+                else:
+                    nameserver_domain_map[region] = {nameserver: 1}
+
                 coordinates = get_coordinates(region, region_data)
                 longitude = 116.3979471
                 latitude = 39.9081726
                 if coordinates:
                     longitude, latitude, value = coordinates
-                    longitude += random.uniform(-0.2, 0.2)
-                    latitude += random.uniform(-0.2, 0.2)
-                    print(f"Region: {region}, Longitude: {longitude}, Latitude: {latitude}, Value: {value}")
+                    longitude += random.uniform(-0.1, 0.1)
+                    latitude += random.uniform(-0.1, 0.1)
+                    # print(f"Region: {region}, Longitude: {longitude}, Latitude: {latitude}, Value: {value}")
                 else:
                     print(f"No coordinates found for {region}")
 
@@ -172,15 +222,67 @@ def geospatial_analysis(nameservers, province_dir, output_dir):
                         isp_color = color
                         break
 
+                # 使用 folium.Icon 时，确保 isp_color 在 Folium 支持的颜色列表中
+                if isp_color not in ['red', 'blue', 'green', 'purple', 'orange', 'darkred', 'lightred', 'beige',
+                                     'darkblue', 'darkgreen', 'cadetblue', 'darkpurple', 'white', 'pink', 'lightblue',
+                                     'lightgreen', 'gray', 'black', 'lightgray']:
+                    isp_color = 'gray'
+
                 # 添加标记到地图上
                 folium.Marker([float(latitude), float(longitude)],
                               icon=folium.Icon(color=isp_color),
-                              popup=f"Nameserver: {nameserver}\nIP: {ip}\nRegion: {region}\nISP: {isp}").add_to(province_clusters[region])
+                              popup=f"Nameserver: {nameserver}\nIP: {ip}\nRegion: {region}\nISP: {isp}").add_to(
+                    province_clusters[region])
             except Exception as e:
                 print(f"Error for {nameserver}: {str(e)}")
+                # 如果发生错误，将标记放置在中国东海的中心
+                error_nameservers.append(nameserver)
 
-    # Adding MarkerClusters for each province to the map
+                folium.Marker(china_sea_center,
+                              icon=folium.Icon(color='red'),
+                              popup=f"Error for {nameserver}: {str(e)}").add_to(province_clusters['local_or_error'])
+    # 保存每个省的 ISP 数据到 CSV 文件
+    csv_output_path = os.path.join(output_dir, f"{province_dir}_isp_data.csv")
+    save_isp_data_to_csv(region_isp_count, csv_output_path)
+
+    # 写入nameserver负责解析域名的数量到JSON文件
+    if nameserver_domain_map is not None:
+        nameserver_domain_map_file = os.path.join(output_dir, f"{province_dir}_nameserver_domain_map.json")
+        with open(nameserver_domain_map_file, 'w', encoding='utf-8') as f:
+            json.dump(nameserver_domain_map, f, ensure_ascii=False, indent=2)
+
+    # 写入发生错误的nameserver到JSON文件
+    if error_nameservers is not None:
+        error_nameservers_file = os.path.join(output_dir, f"{province_dir}_local_nameserver.json")
+        with open(error_nameservers_file, 'w', encoding='utf-8') as f:
+            json.dump({"error_nameservers": error_nameservers}, f, ensure_ascii=False, indent=2)
+
+    # 遍历区域和对应的Cluster，找到每个区域最多的ISP，设置Cluster的颜色
     for region, cluster in province_clusters.items():
+        isp_count = region_isp_count.get(region)
+        if isp_count is None:
+            continue
+
+        # 找到最多的 ISP 和对应的颜色
+        most_common_isp, count = isp_count.most_common(1)[0]
+        isp_color = isp_rgb_colors.get(most_common_isp, (128, 128, 128,))  # Default to gray if ISP not found
+        print(f"{region} Most common {most_common_isp}:{isp_count} with {isp_color} ")
+
+        # 设置 Cluster 的颜色
+        cluster.icon_create_function = f"""
+            function(cluster) {{
+                var childCount = cluster.getChildCount();
+                var size = 5 + Math.min(childCount, 90) * 0.1;
+
+                return new L.DivIcon({{
+                    html: '<div style="border: 2px solid rgb({isp_color[0]}, {isp_color[1]}, {isp_color[2]}); background-color: rgba({isp_color[0]}, {isp_color[1]}, {isp_color[2]}, 0.8); color: white; font-size: 12px; display: flex; justify-content: center; align-items: center;" class="marker-cluster">' + childCount + '</div>',
+                    className: 'marker-cluster',
+                    iconSize: new L.Point(size, size)
+                }});
+            }}
+        """
+        cluster.layer_name = region
+        # 将新的 Cluster 图层添加到地图上
         cluster.add_to(m)
 
     # 保存地图
@@ -222,8 +324,8 @@ def process_province_statistics(class_directory, output_dir):
                         if not isinstance(name_servers, list):
                             # Convert to list if it's not already
                             name_servers = [name_servers]
-                        print(name_servers)
-                        print("-------")
+                        # print(name_servers)
+                        # print("-------")
                         nameservers.extend(name_servers)
                         total_name_server.extend(name_servers)
 

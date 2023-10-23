@@ -1,0 +1,8 @@
+certificate verify failed: Hostname mismatch, certificate is not valid for 'www.zaozhuang.gov.cn'.
+certificate verify failed: self signed certificate in certificate chain
+certificate verify failed: unable to get local issuer certificate
+certificate verify failed: self signed certificate
+
+ sslv3 alert handshake failure
+
+ bad ecpoint
