@@ -1,10 +1,12 @@
 import os
 from time import sleep
+from urllib.parse import urlparse
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 import requests
+
 
 # def store_response(domain):
 #     try:
@@ -60,18 +62,45 @@ import requests
 #         return False
 #
 
+def process_url(url):
+    return urlparse(url).netloc
 
 
+def get_domain():
+    directory = '../domain_txt'
+    all_domain = []
+    failed_domains = []
+
+    for filename in os.listdir(directory):
+        if filename.endswith('.txt'):
+            with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
+                urls = [line.strip() for line in file if line.strip()]
+
+            for url in urls:
+                sdomain = process_domain(url)
+                if sdomain:
+                    all_domain.append(sdomain)
+                    print(sdomain)
+                    store_response(sdomain)
+
+    return all_domain
+
+
+def process_domain(domain):
+    if not domain.startswith("http"):
+        domain = "http://" + domain
+    parsed_url = urlparse(domain)
+    return parsed_url.geturl() if parsed_url.scheme and parsed_url.netloc else None
 
 
 def store_response(domain):
+    filename = f"./response/{urlparse(domain).netloc}.txt"
+    if os.path.isfile(filename):
+        print(f"File already exists: {filename}")
+        return True
+
     try:
         driver = webdriver.Chrome()  # Provide the path to your Chrome driver executable
-
-        filename = f"./response/{domain.split('//')[1]}.txt"
-        if os.path.isfile(filename):
-            print(f"File already exists: {filename}")
-            return True
 
         # Check the URL scheme
         if domain.startswith("http://") or domain.startswith("https://"):
@@ -96,23 +125,19 @@ def store_response(domain):
         return False
 
 
-
-
-
-
-
 #
 # requests.DEFAULT_RETRIES = 5  # 增加重试连接次数
 #
 
 # # Read the failed domains from the file
-failed_domains = []
-with open("failed_domains.txt", "r") as file:
-    failed_domains = [line.strip() for line in file]
+# failed_domains = []
+# with open("failed_domains.txt", "r") as file:
+#     failed_domains = [line.strip() for line in file]
+#
+#
+# # Re-request and store responses for the failed domains
+# for domain in failed_domains:
+#     print(domain)
+#     store_response(domain)
 
-# Re-request and store responses for the failed domains
-for domain in failed_domains:
-    store_response(domain)
-
-
-
+get_domain()

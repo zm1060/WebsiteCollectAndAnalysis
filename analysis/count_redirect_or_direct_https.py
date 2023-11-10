@@ -73,7 +73,7 @@ def get_domain():
                             print('Error' + str(e))
                             failed_request += 1
             unit_result = {
-                "province" : unit_name,
+                "province": unit_name,
                 "direct_https": direct_https,
                 "indirect_https": indirect_https,
                 "unused_https": unused_https,
@@ -96,5 +96,6 @@ def get_domain():
     }
     with open(f"./direct_or_indirect/total.json", 'w', encoding='utf-8') as json_file:
         json.dump(total_result, json_file, ensure_ascii=False, indent=4)
+
 
 get_domain()

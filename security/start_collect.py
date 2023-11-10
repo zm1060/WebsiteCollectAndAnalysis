@@ -3,7 +3,6 @@ from urllib.parse import urlparse
 from ca_chain import fetch_certificates
 import os
 
-response_dir = '../xdns/class'  # response目录路径
 
 directory = '../domain_txt'
 failed_domains = []
@@ -35,7 +34,6 @@ for filename in os.listdir(directory):
                 if sdomain:
                     parsed_sdomain = urlparse(sdomain)
                     if os.path.exists(f'./ca/{unit_name}/{parsed_sdomain.netloc}.json'):
-                        print(f'{unit_name}/{parsed_sdomain.netloc}')
                         continue
                     fetch_certificates(parsed_sdomain.netloc, unit_name)
 
