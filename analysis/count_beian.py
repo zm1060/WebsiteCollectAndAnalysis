@@ -46,8 +46,8 @@ def check_beian_info(url):
             page_source = driver.page_source
 
             # Check for ICP备案信息 and 公安备案信息
-            icp_beian_info_present = 'http://beian.miit.gov.cn' in page_source or 'ICP' in page_source
-            police_beian_info_present = 'https://www.beian.gov.cn' in page_source or '公网安备' in page_source
+            icp_beian_info_present = 'http://beian.miit.gov.cn' in page_source or 'ICP' in page_source or 'icp' in page_source
+            police_beian_info_present = 'https://www.beian.gov.cn' in page_source or '网安' in page_source
             free_present = '无障碍' in page_source or '关怀版' in page_source or '无障碍浏览' in page_source
 
             # Check for SRI support

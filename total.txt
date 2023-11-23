@@ -5548,7 +5548,7 @@ http://mzj.xm.gov.cn
 http://gjj.xm.gov.cn
 http://wlj.xm.gov.cn/
 http://ixm.xm.gov.cn/
-http://www.xm12345.xm.gov.cn
+http://www.xm12345.gov.cn
 http://ftz.xm.gov.cn/
 http://fao.xm.gov.cn/
 http://jr.xm.gov.cn/

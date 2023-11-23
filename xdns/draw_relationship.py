@@ -19,7 +19,6 @@ govcn_links = set()  # 存储.gov.cn链接
 font_path = '../SimHei.ttf'  # Replace with the path to a Chinese font file (.ttf)
 font_prop = FontProperties(fname=font_path)
 
-
 # ToDO
 # 使用 Apache Spark Graphx
 # 遍历每个单位目录
@@ -28,8 +27,6 @@ font_prop = FontProperties(fname=font_path)
 for unit_dir in os.listdir(response_dir):
     unit_path = os.path.join(response_dir, unit_dir)
     unit_name = unit_dir
-    if unit_name != "贵州省":
-        continue
 
     graph_filename = os.path.join('graph_result', f"{unit_name}.pkl")
     if os.path.exists(graph_filename):
@@ -69,32 +66,34 @@ for unit_dir in os.listdir(response_dir):
                                         external_links.add(url_domain)  # 添加外部链接到集合
                                         graph.add_node(url_domain, type='external')  # 添加外部链接节点
                                     graph.add_edge(existing_node, url_domain)  # 连接现有节点和链接节点
-    # # Calculate the in-degree and out-degree centrality measures
-    # in_degree_centrality = nx.in_degree_centrality(graph)
-    # out_degree_centrality = nx.out_degree_centrality(graph)
-    # # Sort the nodes by out-degree centrality and select the top 20 nodes
-    # sorted_nodes = sorted(graph.nodes(), key=out_degree_centrality.get, reverse=True)[:50]
-    #
-    # # Create a subgraph with the top 20 nodes
-    # subgraph = graph.subgraph(sorted_nodes)
-    # # Draw the graph with node sizes based on the in-degree and out-degree centrality
-    # pos = nx.spring_layout(subgraph)
-    # node_size = [5000 * in_degree_centrality[node] for node in subgraph.nodes()]
-    clustering_coefficients = nx.clustering(graph)
-    betweenness_centralities = nx.betweenness_centrality(graph)
-    # 接下来的步骤和您之前的绘图逻辑一样
-    # 排序节点根据介数中心系数，而不是出度中心性
-    sorted_nodes = sorted(graph.nodes(), key=betweenness_centralities.get, reverse=True)[:50]
+    # Calculate the in-degree and out-degree centrality measures
+    in_degree_centrality = nx.in_degree_centrality(graph)
+    out_degree_centrality = nx.out_degree_centrality(graph)
+
+    # Sort the nodes by out-degree centrality and select the top 10 nodes
+    sorted_nodes = sorted(graph.nodes(), key=out_degree_centrality.get, reverse=True)[:20]
+
+    # Create a subgraph with the top 10 nodes
     subgraph = graph.subgraph(sorted_nodes)
+
+    # Draw the graph with node sizes based on the in-degree and out-degree centrality
     pos = nx.spring_layout(subgraph)
-    # 使用介数中心系数和聚集系数调整节点大小
-    node_size = [
-        5000 * (clustering_coefficients[node] + betweenness_centralities[node])
-        for node in subgraph.nodes()
-    ]
+    node_size = [10000 * in_degree_centrality[node] for node in subgraph.nodes()]
+    node_color = [out_degree_centrality[node] for node in subgraph.nodes()]
+    # clustering_coefficients = nx.clustering(graph)
+    # betweenness_centralities = nx.betweenness_centrality(graph)
+    # # 接下来的步骤和您之前的绘图逻辑一样
+    # # 排序节点根据介数中心系数，而不是出度中心性
+    # sorted_nodes = sorted(graph.nodes(), key=betweenness_centralities.get, reverse=True)[:50]
+    # subgraph = graph.subgraph(sorted_nodes)
+    # pos = nx.spring_layout(subgraph)
+    # # 使用介数中心系数和聚集系数调整节点大小
+    # node_size = [
+    #     5000 * (clustering_coefficients[node] + betweenness_centralities[node])
+    #     for node in subgraph.nodes()
+    # ]
 
-
-    node_color = ['red' if node in govcn_links else 'green' for node in subgraph.nodes()]
+    # node_color = ['red' if node in govcn_links else 'green' for node in subgraph.nodes()]
     plt.figure(figsize=(12, 12), dpi=800)
     nx.draw_networkx(
         subgraph,
@@ -123,8 +122,6 @@ for unit_dir in os.listdir(response_dir):
     with open(graph_filename, 'wb') as file:
         pickle.dump(graph, file)
     graph.clear()
-
-
 
 #
 #     # Create lists to store node and edge trace data
@@ -165,5 +162,3 @@ for unit_dir in os.listdir(response_dir):
 #
 #     # Show the interactive plot in a web browser
 #     fig.show()
-
-

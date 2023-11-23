@@ -12,6 +12,7 @@ import folium
 from collections import Counter, defaultdict
 
 import matplotlib
+import requests
 from folium.plugins import MarkerCluster
 from matplotlib import pyplot as plt
 from matplotlib.font_manager import FontProperties
@@ -28,6 +29,30 @@ matplotlib.rcParams['font.family'] = 'Microsoft YaHei'
 
 sns.set(style="whitegrid")
 
+import requests
+
+
+def get_ipv6_info(ipv6_address):
+    api_url = f'https://api.a76yyyy.cn/ip?function=ipv6Info&params1={ipv6_address}'
+
+    try:
+        response = requests.get(api_url)
+        data = response.json()
+
+        if response.status_code == 200:
+            if 'code' in data and data['code'] == 200:
+                ipv6_info = data['data']
+                return ipv6_info.get('详细地址', ''), ipv6_info.get('运营商/节点', '')
+            else:
+                print(f"API returned an error: {data.get('msg', 'Unknown error')}")
+        else:
+            print(f"HTTP error: {response.status_code}")
+
+    except Exception as e:
+        print(f"An error occurred while fetching IPv6 information: {e}")
+
+    return '', ''
+
 
 def get_ip_address_isp(ip):
     q = QQwry()
@@ -36,15 +61,35 @@ def get_ip_address_isp(ip):
     return res[0], res[1]
 
 
-def process_province_directories(class_directory):
-    # 存储地理位置信息的列表
-    location_data = []
-    # 已解析的nameserver集合
-    processed_nameservers = set()
+def get_ipv4_ipv6_addresses(domain):
+    try:
+        # Get address information for both IPv4 and IPv6
+        addr_info = socket.getaddrinfo(domain, None, socket.AF_UNSPEC)
 
+        # Extract and print the IPv4 and IPv6 addresses
+        ipv4_addresses = []
+        ipv6_addresses = []
+        for info in addr_info:
+            family, _, _, _, address = info
+            if family == socket.AF_INET:
+                ipv4_addresses.append(address[0])
+            elif family == socket.AF_INET6:
+                ipv6_addresses.append(address[0])
+
+        return ipv4_addresses, ipv6_addresses
+    except socket.gaierror:
+        # Handle DNS resolution error here
+        return [], []
+
+
+def process_province_directories(class_directory):
     # 遍历省份目录
     for province_dir in os.listdir(class_directory):
         province_path = os.path.join(class_directory, province_dir)
+        # 存储地理位置信息的列表
+        location_data = []
+        # 已解析的nameserver集合
+        processed_nameservers = set()
 
         # 遍历每个省份目录下的json文件
         for file in os.listdir(province_path):
@@ -55,16 +100,31 @@ def process_province_directories(class_directory):
                 with open(file_path, 'r', encoding='utf-8') as json_file:
                     domain_data = json.load(json_file)
                 # 获取每个nameserver的地理位置信息
-                if domain_data["name_servers"]:
-                    for nameserver in domain_data["name_servers"]:
+                nameservers = domain_data.get("name_servers", [])
+                if isinstance(nameservers, str):
+                    nameservers = [nameservers]  # 如果是字符串，将其转换为列表
+                if nameservers is not None:
+                    for nameserver in nameservers:
                         if nameserver not in processed_nameservers:
                             processed_nameservers.add(nameserver)
 
                             print(nameserver)
                             time.sleep(0.2)
                             try:
-                                ip = socket.gethostbyname(nameserver)
-                                region, isp = get_ip_address_isp(ip)
+
+                                ipv4_addresses, ipv6_addresses = get_ipv4_ipv6_addresses(nameserver)
+                                if ipv4_addresses:
+                                    # If IPv4 addresses are available, use the first one
+                                    ipv4_address = ipv4_addresses[0]
+                                    region, isp = get_ip_address_isp(ipv4_address)
+                                    ip_version = 'IPv4'
+
+                                elif ipv6_addresses:
+                                    # If IPv6 addresses are available, use the first one
+                                    ipv6_address = ipv6_addresses[0]
+                                    region, isp = get_ipv6_info(ipv6_address)
+                                    ip_version = 'IPv6'
+                                ip = ipv4_addresses if ip_version == "IPv4" else ipv6_addresses
                             except Exception as e:
                                 print()
 
@@ -73,14 +133,16 @@ def process_province_directories(class_directory):
                                 'province': province_dir,
                                 'nameserver': nameserver,
                                 'ip': ip,
+                                'ip_version': ip_version,
                                 'region': region,
                                 'isp': isp
                             }
+                            print(location_info)
                             location_data.append(location_info)
 
-            # 将地理位置信息写入JSON文件
-            with open(f'./whois_full/{province_dir}.json', 'w', encoding='utf-8') as json_output:
-                json.dump(location_data, json_output, ensure_ascii=False, indent=2)
+        # 将地理位置信息写入JSON文件
+        with open(f'./whois_full/{province_dir}.json', 'w', encoding='utf-8') as json_output:
+            json.dump(location_data, json_output, ensure_ascii=False, indent=2)
 
 
 def save_isp_data_to_csv(region_isp_data, output_path):
@@ -193,11 +255,28 @@ def geospatial_analysis(nameservers, province_dir, output_dir):
     for nameserver in nameservers:
         if is_valid_domain(nameserver):
             try:
-                ip = socket.gethostbyname(nameserver)
-                region, isp = get_ip_address_isp(ip)
-                # 更新区域的ISP计数
-                region_isp_count[region][isp] += 1
+                ip = ''
+                region = ''
+                isp = ''
+                ip_version = ''
+                try:
+                    ipv4_addresses, ipv6_addresses = get_ipv4_ipv6_addresses(nameserver)
+                    if ipv4_addresses:
+                        # If IPv4 addresses are available, use the first one
+                        ipv4_address = ipv4_addresses[0]
+                        region, isp = get_ip_address_isp(ipv4_address)
+                        ip_version = 'IPv4'
 
+                    elif ipv6_addresses:
+                        # If IPv6 addresses are available, use the first one
+                        ipv6_address = ipv6_addresses[0]
+                        region, isp = get_ipv6_info(ipv6_address)
+                        ip_version = 'IPv6'
+                    ip = ipv4_addresses if ip_version == "IPv4" else ipv6_addresses
+
+                except Exception as e:
+                    print()
+                region_isp_count[region][isp] += 1
                 # 记录nameserver负责解析的域名数量
                 if region in nameserver_domain_map:
                     nameserver_domain_map[region][nameserver] = nameserver_domain_map[region].get(nameserver, 0) + 1
@@ -209,9 +288,9 @@ def geospatial_analysis(nameservers, province_dir, output_dir):
                 latitude = 39.9081726
                 if coordinates:
                     longitude, latitude, value = coordinates
-                    longitude += random.uniform(-0.1, 0.1)
-                    latitude += random.uniform(-0.1, 0.1)
-                    # print(f"Region: {region}, Longitude: {longitude}, Latitude: {latitude}, Value: {value}")
+                    longitude += random.uniform(-0.02, 0.02)
+                    latitude += random.uniform(-0.02, 0.02)
+                    print(f"Region: {region}, Longitude: {longitude}, Latitude: {latitude}, Value: {value}")
                 else:
                     print(f"No coordinates found for {region}")
 
@@ -324,8 +403,8 @@ def process_province_statistics(class_directory, output_dir):
                         if not isinstance(name_servers, list):
                             # Convert to list if it's not already
                             name_servers = [name_servers]
-                        # print(name_servers)
-                        # print("-------")
+                        print(name_servers)
+                        print("-------")
                         nameservers.extend(name_servers)
                         total_name_server.extend(name_servers)
 
