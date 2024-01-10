@@ -1,14 +1,3 @@
-import os
-from time import sleep
-from urllib.parse import urlparse
-import requests
-import concurrent.futures
-import urllib3
-import chardet
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-
 
 # <script>window.location='/dzsggzy/'</script>
 # <script>
@@ -55,6 +44,19 @@ from selenium.webdriver.common.by import By
 # http://credit.zglh.gov.cn/
 # http://credit.zglh.gov.cn:81/
 # http://credit.wugongshan.gov.cn:81/
+import os
+from time import sleep
+from urllib.parse import urlparse
+import requests
+import concurrent.futures
+import urllib3
+import chardet
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+
+
+
 def process_url(url):
     return urlparse(url).netloc
 
@@ -74,7 +76,7 @@ def get_domain():
                 if sdomain:
                     all_domain.append(sdomain)
                     print(sdomain)
-                    # store_response(sdomain)
+                    store_response(sdomain)
 
     with concurrent.futures.ThreadPoolExecutor() as executor:
         results = list(executor.map(store_response, all_domain))
@@ -91,85 +93,85 @@ def process_domain(domain):
     return parsed_url.geturl() if parsed_url.scheme and parsed_url.netloc else None
 
 
-# def store_response(domain):
-#     filename = f"./response/{domain.split('//')[1]}.txt"
-#     if os.path.isfile(filename):
-#         print(f"File already exists: {filename}")
-#         return True
-#
-#     try:
-#         headers = {
-#             'Content-Type': 'text/html;charset=utf-8',
-#             'Connection': 'close',
-#             'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
-#         }
-#
-#         response = requests.get(domain, headers=headers, verify=False, timeout=10, allow_redirects=True)
-#         response.encoding = "utf-8"
-#
-#         if response.status_code == 200 and 'Content-Type' in response.headers and 'text' in response.headers['Content-Type']:
-#             filename = f"./response/{process_url(domain)}.txt"
-#             with open(filename, "w", encoding="utf-8") as file:
-#                 file.write(response.text)
-#             print(f"Response stored: {filename}")
-#             return True
-#         else:
-#             print(f"Failed to request website: {domain} (Status code: {response.status_code})")
-#             if domain.startswith("http://"):
-#                 return store_response(domain.replace("http://", "https://"))
-#             return False
-#
-#     except requests.exceptions.RequestException as e:
-#         print(f"Failed to request website: {domain} ({str(e)})")
-#         return False
+def store_response(domain):
+    filename = f"./response/{domain.split('//')[1]}.txt"
+    if os.path.isfile(filename):
+        print(f"File already exists: {filename}")
+        return True
+
+    try:
+        headers = {
+            'Content-Type': 'text/html;charset=utf-8',
+            'Connection': 'close',
+            'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'
+        }
+
+        response = requests.get(domain, headers=headers, verify=False, timeout=10, allow_redirects=True)
+        response.encoding = "utf-8"
+
+        if response.status_code == 200 and 'Content-Type' in response.headers and 'text' in response.headers['Content-Type']:
+            filename = f"./response/{process_url(domain)}.txt"
+            with open(filename, "w", encoding="utf-8") as file:
+                file.write(response.text)
+            print(f"Response stored: {filename}")
+            return True
+        else:
+            print(f"Failed to request website: {domain} (Status code: {response.status_code})")
+            if domain.startswith("http://"):
+                return store_response(domain.replace("http://", "https://"))
+            return False
+
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to request website: {domain} ({str(e)})")
+        return False
 
 
 # 河南    访问被云平台拦截     云平台WAF防护规则
-
-def store_response(domain):
-    sdomain = urlparse(domain).netloc
-    filename = f"./response/{sdomain}.txt"
-    if os.path.isfile(filename):
-        print(f"File already exists: {filename}")
-        # Check if the file contains "ICP备案"
-        with open(filename, "r", encoding="utf-8") as file:
-            file_content = file.read()
-            if "ICP备" in file_content or "icp" in file_content or "ICP" in file_content:
-                print(f"File contains 'ICP备案': {filename}")
-                return True
-            else:
-                print(f"File does not contain 'ICP备案': {filename}")
-    try:
-        options = Options()
-        options.add_argument("--headless")  # Run Chrome in headless mode
-        options.add_argument("--no-sandbox")
-        options.add_argument("--disable-dev-shm-usage")
-
-        driver = webdriver.Chrome(options=options)  # Provide the path to your Chrome driver executable
-        # Check the URL scheme
-        if domain.startswith("http://") or domain.startswith("https://"):
-            driver.get(domain)
-            sleep(6)
-            # Find the <html> element and get its text
-            page_source = driver.execute_script("return document.documentElement.outerHTML")
-            response_text = page_source
-
-            with open(filename, "w", encoding="utf-8") as file:
-                file.write(response_text)
-
-            print(f"Response stored: {filename}")
-            driver.quit()
-            return True
-        else:
-            # Invalid URL scheme
-            print(f"Invalid URL scheme for domain: {domain}")
-            return False
-    except Exception as e:
-        print(f"Failed to request website: {domain} ({str(e)})")
-        with open(f"{str(type(e).__name__)}.txt", "a") as file:
-            file.write(domain + "\n")
-        return False
-
+#
+# def store_response(domain):
+#     sdomain = urlparse(domain).netloc
+#     filename = f"./response/{sdomain}.txt"
+#     if os.path.isfile(filename):
+#         print(f"File already exists: {filename}")
+#         # Check if the file contains "ICP备案"
+#         with open(filename, "r", encoding="utf-8") as file:
+#             file_content = file.read()
+#             if "ICP备" in file_content or "icp" in file_content or "ICP" in file_content:
+#                 print(f"File contains 'ICP备案': {filename}")
+#                 return True
+#             else:
+#                 print(f"File does not contain 'ICP备案': {filename}")
+#     try:
+#         options = Options()
+#         options.add_argument("--headless")  # Run Chrome in headless mode
+#         options.add_argument("--no-sandbox")
+#         options.add_argument("--disable-dev-shm-usage")
+#
+#         driver = webdriver.Chrome(options=options)  # Provide the path to your Chrome driver executable
+#         # Check the URL scheme
+#         if domain.startswith("http://") or domain.startswith("https://"):
+#             driver.get(domain)
+#             sleep(6)
+#             # Find the <html> element and get its text
+#             page_source = driver.execute_script("return document.documentElement.outerHTML")
+#             response_text = page_source
+#
+#             with open(filename, "w", encoding="utf-8") as file:
+#                 file.write(response_text)
+#
+#             print(f"Response stored: {filename}")
+#             driver.quit()
+#             return True
+#         else:
+#             # Invalid URL scheme
+#             print(f"Invalid URL scheme for domain: {domain}")
+#             return False
+#     except Exception as e:
+#         print(f"Failed to request website: {domain} ({str(e)})")
+#         with open(f"{str(type(e).__name__)}.txt", "a") as file:
+#             file.write(domain + "\n")
+#         return False
+#
 
 def save_failed_domains(failed_domains):
     with open('failed_domains.txt', 'w', encoding="utf-8") as file:

@@ -27,7 +27,7 @@ font_prop = FontProperties(fname=font_path)
 plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
 matplotlib.rcParams['font.family'] = 'Microsoft YaHei'
 
-sns.set(style="whitegrid")
+sns.set(style="white")
 
 import requests
 
@@ -238,9 +238,17 @@ def geospatial_analysis(nameservers, province_dir, output_dir):
     }
 
     # 创建地图
-    m = folium.Map(location=[35, 105], zoom_start=5,
-                   tiles='http://webst02.is.autonavi.com/appmaptile?lang=en&size=1&scale=1&style=7&x={x}&y={y}&z={z}',
-                   attr='default')
+    m = folium.Map(location=[35, 105], zoom_start=5, control_scale=True)
+    # 添加 GeoJSON 图层
+    china_geojson = "./china.json"  # 请替换成包含中国边界的 GeoJSON 文件路径
+
+    with open(china_geojson, 'r', encoding='utf-8') as f:
+        geojson_data = json.load(f)
+
+    folium.GeoJson(
+        geojson_data,
+        name='geojson'
+    ).add_to(m)
 
     # Creating a dictionary to store MarkerClusters for each province
     province_clusters = defaultdict(MarkerCluster)
@@ -535,16 +543,54 @@ def process_province_statistics(class_directory, output_dir):
     # plt.savefig(os.path.join(output_dir, "total_status.png"))
     # plt.close()
     #
+    print(total_dnssec_counter)
+    print(total_registrar_counter)
+    print(total_status_counter)
+    print(total_name_server)
+    # 将 Counter 转换为普通字典
+    dnssec_dict = dict(total_dnssec_counter)
+    registrar_dict = dict(total_registrar_counter)
+    status_dict = dict(total_status_counter)
+
+    # 将字典保存到 JSON 文件
+    with open("counters.json", "w") as file:
+        json.dump({
+            'total_dnssec_counter': dnssec_dict,
+            'total_registrar_counter': registrar_dict,
+            'total_status_counter': status_dict
+        }, file)
+
+    print("Counters saved to JSON file.")
+
+    # 将列表保存到 JSON 文件
+    with open("total_name_server.json", "w") as file:
+        json.dump(total_name_server, file)
+
+    print("total_name_server saved to JSON file.")
+
     # # 生成并保存总体DNSSEC统计结果的条形图
     # plt.bar(total_dnssec_counter.keys(), total_dnssec_counter.values())
     # plt.title("Total DNSSEC Statistics")
     # plt.xlabel("DNSSEC")
     # plt.ylabel("Count")
-    # plt.xticks(rotation=45, ha="right")
+    # plt.xticks(rotation=0, ha="right")
     # plt.tight_layout()
     # plt.savefig(os.path.join(output_dir, "total_dnssec.png"))
     # plt.close()
-    geospatial_analysis(total_name_server, 'total', output_dir)
+    # geospatial_analysis(total_name_server, 'total', output_dir)
+    plt.bar(total_dnssec_counter.keys(), total_dnssec_counter.values())
+    plt.title("Total DNSSEC Statistics")
+    plt.xlabel("DNSSEC")
+    plt.ylabel("Count")
+    plt.xticks(rotation=0, ha="right")
+
+    # 在每个条形上方显示具体数值
+    for key, value in total_dnssec_counter.items():
+        plt.text(key, value + 0.1, str(value), ha='center', va='bottom')
+
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, "total_dnssec.png"), dpi=500)
+    plt.show()
 
 
 if __name__ == "__main__":

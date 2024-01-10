@@ -51,7 +51,6 @@ def parse_output(dns_output):
             if name == '.' or name == 'cn.' or name == 'com.':
                 continue
 
-
             records.append({
                 "Name": name,
                 "TTL": ttl,
@@ -74,7 +73,7 @@ def count_dns_records(url):
         # Use subprocess to call dig command
         try:
             # Basic query
-            output = subprocess.check_output(['dig', '+trace', '+noident', sdomain], text=True)
+            output = subprocess.check_output(['dig', '+noident', sdomain], text=True)
             parsed_output = parse_output(output)
             dns_info['records'] = parsed_output
             return dns_info
@@ -84,6 +83,9 @@ def count_dns_records(url):
 
 def process_txt_file(filename, directory):
     unit_name = filename.split('.txt')[0]
+    output_filename = f"./dns_records/{unit_name}.json"
+    if os.path.exists(output_filename):
+        return
     urls = []
     with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
         urls = file.readlines()
@@ -150,20 +152,24 @@ def main(directory):
 # Example usage
 # main('../domain_txt')
 
+
 # 示例用法
-# trace_output = subprocess.check_output(['dig', '+trace', '+noident', 'cgzf.sh.gov.cn'], text=True)
-# # print(trace_output)
+# trace_output = subprocess.check_output(
+#     ['dig', '+nocmd', '+nocomments', '+stats', '+noquestion', '+noident', 'cgzf.sh.gov.cn'], text=True)
+# print(trace_output)
+
+
 # parsed_trace_result = parse_output(trace_output)
 # print(parsed_trace_result)
 
 
-# dig: couldn't get address for 'dns2.dazhou.gov.cn': no more
 # dig: couldn't get address for 'dns1.dazhou.gov.cn': no more
 def extract_domain_part(value):
     # Extract the part between the last two dots
     parts = value.split('.')
     if len(parts) >= 3:
-        return parts[-3]+'.'+parts[-2]
+        return parts[-3] + '.' + parts[-2]
+
 
 def analyze_dns_data(json_data):
     # Filter records with Type "CNAME" and extract the desired domain part
@@ -196,42 +202,45 @@ def analyze_dns_data(json_data):
     with open('dns_analysis_results_sorted.json', 'w', encoding='utf-8') as json_output_file:
         json.dump(results, json_output_file, ensure_ascii=False, indent=4)
 
+
 def analyze_all():
     all_records = []
     for json_filename in os.listdir('./dns_records'):
         with open(f'./dns_records/{json_filename}', 'r', encoding='utf-8') as json_file:
             json_data = json.load(json_file)
             all_records.extend(json_data)  # Use extend to add records from the list
+    print(len(all_records))
     analyze_dns_data(all_records)
 
     return all_records
 
-analyze_all()
+#
+# analyze_all()
 
 
-map = {
-    'qaxcloudwaf.com':'Qi-Anxin Legendsec Information Technology (Beijing) Inc.',
-    '365cyd.cn':'Beijing Knownsec Information Technology Co., Ltd.',
-    'saaswaf.com':'Hangzhou Dbappsecurity Co., Ltd.',
-    'glvs.com':'eName Technology Co., Ltd',
-    'gov.cn':'China Government Self-Operated',
-    'v6lvs.com':'Fujian Wanwu Yilian Network Technology Co., Ltd.',
-    'wswebpic.com':'Wangsu Technology Co., Ltd. Beijing Branch',
-    'jiashule.com':'Beijing Knownsec Information Technology Co., Ltd.',
-    'rednetdns.com':'Changsha Zhiwei Information Technology Co.,Ltd.',
-    'jiasule.org':'Beijing Knownsec Information Technology Co., Ltd.',
-    'damddos.com':'China Telecom Corporation Limited Network Security Product Operation Center',
-    'wsssec.com':'Wangsu Science&Technology Co.,Ltd.',
-    'jx163-cname.com':'Zhongqi Power Technology Co.,Ltd.',
-    'icloudv6.com':'Yundun Intelligent Security Technology Co., Ltd.',
-    'allsafeip.com':"Shenzhen Zhi'an Network Co., Ltd.",
-    'cdnhwc1.com':'Huawei Cloud Computing Technologies Co., Ltd.',
-    'icloudwaf.com':'Yundun Intelligent Security Technology Co., Ltd.',
-    'bsgslb.cn':'Beijing Baishanyun Technology Co.,Ltd.',
-    'nelcisp.cn':'THE THIRD RESEARCH INSTITUTE OF THE MINISTRY OF PUBLIC SECURITY',
-    'xfsec.net':"Xi'an Xunfeng Technology Co., Ltd.",
-    'ctdns.cn':'Tianyi Cloud Technology Co., Ltd.',
-    '360panyun.com':'Tianjin 360 Security Technology Co., Ltd.',
+company_map = {
+    'qaxcloudwaf.com': 'Qi-Anxin Legendsec Information Technology (Beijing) Inc.',
+    '365cyd.cn': 'Beijing Knownsec Information Technology Co., Ltd.',
+    'saaswaf.com': 'Hangzhou Dbappsecurity Co., Ltd.',
+    'glvs.com': 'eName Technology Co., Ltd',
+    'gov.cn': 'China Government Self-Operated',
+    'v6lvs.com': 'Fujian Wanwu Yilian Network Technology Co., Ltd.',
+    'wswebpic.com': 'Wangsu Technology Co., Ltd. Beijing Branch',
+    'jiashule.com': 'Beijing Knownsec Information Technology Co., Ltd.',
+    'rednetdns.com': 'Changsha Zhiwei Information Technology Co.,Ltd.',
+    'jiasule.org': 'Beijing Knownsec Information Technology Co., Ltd.',
+    'damddos.com': 'China Telecom Corporation Limited Network Security Product Operation Center',
+    'wsssec.com': 'Wangsu Science&Technology Co.,Ltd.',
+    'jx163-cname.com': 'Zhongqi Power Technology Co.,Ltd.',
+    'icloudv6.com': 'Yundun Intelligent Security Technology Co., Ltd.',
+    'allsafeip.com': "Shenzhen Zhi'an Network Co., Ltd.",
+    'cdnhwc1.com': 'Huawei Cloud Computing Technologies Co., Ltd.',
+    'icloudwaf.com': 'Yundun Intelligent Security Technology Co., Ltd.',
+    'bsgslb.cn': 'Beijing Baishanyun Technology Co.,Ltd.',
+    'nelcisp.cn': 'THE THIRD RESEARCH INSTITUTE OF THE MINISTRY OF PUBLIC SECURITY',
+    'xfsec.net': "Xi'an Xunfeng Technology Co., Ltd.",
+    'ctdns.cn': 'Tianyi Cloud Technology Co., Ltd.',
+    '360panyun.com': 'Tianjin 360 Security Technology Co., Ltd.',
     'ctacdn.cn': 'Tianyi Cloud Technology Co., Ltd.',
     'aicdn.com': 'Hangzhou Dianzhilian Technology Co., Ltd.',
     'cdn30.com': 'Wangsu Science&Technology Co.,Ltd.',
@@ -264,7 +273,7 @@ map = {
     'wsglb0.com': 'Wangsu Science&Technology Co.,Ltd.',
     'wscvip.cn': 'Wangsu Science&Technology Co.,Ltd.',
     'ctadns.cn': 'Tianyi Cloud Technology Co., Ltd.',
-    'yunduncdns.com,': 'Shanghai Yundun Information Technology Co., Ltd.',
+    'yunduncdns.com': 'Shanghai Yundun Information Technology Co., Ltd.',
     'wjgslb.com': 'Shenzhen Wangjuyunlian Technology Co., Ltd.',
     'jcloudgslb.com': 'Beijing Jingdong 360 Degree Electric Commerce Co., Ltd.',
     'igtm-c101.com': 'DNSPod,Inc.',
@@ -314,5 +323,339 @@ map = {
     'upln.cn': 'China Medical University',
     'gotoip4.com': '***Personal***',
     'datasky360.cn': 'Beijing Hongtu Jiadu Communication Equipment Co.,Ltd.',
-    'cdn300.cn': 'Zhongqi Power Technology Co.,Ltd.'
+    'cdn300.cn': 'Zhongqi Power Technology Co.,Ltd.',
 }
+
+# data = {
+#     "qaxcloudwaf.com": 722,
+#     "365cyd.cn": 657,
+#     "saaswaf.com": 966,
+#     "glvs.com": 409,
+#     "gov.cn": 238,
+#     "v6lvs.com": 222,
+#     "wswebpic.com": 175,
+#     "jiashule.com": 159,
+#     "rednetdns.com": 140,
+#     "jiasule.org": 140,
+#     "damddos.com": 120,
+#     "wsssec.com": 95,
+#     "jx163-cname.com": 81,
+#     "icloudv6.com": 76,
+#     "allsafeip.com": 68,
+#     "cdnhwc1.com": 65,
+#     "icloudwaf.com": 53,
+#     "bsgslb.cn": 53,
+#     "nelcisp.cn": 52,
+#     "xfsec.net": 52,
+#     "ctdns.cn": 51,
+#     "360panyun.com": 50,
+#     "ctacdn.cn": 50,
+#     "aicdn.com": 47,
+#     "cdn30.com": 46,
+#     "wswebcdn.com": 42,
+#     "bzwaf.com": 40,
+#     "ddnsec.cn": 38,
+#     "chinamobile.com": 20,
+#     "qaxanyuv6.com": 19,
+#     "bsclink.cn": 18,
+#     "cmecloud.cn": 16,
+#     "yunduncname.com": 15,
+#     "zwyfh.cn": 14,
+#     "qtlcdn.com": 13,
+#     "trpcdn.net": 12,
+#     "igtm-b101.com": 10,
+#     "bdydns.com": 9,
+#     "yjs-cdn.com": 9,
+#     "pywqdns.cn": 9,
+#     "kunlunaq.com": 8,
+#     "sangfordns.com": 8,
+#     "igtm-d101.com": 8,
+#     "igtm-a101.com": 8,
+#     "igtm-e101.com": 8,
+#     "cdn20.com": 7,
+#     "nscloudwaf.com": 7,
+#     "kunlunca.com": 6,
+#     "kunluncan.com": 6,
+#     "hwwsdns.cn": 6,
+#     "jdcloudwaf.com": 6,
+#     "wsglb0.com": 5,
+#     "wscvip.cn": 5,
+#     "ctadns.cn": 5,
+#     "yunduncdns.com": 5,
+#     "wjgslb.com": 4,
+#     "jcloudgslb.com": 4,
+#     "igtm-c101.com": 4,
+#     "racetec.cn": 3,
+#     "com.cn": 3,
+#     "dolfincdnx.com": 3,
+#     "aliyunddos1026.com": 3,
+#     "yundunwaf5.com": 3,
+#     "cmictonecity.cn": 3,
+#     "qcloudzygj.com": 3,
+#     "wscdns.com": 3,
+#     "7cname.com": 3,
+#     "xacnnic.com": 3,
+#     "cas.cn": 2,
+#     "huaweicloudwaf.com": 2,
+#     "cdnhwc8.cn": 2,
+#     "sfndns.cn": 2,
+#     "yunjiasu-cdn.net": 2,
+#     "kunlungr.com": 2,
+#     "dayugslb.com": 2,
+#     "gotocdn.com": 2,
+#     "cugslb.cn": 2,
+#     "cdnhwc9.com": 2,
+#     "t-0p.cn": 2,
+#     "yundunwaf4.com": 2,
+#     "jx163.com": 2,
+#     "thefastcdns.com": 2,
+#     "kunlunpi.com": 1,
+#     "gfcname.com": 1,
+#     "ioiosafe.com": 1,
+#     "cmccsecuritywaf.cn": 1,
+#     "technames.com": 1,
+#     "yundunwaf1.com": 1,
+#     "yundunwaf2.com": 1,
+#     "faipod.com": 1,
+#     "wsdvs.com": 1,
+#     "jiexidizhi.top": 1,
+#     "365960.com": 1,
+#     "tongdanet.com": 1,
+#     "kld.wang": 1,
+#     "cloudvhost.cn": 1,
+#     "yundunwaf3.com": 1,
+#     "bestv6.com": 1,
+#     "17986.net": 1,
+#     "hcnamecdns.com": 1,
+#     "mcnamedns.com": 1,
+#     "upln.cn": 1,
+#     "gotoip4.com": 1,
+#     "datasky360.cn": 1,
+#     "cdn300.cn": 1
+# }
+data = {
+    "saaswaf.com": 966,
+    "qaxcloudwaf.com": 694,
+    "v6lvs.com": 633,
+    "365cyd.cn": 589,
+    "glvs.com": 407,
+    "gov.cn": 264,
+    "dbappwaf.cn": 190,
+    "allsafeip.com": 140,
+    "rednetdns.com": 133,
+    "damddos.com": 131,
+    "wswebpic.com": 117,
+    "jiashule.com": 115,
+    "wsssec.com": 94,
+    "aicdn.com": 91,
+    "jiasule.org": 90,
+    "icloudv6.com": 82,
+    "wswebcdn.com": 77,
+    "jx163-cname.com": 77,
+    "cdn20.com": 65,
+    "cdnhwc1.com": 65,
+    "360panyun.com": 61,
+    "bdydns.com": 61,
+    "jomodns.com": 61,
+    "ctacdn.cn": 52,
+    "nelcisp.cn": 52,
+    "xfsec.net": 52,
+    "ctdns.cn": 51,
+    "bsgslb.cn": 50,
+    "chinamobile.com": 50,
+    "icloudwaf.com": 49,
+    "cdn30.com": 44,
+    "bzwaf.com": 40,
+    "ddnsec.cn": 40,
+    "cloudcsp.com": 23,
+    "bsclink.cn": 18,
+    "cmecloud.cn": 18,
+    "pywqdns.cn": 17,
+    "qaxanyuv6.com": 16,
+    "yunduncname.com": 15,
+    "qtlcdn.com": 13,
+    "yjs-cdn.com": 10,
+    "trpcdn.net": 10,
+    "igtm-b101.com": 10,
+    "kunlunaq.com": 9,
+    "igtm-d101.com": 8,
+    "igtm-a101.com": 8,
+    "igtm-e101.com": 8,
+    "cdnhwcpsd13.com": 7,
+    "cdnhwcprh113.com": 7,
+    "ctadns.cn": 7,
+    "kunluncan.com": 6,
+    "jdcloudwaf.com": 6,
+    "yunduncdns.com": 5,
+    "kunlunca.com": 4,
+    "qcloudzygj.com": 4,
+    "hwwsdns.cn": 4,
+    "igtm-c101.com": 4,
+    "kunlunpi.com": 3,
+    "huaweicloudwaf.com": 3,
+    "wsglb0.com": 3,
+    "racetec.cn": 3,
+    "sangfordns.com": 3,
+    "nscloudwaf.com": 3,
+    "xacnnic.com": 3,
+    "ioiosafe.com": 2,
+    "yunjiasu-cdn.net": 2,
+    "qcloudwzgj.com": 2,
+    "wjgslb.com": 2,
+    "vvipcdn.com": 2,
+    "wscvip.cn": 2,
+    "dolfincdnx.com": 2,
+    "jcloudgslb.com": 2,
+    "jx163.com": 2,
+    "thefastcdns.com": 2,
+    "qcloudcdn.cn": 2,
+    "tdnsv12.com": 2,
+    "7cname.com": 2,
+    "cdnhwc2.com": 2,
+    "cmictonecity.cn": 2,
+    "cdngslb.com": 1,
+    "gfcname.com": 1,
+    "yundunwaf5.com": 1,
+    "cmccsecuritywaf.cn": 1,
+    "aliyunddos1026.com": 1,
+    "alikunlun.com": 1,
+    "queniuqy.com": 1,
+    "com.cn": 1,
+    "tdnsstic1.cn": 1,
+    "ho-wan.cn": 1,
+    "cdnhwc8.cn": 1,
+    "cdnhwcibv122.com": 1,
+    "cd23f.com": 1,
+    "kunlungr.com": 1,
+    "dayugslb.com": 1,
+    "cugslb.cn": 1,
+    "cdnhwc9.com": 1,
+    "cdnhwctnm107.com": 1,
+    "cas.cn": 1,
+    "wscdns.com": 1,
+    "cdnhwcbqs106.com": 1,
+    "sfndns.cn": 1,
+    "yourpage.cn": 1,
+    "t-0p.cn": 1,
+    "technames.com": 1,
+    "yundunwaf1.com": 1,
+    "yundunwaf4.com": 1,
+    "faipod.com": 1,
+    "ourwscs.cn": 1,
+    "wsdvs.com": 1,
+    "jiexidizhi.top": 1,
+    "365960.com": 1,
+    "tongdanet.com": 1,
+    "kld.wang": 1,
+    "cloudvhost.cn": 1,
+    "yundunwaf3.com": 1,
+    "bestv6.com": 1,
+    "17986.net": 1,
+    "hcnamecdns.com": 1,
+    "mcnamedns.com": 1,
+    "upln.cn": 1,
+    "gotoip4.com": 1,
+    "abc188.com": 1,
+    "vhostgo.com": 1,
+    "datasky360.cn": 1
+}
+#
+# 柱状图    数字
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+# import pandas as pd
+#
+# # Create a DataFrame
+# df = pd.DataFrame(list(company_map.items()), columns=['Company', 'Company Name'])
+# df['Domain Count'] = df['Company'].map(data.get)  # Use get method with a default value of 0
+#
+# # Sort DataFrame by Domain Count in descending order
+# df = df.sort_values(by='Domain Count', ascending=False).reset_index(drop=True)
+#
+# # Save to Excel
+# df.to_excel('company_data.xlsx', index=False)
+#
+# # Take only the top 20 companies
+# df_top20 = df.head(20)
+#
+# # Set Seaborn style
+# sns.set(style="whitegrid")
+#
+# # Plot the bar chart for the top 20 companies
+# plt.figure(figsize=(12, 8), dpi=500)
+# ax = sns.barplot(x=df_top20.index+ 1, y='Domain Count', data=df_top20, palette="viridis")
+#
+# # Customize the plot
+# plt.xlabel('Company Index', fontsize=14)
+# plt.ylabel('Domain Counts', fontsize=14)
+# plt.title('Domain Counts per Company (Top 20)', fontsize=16)
+# plt.xticks(rotation=0, ha='right', fontsize=10)
+# plt.yticks(fontsize=12)
+#
+# # Add data labels
+# for p in ax.patches:
+#     ax.annotate(f'{int(p.get_height())}', (p.get_x() + p.get_width() / 2., p.get_height()),
+#                 ha='center', va='center', fontsize=8, color='black', xytext=(0, 5),
+#                 textcoords='offset points')
+#
+# # Show the plot
+# plt.tight_layout()
+# plt.show()
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+from matplotlib.ticker import FuncFormatter
+
+# Create a DataFrame
+df = pd.DataFrame(list(company_map.items()), columns=['Company', 'Company Name'])
+df['Domain Count'] = df['Company'].map(data.get)  # Use get method with a default value of 0
+
+# Sort DataFrame by Domain Count in descending order
+df = df.sort_values(by='Domain Count', ascending=False).reset_index(drop=True)
+
+# Save to Excel
+df.to_excel('company_data.xlsx', index=False)
+
+# Take only the top 20 companies
+df_top20 = df.head(20)
+
+# Set Seaborn style
+sns.set(style="white")
+
+# Define a function for formatting y-axis labels as percentages
+def percentage_formatter(x, pos):
+    return f'{(x / 5705) * 100:.2f}%'
+
+# Define a function for adding percentage labels above each bar
+def add_percentage_labels(ax):
+    for p in ax.patches:
+        height = p.get_height()
+        ax.annotate(f'{height / 5705 * 100:.2f}%',
+                    (p.get_x() + p.get_width() / 2., height),
+                    ha='center', va='center', fontsize=8, color='black', xytext=(0, 5),
+                    textcoords='offset points')
+
+# Create the formatter
+formatter = FuncFormatter(percentage_formatter)
+
+# Plot the bar chart for the top 20 companies
+plt.figure(figsize=(12, 8), dpi=500)
+ax = sns.barplot(x=df_top20.index + 1, y='Domain Count', data=df_top20, palette="viridis")
+
+# Set y-axis label format
+ax.yaxis.set_major_formatter(formatter)
+
+# Customize the plot
+plt.xlabel('Company Index', fontsize=14)
+plt.ylabel('Domain Counts (%)', fontsize=14)
+plt.title('Domain Counts per Company (Top 20)', fontsize=16)
+plt.xticks(rotation=0, ha='right', fontsize=10)
+plt.yticks(fontsize=12)
+
+# Add data labels above each bar
+add_percentage_labels(ax)
+
+# Show the plot
+plt.tight_layout()
+plt.show()

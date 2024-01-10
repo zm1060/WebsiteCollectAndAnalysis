@@ -21,15 +21,15 @@ target_audits = [
     "uses-passive-event-listeners",
     "is-crawlable",
     "robots-txt",
-    "paste-preventing-inputs",
     "meta-viewport",  # very important for mobile user!
     "content-width",  # mobile user
     "viewport",       # mobile user
     "link-name",
+    "paste-preventing-inputs",
+    "interactive",
     "unsized-images",
     "font-display",
     "redirects",
-    "interactive",
     "total-blocking-time",
     "max-potential-fid",
     "first-contentful-paint",

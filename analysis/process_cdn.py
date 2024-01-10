@@ -7,7 +7,8 @@ def process_cdn_file(file_path):
         lines = file.readlines()
 
     # 过滤掉不需要的行
-    filtered_lines = [line for line in lines if not line.startswith(('服务器:', 'Address:'))]
+    filtered_lines = [line for line in lines if not line.startswith(('服务器:  UnKnown', 'Address:  172.26.26.3'))]
+    filtered_lines = [line.replace('Address:', 'Addresses:') for line in filtered_lines]
 
     # 组织成JSON格式
     data = []
@@ -23,12 +24,19 @@ def process_cdn_file(file_path):
             if current_entry:
                 data.append(current_entry)
             current_entry = {'Name': line.split(':')[1].strip(), 'Addresses': [], 'Aliases': []}
+            if line.split(':')[1].strip() == 'xy.mdj.gov.cn':
+                print('I am going')
         elif line.startswith('Addresses:'):
             # Extract addresses from the current line and subsequent lines
             addresses = []
             while line.startswith('Addresses:') or not line.strip():
-                address_part = line.split('Addresses:')[1].strip()
-                addresses.extend(addr.strip() for addr in address_part.split())
+                if 'Addresses:' in line:
+                    address_part = line.split('Addresses:')[1].strip()
+                    addresses.extend(addr.strip() for addr in address_part.split())
+                # print(address_part)
+                if address_part == '218.10.148.62':
+                    print('***********')
+
                 line_index += 1
                 if line_index < total_lines:
                     line = filtered_lines[line_index]
@@ -49,9 +57,9 @@ def process_cdn_file(file_path):
                     else:
                         break
                 else:
-                    print('befor: ', filtered_lines[line_index])
-                    line_index -= 1
-                    print('after: ', filtered_lines[line_index])
+                    # print('befor: ', filtered_lines[line_index])
+                    # line_index -= 1
+                    # print('after: ', filtered_lines[line_index])
                     break
             current_entry['Addresses'].extend(addresses)
         elif line.startswith('Aliases:'):
