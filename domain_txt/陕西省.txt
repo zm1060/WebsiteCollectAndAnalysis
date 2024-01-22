@@ -33,7 +33,7 @@ http://wwj.shaanxi.gov.cn
 http://sxssljsglj.shaanxi.gov.cn/
 http://gat.shaanxi.gov.cn/
 http://sthjt.shaanxi.gov.cn
-rst.shaanxi.gov.cn
+http://rst.shaanxi.gov.cn
 http://jyt.shaanxi.gov.cn/
 http://sft.shaanxi.gov.cn
 http://sn.119.gov.cn/
@@ -83,16 +83,16 @@ http://gxj.xa.gov.cn
 http://dzj.xa.gov.cn
 http://wlj.xa.gov.cn
 http://zjj.xa.gov.cn/
-xacg.xa.gov.cn
+http://xacg.xa.gov.cn
 http://scjg.xa.gov.cn
 http://xapta.xa.gov.cn
 http://wwj.xa.gov.cn/
-zfgjj.xa.gov.cn
-jrgzj.xa.gov.cn
+http://zfgjj.xa.gov.cn
+http://jrgzj.xa.gov.cn
 http://itl.xa.gov.cn/
 http://gzw.xa.gov.cn
 http://qjxq.xa.gov.cn/
-zygh.xa.gov.cn
+http://zygh.xa.gov.cn
 http://cbe.xa.gov.cn
 http://xasj.xa.gov.cn
 http://nyncj.xa.gov.cn
@@ -116,7 +116,7 @@ http://www.beilin.gov.cn
 http://www.lianhu.gov.cn
 http://www.baqiao.gov.cn/
 http://www.weiyang.gov.cn
-www.yanta.gov.cn
+http://www.yanta.gov.cn
 http://www.yanliang.gov.cn/
 http://www.lintong.gov.cn
 http://www.changanqu.gov.cn
@@ -258,7 +258,7 @@ http://wlj.weinan.gov.cn
 http://rfb.weinan.gov.cn
 http://czj.weinan.gov.cn
 http://scjgj.weinan.gov.cn
-sjj.weinan.gov.cn
+http://sjj.weinan.gov.cn
 http://tjj.weinan.gov.cn/
 http://jyj.weinan.gov.cn/
 http://nyncj.weinan.gov.cn/
@@ -476,7 +476,7 @@ http://zjj.ankang.gov.cn/
 http://gaj.ankang.gov.cn/
 http://fgw.ankang.gov.cn
 http://sjj.ankang.gov.cn/
-gsj.ankang.gov.cn/
+http://gsj.ankang.gov.cn/
 http://zs.ankang.gov.cn/
 http://www.sxakhidz.gov.cn/
 http://jtj.ankang.gov.cn/
@@ -499,7 +499,7 @@ http://rsj.ankang.gov.cn/
 http://xczx.ankang.gov.cn/
 http://fzb.ankang.gov.cn/
 http://wsjd.ankang.gov.cn
-jyj.ankang.gov.cn
+http://jyj.ankang.gov.cn
 http://sc.ankang.gov.cn/
 http://gjj.ankang.gov.cn
 http://credit.ankang.gov.cn

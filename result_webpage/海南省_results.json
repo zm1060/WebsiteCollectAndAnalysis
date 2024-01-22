@@ -1,0 +1,1227 @@
+{
+    "active_url_count": 122,
+    "dead_url_count": 0,
+    "total_url_count": 122,
+    "domains": [
+        {
+            "domain": "http://www.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.079668
+            }
+        },
+        {
+            "domain": "http://jt.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.324945
+            }
+        },
+        {
+            "domain": "http://mz.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.263069
+            }
+        },
+        {
+            "domain": "http://zjt.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.210619
+            }
+        },
+        {
+            "domain": "http://iitb.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.183435
+            }
+        },
+        {
+            "domain": "http://audit.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.47462
+            }
+        },
+        {
+            "domain": "http://edu.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.796991
+            }
+        },
+        {
+            "domain": "http://yangpu.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.537233
+            }
+        },
+        {
+            "domain": "http://lwt.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.801224
+            }
+        },
+        {
+            "domain": "http://yjglt.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.818122
+            }
+        },
+        {
+            "domain": "http://mof.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.721063
+            }
+        },
+        {
+            "domain": "http://gxs.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.534347
+            }
+        },
+        {
+            "domain": "http://smzw.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.860106
+            }
+        },
+        {
+            "domain": "http://hnsthb.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.172154
+            }
+        },
+        {
+            "domain": "http://dost.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.640468
+            }
+        },
+        {
+            "domain": "http://ga.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.221567
+            }
+        },
+        {
+            "domain": "http://geo.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.344883
+            }
+        },
+        {
+            "domain": "http://justice.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.759226
+            }
+        },
+        {
+            "domain": "http://fpb.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.462106
+            }
+        },
+        {
+            "domain": "http://lr.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.152968
+            }
+        },
+        {
+            "domain": "http://gzw.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.700741
+            }
+        },
+        {
+            "domain": "http://swt.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.237984
+            }
+        },
+        {
+            "domain": "http://dfoca.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.750698
+            }
+        },
+        {
+            "domain": "http://plan.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.197913
+            }
+        },
+        {
+            "domain": "http://xyhn.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.244428
+            }
+        },
+        {
+            "domain": "http://tyt.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.261326
+            }
+        },
+        {
+            "domain": "http://stats.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.089926
+            }
+        },
+        {
+            "domain": "http://hrss.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.217624
+            }
+        },
+        {
+            "domain": "http://gxq.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.233031
+            }
+        },
+        {
+            "domain": "http://gjj.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.23088
+            }
+        },
+        {
+            "domain": "http://jrj.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.308304
+            }
+        },
+        {
+            "domain": "https://hnsbyb.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.383788
+            }
+        },
+        {
+            "domain": "http://kgxj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.272098
+            }
+        },
+        {
+            "domain": "http://hkjsj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.312432
+            }
+        },
+        {
+            "domain": "http://wst.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.166179
+            }
+        },
+        {
+            "domain": "http://sthb.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.31375
+            }
+        },
+        {
+            "domain": "http://ftz.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.310809
+            }
+        },
+        {
+            "domain": "http://lwj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.282275
+            }
+        },
+        {
+            "domain": "https://wssp.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.352498
+            }
+        },
+        {
+            "domain": "http://lyj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.281064
+            }
+        },
+        {
+            "domain": "http://lyj.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.502733
+            }
+        },
+        {
+            "domain": "http://www.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.293609
+            }
+        },
+        {
+            "domain": "http://hksmz.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.29131
+            }
+        },
+        {
+            "domain": "http://rsj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.424031
+            }
+        },
+        {
+            "domain": "http://nyj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.380809
+            }
+        },
+        {
+            "domain": "http://zzgj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.472382
+            }
+        },
+        {
+            "domain": "http://ybj.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.551713
+            }
+        },
+        {
+            "domain": "http://dofcom.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.541307
+            }
+        },
+        {
+            "domain": "http://jyj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.523113
+            }
+        },
+        {
+            "domain": "http://tjj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.504996
+            }
+        },
+        {
+            "domain": "http://sfj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.481773
+            }
+        },
+        {
+            "domain": "http://drc.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.512397
+            }
+        },
+        {
+            "domain": "http://amr.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.607095
+            }
+        },
+        {
+            "domain": "http://jtj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.544804
+            }
+        },
+        {
+            "domain": "http://sjj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.59771
+            }
+        },
+        {
+            "domain": "http://wjw.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.628776
+            }
+        },
+        {
+            "domain": "http://db.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.731443
+            }
+        },
+        {
+            "domain": "http://hkgxs.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.663509
+            }
+        },
+        {
+            "domain": "http://sczj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.742755
+            }
+        },
+        {
+            "domain": "http://swj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.725745
+            }
+        },
+        {
+            "domain": "http://hkcg.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.747705
+            }
+        },
+        {
+            "domain": "http://daj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.747516
+            }
+        },
+        {
+            "domain": "http://police.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.741699
+            }
+        },
+        {
+            "domain": "http://zffwzx.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.693633
+            }
+        },
+        {
+            "domain": "http://hksw.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.775221
+            }
+        },
+        {
+            "domain": "http://gzw.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.701595
+            }
+        },
+        {
+            "domain": "http://amr.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.721907
+            }
+        },
+        {
+            "domain": "http://ybj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.787562
+            }
+        },
+        {
+            "domain": "http://yjglj.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.741273
+            }
+        },
+        {
+            "domain": "http://hksylhw.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.851734
+            }
+        },
+        {
+            "domain": "http://fpb.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.822995
+            }
+        },
+        {
+            "domain": "http://xyhk.dn.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.904984
+            }
+        },
+        {
+            "domain": "http://tyjr.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.89782
+            }
+        },
+        {
+            "domain": "http://xyqzf.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.918283
+            }
+        },
+        {
+            "domain": "http://lhqzf.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.885125
+            }
+        },
+        {
+            "domain": "http://qsqzf.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.897188
+            }
+        },
+        {
+            "domain": "http://mlqzf.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.853113
+            }
+        },
+        {
+            "domain": "http://jdxq.haikou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.158267
+            }
+        },
+        {
+            "domain": "http://hrss.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.985616
+            }
+        },
+        {
+            "domain": "http://lyj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.067243
+            }
+        },
+        {
+            "domain": "http://jt.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.021903
+            }
+        },
+        {
+            "domain": "http://ny.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.024595
+            }
+        },
+        {
+            "domain": "http://xzzf.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.074468
+            }
+        },
+        {
+            "domain": "http://zwzx.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.130871
+            }
+        },
+        {
+            "domain": "http://edu.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.13592
+            }
+        },
+        {
+            "domain": "http://swj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.153647
+            }
+        },
+        {
+            "domain": "http://tjj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.124884
+            }
+        },
+        {
+            "domain": "http://ws.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.19612
+            }
+        },
+        {
+            "domain": "http://mof.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.101232
+            }
+        },
+        {
+            "domain": "http://gaj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.114295
+            }
+        },
+        {
+            "domain": "http://fg.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.096892
+            }
+        },
+        {
+            "domain": "http://www.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.023851
+            }
+        },
+        {
+            "domain": "http://hbj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.967696
+            }
+        },
+        {
+            "domain": "http://sj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.001691
+            }
+        },
+        {
+            "domain": "http://zj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.960429
+            }
+        },
+        {
+            "domain": "http://yz.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.85141
+            }
+        },
+        {
+            "domain": "http://lwj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.013926
+            }
+        },
+        {
+            "domain": "http://xysy.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.840588
+            }
+        },
+        {
+            "domain": "http://zgj.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.913086
+            }
+        },
+        {
+            "domain": "http://jy.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.877522
+            }
+        },
+        {
+            "domain": "http://syipb.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.848464
+            }
+        },
+        {
+            "domain": "http://ty.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.767729
+            }
+        },
+        {
+            "domain": "http://ht.sanya.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.818668
+            }
+        },
+        {
+            "domain": "http://xydz.danzhou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.645282
+            }
+        },
+        {
+            "domain": "http://www.sansha.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.729975
+            }
+        },
+        {
+            "domain": "http://lingao.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.551491
+            }
+        },
+        {
+            "domain": "http://wenchang.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.634325
+            }
+        },
+        {
+            "domain": "http://dongfang.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.529163
+            }
+        },
+        {
+            "domain": "http://lingshui.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.582886
+            }
+        },
+        {
+            "domain": "http://chengmai.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.525544
+            }
+        },
+        {
+            "domain": "http://qiongzhong.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.518505
+            }
+        },
+        {
+            "domain": "http://ledong.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.473273
+            }
+        },
+        {
+            "domain": "http://changjiang.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.54381
+            }
+        },
+        {
+            "domain": "http://baoting.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.430508
+            }
+        },
+        {
+            "domain": "http://wanning.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.079304
+            }
+        },
+        {
+            "domain": "http://dingan.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.080114
+            }
+        },
+        {
+            "domain": "http://www.danzhou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.080391
+            }
+        },
+        {
+            "domain": "http://tunchang.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.069761
+            }
+        },
+        {
+            "domain": "http://qionghai.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.742271
+            }
+        },
+        {
+            "domain": "http://baisha.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.077491
+            }
+        },
+        {
+            "domain": "http://wzs.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.720098
+            }
+        },
+        {
+            "domain": "http://agri.hainan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.098833
+            }
+        }
+    ]
+}

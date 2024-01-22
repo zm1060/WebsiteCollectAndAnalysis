@@ -1,81 +1,76 @@
 import json
-import os
-import ipaddress
+
+import matplotlib.pyplot as plt
+import pandas as pd
 
 
-count_cdn = 0
-all_data = []
-cdn_list = []
-ipv6_count = 0
-ipv4_count = 0
-both_count = 0
-none_count = 0
-for filename in os.listdir('cleaned_cdn'):
-    print(filename)
-    unit_name = filename.split('.json')[0]
-    unit_data = []
-    with open(f'./cleaned_cdn/{filename}', 'r', encoding='utf-8') as json_file:
-        unit_data = json.load(json_file)
-    for data in unit_data:
-        addresses = data['Addresses']
-        all_data.append(data)
-        if len(addresses) > 3:
-            is_cdn = True
-            # print(data['Name'] + ' use CDN!')
-            count_cdn += 1
-            # print(addresses)
-            cdn_list.append(data)
-        is_ipv6 = False
-        is_ipv4 = False
+def analye_nslookup_domain_and_ips():
+    data = {1: 607, 2: 9433, 3: 1509, 4: 1691, 5: 84, 6: 102, 7: 56, 8: 184, 9: 44, 10: 11, 12: 94, 15: 1, 18: 1, 19: 2,
+            20: 1, 22: 1}
+
+    # Create a DataFrame
+    df = pd.DataFrame(list(data.items()), columns=['Server Numbers', 'Domain Counts'])
+
+    # Calculate percentage
+    total_domains = df['Domain Counts'].sum()
+    df['Percentage'] = (df['Domain Counts'] / total_domains) * 100
+
+    # Define a custom sci-fi style color palette
+    sci_fi_palette = ['#00FFD4', '#FF00FF', '#FFA500', '#800080', '#00CED1', '#FF6347', '#4B0082', '#7FFFD4', '#8A2BE2',
+                      '#00FA9A', '#FFD700', '#FF4500', '#9932CC', '#FF1493', '#7FFF00', '#20B2AA']
+
+    # Plotting using Matplotlib bar chart with percentages and sci-fi style color palette
+    fig, ax1 = plt.subplots(figsize=(10, 6), dpi=500)
+    bars = ax1.bar(df['Server Numbers'], df['Domain Counts'], color=sci_fi_palette, width=1.0, )
+
+    # Add labels and title
+    ax1.set_xlabel('Server Numbers')
+    ax1.set_ylabel('Domain Counts', color='black')
+    # ax1.set_title('Distribution of Domain Counts across Server Numbers')
+
+    # Rotate x-axis labels for better readability
+    ax1.set_xticks(df['Server Numbers'])
+    ax1.set_xticklabels(df['Server Numbers'], rotation=45, ha='right')
+
+    # Create a second y-axis for percentages
+    ax2 = ax1.twinx()
+    ax2.set_ylabel('Percentage', color='black')
+    ax2.set_ylim(0, 100)
+
+    # Add percentages on top of the bars
+    for bar, percentage in zip(bars, df['Percentage']):
+        height = bar.get_height()
+        ax1.text(bar.get_x() + bar.get_width() / 2, height, f'{percentage:.2f}%', ha='center', va='bottom',
+                 color='black', fontsize=8)
+
+    plt.savefig('cdn_distribution_sci.png', dpi=500)
+    # Show the plot
+    plt.show()
+
+
+def is_ipv4(ip):
+    return ip.count('.') == 3
+
+
+def is_ipv6(ip):
+    return ip.count(':') == 7
+
+
+def analyze_4_and_6():
+    with open('./nslookup_info.json', 'r', encoding='utf-8') as f:
+        json_data = json.load(f)
+    ipv4_count = 0
+    ipv6_count = 0
+    for record in json_data:
+        addresses = record['Addresses']
         for address in addresses:
-            try:
-                ip = ipaddress.ip_address(address)
-                if ip.version == 6:
-                    is_ipv6 = True
-                if ip.version == 4:
-                    is_ipv4 = True
-
-            except ValueError:
-                print(f"{address}不是一个有效的IP地址.")
-        if is_ipv4 and is_ipv6:
-            both_count += 1
-        if is_ipv6 and not is_ipv4:
-            ipv6_count += 1
-            print(data)
-        if is_ipv4 and not is_ipv6:
-            ipv4_count += 1
-            print(data)
-        if not is_ipv4 and not is_ipv6:
-            none_count += 1
-            print("None: ", data)
-    with open('./use_cdn.json', 'w', encoding='utf-8') as write_file:
-        json.dump(cdn_list, write_file,  ensure_ascii=False, indent=None)
-
-print(len(all_data))
-# Deduplicating based on the 'Name' field
-unique_data = {}
-for item in all_data:
-    if item['Name'] not in unique_data:
-        unique_data[item['Name']] = item
-
-# Convert the dictionary back to a list
-deduplicated_data = list(unique_data.values())
-print(len(unique_data))
-
-print('CDN total: ', {count_cdn})
-print('IPV4 total: ', {ipv4_count})
-print('IPV6 total: ', {ipv6_count})
-print('Dual Stack total: ', {both_count})
-print('None IP: ', {none_count})
+            if is_ipv4(address):
+                ipv4_count += 1
+            if is_ipv6(address):
+                ipv6_count += 1
+                break
+    print(ipv4_count)
+    print(ipv6_count)
 
 
-'''
-    统计结果
-    13821
-    12795
-    CDN total:  {2137}
-    IPV4 total:  {710}
-    IPV6 total:  {161}
-    Dual Stack total:  {12950}
-    None IP:  {0}
-'''
+analyze_4_and_6()

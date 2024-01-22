@@ -347,8 +347,8 @@ http://www.ldxzf.gov.cn
 http://www.linxia.gov.cn
 http://jyj.linxia.gov.cn
 http://scjg.linxia.gov.cn
-rsj.linxia.gov.cn
-gaj.linxia.gov.cn
+http://rsj.linxia.gov.cn
+http://gaj.linxia.gov.cn
 http://wglj.linxia.gov.cn
 http://credit.linxia.gov.cn
 http://www.lxs.gov.cn

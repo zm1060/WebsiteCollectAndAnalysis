@@ -80,77 +80,142 @@
 #
 #
 # run_lighthouse_with_directory("../domain_txt")
+
+##########################################################################################
+# Actual run version
+##########################################################################################
+# import os
+# import subprocess
+# import concurrent.futures
+# from urllib.parse import urlparse
+# import time
+#
+#
+# def process_domain(domain):
+#     if not domain.startswith("http"):
+#         domain = "http://" + domain
+#
+#     parsed_url = urlparse(domain)
+#     base_url = parsed_url.scheme + "://" + parsed_url.netloc + parsed_url.path + parsed_url.query + parsed_url.fragment
+#     if not parsed_url.scheme or not parsed_url.netloc:
+#         return
+#     return base_url
+#
+#
+# def lighthouse_task(url, unit_name):
+#     try:
+#         sdomain = process_domain(url)
+#         dom = urlparse(sdomain).netloc
+#         if sdomain:
+#             all_domain.append(sdomain)
+#             print(sdomain)
+#             output_directory = f'./new_lighthouse/{unit_name}/'
+#             os.makedirs(output_directory, exist_ok=True)
+#             json_filename = f'./new_lighthouse/{unit_name}/{dom}.json'
+#
+#             if os.path.exists(json_filename):
+#                 return
+#
+#             command = f'lighthouse --quiet --no-update-notifier --no-enable-error-reporting --screenEmulation.disabled --output=json ' \
+#                       f'--output-path={json_filename} --chrome-flags="--headless" {sdomain}'
+#
+#             process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+#
+#             stdout, stderr = process.communicate(timeout=120)
+#
+#             if process.poll() is None:
+#                 process.terminate()
+#                 print("Process terminated due to timeout.")
+#             else:
+#                 print("Process completed.")
+#
+#             print("stdout:", stdout.decode())
+#             print("stderr:", stderr.decode())
+#
+#     except subprocess.TimeoutExpired:
+#         process.terminate()
+#         print("Process terminated due to timeout.")
+#     except Exception as e:
+#         print(str(e))
+#
+#
+# def run_lighthouse_with_directory(directory):
+#     global all_domain
+#     all_domain = []
+#
+#     with concurrent.futures.ThreadPoolExecutor() as executor:
+#         futures = []
+#         for filename in os.listdir(directory):
+#             if filename.endswith('.txt'):
+#                 unit_name = filename.split('.txt')[0]
+#                 urls = []
+#                 with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
+#                     urls = file.readlines()
+#                 futures.extend([executor.submit(lighthouse_task, url.strip(), unit_name) for url in urls])
+#
+#         concurrent.futures.wait(futures)
+#
+#
+# # 替换为你的目录路径
+# run_lighthouse_with_directory("../domain_txt")
+
+
+
 import os
 import subprocess
 import concurrent.futures
 from urllib.parse import urlparse
-import time
+from pathlib import Path
 
 
 def process_domain(domain):
-    if not domain.startswith("http"):
-        domain = "http://" + domain
-
     parsed_url = urlparse(domain)
-    base_url = parsed_url.scheme + "://" + parsed_url.netloc + parsed_url.path
-    if not parsed_url.scheme or not parsed_url.netloc:
-        return
-    return base_url
+    if parsed_url.scheme and parsed_url.netloc:
+        return parsed_url.geturl()  # Construct complete URL
 
 
 def lighthouse_task(url, unit_name):
     try:
         sdomain = process_domain(url)
-        dom = urlparse(sdomain).netloc
         if sdomain:
-            all_domain.append(sdomain)
-            print(sdomain)
-            output_directory = f'./lighthouse/{unit_name}/'
-            os.makedirs(output_directory, exist_ok=True)
-            json_filename = f'./lighthouse/{unit_name}/{dom}.json'
+            output_dir = Path(f'./new_lighthouse/{unit_name}')
+            output_dir.mkdir(parents=True, exist_ok=True)  # Create directory if needed
+            json_filename = output_dir / f'{urlparse(sdomain).netloc}.json'
 
-            if os.path.exists(json_filename):
-                return
+            if json_filename.exists():
+                return  # Skip if output already exists
 
-            command = f'lighthouse --quiet --no-update-notifier --no-enable-error-reporting --output=json ' \
-                      f'--output-path={json_filename} --chrome-flags="--headless" {sdomain}'
+            command = (
+                f'lighthouse --quiet --no-update-notifier --no-enable-error-reporting '
+                f'--screenEmulation.disabled --chrome-flags="--window-size=1,1" --output=json --output-path="{json_filename}" '
+                f'--chrome-flags="--headless" {sdomain}'
+            )
 
-            process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            process = subprocess.run(command, shell=True, capture_output=True, text=True, timeout=120)
 
-            stdout, stderr = process.communicate(timeout=120)
-
-            if process.poll() is None:
-                process.terminate()
-                print("Process terminated due to timeout.")
+            if process.returncode == 0:
+                print(f"Lighthouse completed for {sdomain}")
             else:
-                print("Process completed.")
-
-            print("stdout:", stdout.decode())
-            print("stderr:", stderr.decode())
+                print(f"Lighthouse failed for {sdomain}: {process.stderr}")
 
     except subprocess.TimeoutExpired:
-        process.terminate()
-        print("Process terminated due to timeout.")
+        print(f"Lighthouse timed out for {url}")
     except Exception as e:
-        print(str(e))
+        print(f"Error processing {url}: {str(e)}")
 
 
 def run_lighthouse_with_directory(directory):
-    global all_domain
-    all_domain = []
-
     with concurrent.futures.ThreadPoolExecutor() as executor:
         futures = []
         for filename in os.listdir(directory):
             if filename.endswith('.txt'):
                 unit_name = filename.split('.txt')[0]
-                urls = []
                 with open(os.path.join(directory, filename), 'r', encoding='utf-8') as file:
-                    urls = file.readlines()
-                futures.extend([executor.submit(lighthouse_task, url.strip(), unit_name) for url in urls])
+                    urls = [url.strip() for url in file.readlines()]
+                futures.extend(executor.submit(lighthouse_task, url, unit_name) for url in urls)
 
         concurrent.futures.wait(futures)
 
 
-# 替换为你的目录路径
+# Replace with your directory path
 run_lighthouse_with_directory("../domain_txt")

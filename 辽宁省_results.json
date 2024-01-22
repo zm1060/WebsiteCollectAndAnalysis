@@ -1,0 +1,5323 @@
+{
+    "active_url_count": 503,
+    "dead_url_count": 55,
+    "total_url_count": 558,
+    "domains": [
+        {
+            "domain": "https://jgsw.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 41.430448
+            }
+        },
+        {
+            "domain": "https://sft.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 41.493772
+            }
+        },
+        {
+            "domain": "wsb.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "nync.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "rfb.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "sthj.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "jtt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "lyt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "fgw.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "scjg.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "zjt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "rst.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "fpb.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "sjt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "tyj.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "zrzy.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "whly.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "zscq.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "https://ln.122.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.443194
+            }
+        },
+        {
+            "domain": "jyt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://ggzy.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.243883
+            }
+        },
+        {
+            "domain": "http://xyln.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.072978
+            }
+        },
+        {
+            "domain": "http://www.lntb.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.200939
+            }
+        },
+        {
+            "domain": "mzw.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "kjt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "https://tjj.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 40.725386
+            }
+        },
+        {
+            "domain": "https://gxt.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 40.605388
+            }
+        },
+        {
+            "domain": "jrjg.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "https://ypjg.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 40.86296
+            }
+        },
+        {
+            "domain": "https://mzt.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 40.555473
+            }
+        },
+        {
+            "domain": "http://www.lnzwfw.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.068298
+            }
+        },
+        {
+            "domain": "http://www.upln.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.230115
+            }
+        },
+        {
+            "domain": "http://sfggcxsfq.ln.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.262045
+            }
+        },
+        {
+            "domain": "http://www.lnxf.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.761223
+            }
+        },
+        {
+            "domain": "http://sjj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.174399
+            }
+        },
+        {
+            "domain": "http://zwfw.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.201479
+            }
+        },
+        {
+            "domain": "http://jyj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.119475
+            }
+        },
+        {
+            "domain": "http://sthjj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.389852
+            }
+        },
+        {
+            "domain": "http://ybj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.239255
+            }
+        },
+        {
+            "domain": "www.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "gat.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "www.sfxqzwfw.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "www.lnggzy.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "jyj.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "yjgl.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "slt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "gdj.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "czt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "wsjk.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "gxs.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "gzw.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://wjw.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.532982
+            }
+        },
+        {
+            "domain": "http://sbzx.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.734391
+            }
+        },
+        {
+            "domain": "http://tjj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.705401
+            }
+        },
+        {
+            "domain": "http://rsj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.923307
+            }
+        },
+        {
+            "domain": "http://szgyj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.726756
+            }
+        },
+        {
+            "domain": "http://kjj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.56647
+            }
+        },
+        {
+            "domain": "http://zfj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.403911
+            }
+        },
+        {
+            "domain": "http://jxw.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.686684
+            }
+        },
+        {
+            "domain": "http://rfb.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.373317
+            }
+        },
+        {
+            "domain": "http://czj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.413581
+            }
+        },
+        {
+            "domain": "http://jw.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.329575
+            }
+        },
+        {
+            "domain": "http://jrb.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.352111
+            }
+        },
+        {
+            "domain": "http://jtj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.590233
+            }
+        },
+        {
+            "domain": "http://nyncj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.531043
+            }
+        },
+        {
+            "domain": "http://wlgd.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.503809
+            }
+        },
+        {
+            "domain": "http://yjj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.647852
+            }
+        },
+        {
+            "domain": "http://fcj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.369043
+            }
+        },
+        {
+            "domain": "http://gxs.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.789658
+            }
+        },
+        {
+            "domain": "http://sygjj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.73368
+            }
+        },
+        {
+            "domain": "http://gzw.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.637729
+            }
+        },
+        {
+            "domain": "http://swj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.343657
+            }
+        },
+        {
+            "domain": "http://sswj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.294704
+            }
+        },
+        {
+            "domain": "http://mw.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.429467
+            }
+        },
+        {
+            "domain": "http://www.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.413065
+            }
+        },
+        {
+            "domain": "http://sfj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.493639
+            }
+        },
+        {
+            "domain": "http://dsjj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.275905
+            }
+        },
+        {
+            "domain": "http://ftz.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.432053
+            }
+        },
+        {
+            "domain": "http://jgswj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.339917
+            }
+        },
+        {
+            "domain": "http://scj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.248762
+            }
+        },
+        {
+            "domain": "tyj.shengyang.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://tyjrswj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.355667
+            }
+        },
+        {
+            "domain": "http://wb.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.200407
+            }
+        },
+        {
+            "domain": "http://zrzyj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.452987
+            }
+        },
+        {
+            "domain": "http://fgw.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.361163
+            }
+        },
+        {
+            "domain": "http://mzj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.27566
+            }
+        },
+        {
+            "domain": "http://xysy.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.243841
+            }
+        },
+        {
+            "domain": "http://www.syhp.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.210984
+            }
+        },
+        {
+            "domain": "http://www.shenhe.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.254112
+            }
+        },
+        {
+            "domain": "http://www.sydd.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.2122
+            }
+        },
+        {
+            "domain": "http://www.syhg.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.233619
+            }
+        },
+        {
+            "domain": "http://www.tiexi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.199657
+            }
+        },
+        {
+            "domain": "http://www.sjtq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.186464
+            }
+        },
+        {
+            "domain": "www.ccgp-liaoning.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://www.ccgp-liaoning.gov.cn",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "swt.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://www.hunnan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.206252
+            }
+        },
+        {
+            "domain": "mkaq.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "ybj.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "tyjrsw.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "ysj.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://www.nsy.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.226519
+            }
+        },
+        {
+            "domain": "http://www.syyh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.206259
+            }
+        },
+        {
+            "domain": "http://www.liaozhong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.195047
+            }
+        },
+        {
+            "domain": "http://www.kangping.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.227627
+            }
+        },
+        {
+            "domain": "http://www.faku.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.237674
+            }
+        },
+        {
+            "domain": "http://www.xinmin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.237319
+            }
+        },
+        {
+            "domain": "https://kjj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.545027
+            }
+        },
+        {
+            "domain": "https://rfb.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.455072
+            }
+        },
+        {
+            "domain": "http://gaj.shenyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 53.523313
+            }
+        },
+        {
+            "domain": "lcj.ln.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "https://czj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.592271
+            }
+        },
+        {
+            "domain": "https://boc.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.463544
+            }
+        },
+        {
+            "domain": "https://rsj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.623799
+            }
+        },
+        {
+            "domain": "https://ga.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.485046
+            }
+        },
+        {
+            "domain": "https://stats.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.457048
+            }
+        },
+        {
+            "domain": "http://xzfw.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.471244
+            }
+        },
+        {
+            "domain": "https://gjj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.487944
+            }
+        },
+        {
+            "domain": "http://www.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.532971
+            }
+        },
+        {
+            "domain": "http://edu.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.459002
+            }
+        },
+        {
+            "domain": "http://xfj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.530553
+            }
+        },
+        {
+            "domain": "https://csglj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.660267
+            }
+        },
+        {
+            "domain": "http://tyj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.513844
+            }
+        },
+        {
+            "domain": "http://jt.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.479872
+            }
+        },
+        {
+            "domain": "https://pc.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.559229
+            }
+        },
+        {
+            "domain": "http://zrzy.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.451819
+            }
+        },
+        {
+            "domain": "https://sjj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.535221
+            }
+        },
+        {
+            "domain": "http://epb.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.438826
+            }
+        },
+        {
+            "domain": "http://mzj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.426045
+            }
+        },
+        {
+            "domain": "https://agri.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.055957
+            }
+        },
+        {
+            "domain": "http://wb.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.440666
+            }
+        },
+        {
+            "domain": "www.dlyj.dl.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://jh.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.446992
+            }
+        },
+        {
+            "domain": "http://jrj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.480234
+            }
+        },
+        {
+            "domain": "http://hcod.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.473607
+            }
+        },
+        {
+            "domain": "http://www.dlxg.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.181879
+            }
+        },
+        {
+            "domain": "www.gxj.dl.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://ggzyjy.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.228859
+            }
+        },
+        {
+            "domain": "http://www.dlshk.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.825257
+            }
+        },
+        {
+            "domain": "https://www.dljp.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.389029
+            }
+        },
+        {
+            "domain": "https://wlj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.473629
+            }
+        },
+        {
+            "domain": "https://ybj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.490953
+            }
+        },
+        {
+            "domain": "http://www.dlwfd.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 2.861894
+            }
+        },
+        {
+            "domain": "https://credit.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.905601
+            }
+        },
+        {
+            "domain": "http://gxs.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.983877
+            }
+        },
+        {
+            "domain": "http://sfj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.992386
+            }
+        },
+        {
+            "domain": "https://tyjrj.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.331704
+            }
+        },
+        {
+            "domain": "http://mzw.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.455944
+            }
+        },
+        {
+            "domain": "www.swj.dl.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://www.dlzh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.496711
+            }
+        },
+        {
+            "domain": "http://www.dlpld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.382938
+            }
+        },
+        {
+            "domain": "ggzy.shenyang.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://ggzy.shenyang.gov.cn",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "https://zwfw.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.507565
+            }
+        },
+        {
+            "domain": "https://hyfz.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.632066
+            }
+        },
+        {
+            "domain": "http://gzw.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.42687
+            }
+        },
+        {
+            "domain": "http://www.dlgjz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.12288
+            }
+        },
+        {
+            "domain": "http://scjg.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.441121
+            }
+        },
+        {
+            "domain": "http://www.dlch.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.842514
+            }
+        },
+        {
+            "domain": "http://www.dllsk.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.074752
+            }
+        },
+        {
+            "domain": "http://wjw.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.386471
+            }
+        },
+        {
+            "domain": "http://yjj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.357004
+            }
+        },
+        {
+            "domain": "http://www.ccxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.405113
+            }
+        },
+        {
+            "domain": "http://gzw.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.226455
+            }
+        },
+        {
+            "domain": "http://gaj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.225031
+            }
+        },
+        {
+            "domain": "http://mzj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.255133
+            }
+        },
+        {
+            "domain": "http://kjj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.23448
+            }
+        },
+        {
+            "domain": "http://swj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.240901
+            }
+        },
+        {
+            "domain": "http://spj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.082646
+            }
+        },
+        {
+            "domain": "http://js.dl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 40.80881
+            }
+        },
+        {
+            "domain": "http://scj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.210996
+            }
+        },
+        {
+            "domain": "http://wlgdj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.273145
+            }
+        },
+        {
+            "domain": "http://sthjj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.228834
+            }
+        },
+        {
+            "domain": "http://gxq.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.269075
+            }
+        },
+        {
+            "domain": "http://www.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.248856
+            }
+        },
+        {
+            "domain": "www.ccgp-dalian.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://www.dlftz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.378177
+            }
+        },
+        {
+            "domain": "http://tjj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.235004
+            }
+        },
+        {
+            "domain": "http://www.dlhitech.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.402435
+            }
+        },
+        {
+            "domain": "http://sfj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.237149
+            }
+        },
+        {
+            "domain": "http://gxj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.310941
+            }
+        },
+        {
+            "domain": "http://qsfjmsq.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.271722
+            }
+        },
+        {
+            "domain": "http://nyncj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.210442
+            }
+        },
+        {
+            "domain": "http://fgw.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.186902
+            }
+        },
+        {
+            "domain": "http://jyj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.236384
+            }
+        },
+        {
+            "domain": "http://zrzyj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.223096
+            }
+        },
+        {
+            "domain": "http://rsj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.285048
+            }
+        },
+        {
+            "domain": "http://xzspj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.202877
+            }
+        },
+        {
+            "domain": "http://ybj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.25921
+            }
+        },
+        {
+            "domain": "http://slj.anshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.176642
+            }
+        },
+        {
+            "domain": "http://www.tiedong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.221065
+            }
+        },
+        {
+            "domain": "http://www.astxqzf.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.258386
+            }
+        },
+        {
+            "domain": "www.asggzyjy.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://www.lishan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.243081
+            }
+        },
+        {
+            "domain": "http://www.qianshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.226927
+            }
+        },
+        {
+            "domain": "http://www.lntaian.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.203557
+            }
+        },
+        {
+            "domain": "http://www.haicheng.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.18943
+            }
+        },
+        {
+            "domain": "http://www.xiuyan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 24.25046
+            }
+        },
+        {
+            "domain": "credit.anshan.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://fssmzj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.351999
+            }
+        },
+        {
+            "domain": "http://fsjyj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.470621
+            }
+        },
+        {
+            "domain": "http://fsfgw.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.344615
+            }
+        },
+        {
+            "domain": "http://gxj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.31679
+            }
+        },
+        {
+            "domain": "http://fskjj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.300339
+            }
+        },
+        {
+            "domain": "http://ga.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.342806
+            }
+        },
+        {
+            "domain": "http://fsrs.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.314014
+            }
+        },
+        {
+            "domain": "http://sthj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.315511
+            }
+        },
+        {
+            "domain": "fssjrfzj.fushun.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://fssjrfzj.fushun.gov.cn",
+            "response_info": {
+                "is_redirect": true,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "http://fssjj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.309808
+            }
+        },
+        {
+            "domain": "http://whly.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.33609
+            }
+        },
+        {
+            "domain": "xyfs.fushun.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://fswjw.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.303251
+            }
+        },
+        {
+            "domain": "http://zjj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.386693
+            }
+        },
+        {
+            "domain": "http://fsssfj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.347877
+            }
+        },
+        {
+            "domain": "http://fsswj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.387007
+            }
+        },
+        {
+            "domain": "http://yjglj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.317077
+            }
+        },
+        {
+            "domain": "http://www.fsdz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.477767
+            }
+        },
+        {
+            "domain": "http://wlgdj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.139267
+            }
+        },
+        {
+            "domain": "http://rsj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.254531
+            }
+        },
+        {
+            "domain": "https://tjj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.402027
+            }
+        },
+        {
+            "domain": "http://www.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.236132
+            }
+        },
+        {
+            "domain": "http://fgw.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.276598
+            }
+        },
+        {
+            "domain": "http://gaj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.261026
+            }
+        },
+        {
+            "domain": "http://czj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.292627
+            }
+        },
+        {
+            "domain": "fssjtj.fushun.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://fssjtj.fushun.gov.cn",
+            "response_info": {
+                "is_redirect": true,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "http://mzj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.293291
+            }
+        },
+        {
+            "domain": "http://fssgzw.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.329545
+            }
+        },
+        {
+            "domain": "http://jyj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.300216
+            }
+        },
+        {
+            "domain": "http://swj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.363759
+            }
+        },
+        {
+            "domain": "http://zrzyj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.306256
+            }
+        },
+        {
+            "domain": "http://nyncj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.248053
+            }
+        },
+        {
+            "domain": "http://sjj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.329971
+            }
+        },
+        {
+            "domain": "http://scjgj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.281047
+            }
+        },
+        {
+            "domain": "http://yjj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.287091
+            }
+        },
+        {
+            "domain": "http://zjj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.809794
+            }
+        },
+        {
+            "domain": "http://lcj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.2716
+            }
+        },
+        {
+            "domain": "www.fushun.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "https://www.fushun.gov.cn",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "http://bxcredit.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 4.041007
+            }
+        },
+        {
+            "domain": "http://www.lnfsx.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.679529
+            }
+        },
+        {
+            "domain": "http://www.fsgxq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 23.813794
+            }
+        },
+        {
+            "domain": "http://scjdglj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.463535
+            }
+        },
+        {
+            "domain": "http://www.fsxf.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.408589
+            }
+        },
+        {
+            "domain": "http://www.xinbin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.417954
+            }
+        },
+        {
+            "domain": "http://gxj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.138758
+            }
+        },
+        {
+            "domain": "https://wjw.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.336536
+            }
+        },
+        {
+            "domain": "http://sthjj.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.434696
+            }
+        },
+        {
+            "domain": "http://xh.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.304554
+            }
+        },
+        {
+            "domain": "http://www.fssc.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.707212
+            }
+        },
+        {
+            "domain": "http://www.fswh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.835815
+            }
+        },
+        {
+            "domain": "http://www.bx.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.182295
+            }
+        },
+        {
+            "domain": "http://zrzy.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.316772
+            }
+        },
+        {
+            "domain": "https://ddssfj.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.322439
+            }
+        },
+        {
+            "domain": "http://nyncj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.377291
+            }
+        },
+        {
+            "domain": "http://lyj.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.245937
+            }
+        },
+        {
+            "domain": "http://ms.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.998269
+            }
+        },
+        {
+            "domain": "http://wlg.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.266356
+            }
+        },
+        {
+            "domain": "http://www.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.461186
+            }
+        },
+        {
+            "domain": "http://zjw.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.314421
+            }
+        },
+        {
+            "domain": "http://ddedu.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.319293
+            }
+        },
+        {
+            "domain": "http://jtj.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.266277
+            }
+        },
+        {
+            "domain": "http://sjj.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.17284
+            }
+        },
+        {
+            "domain": "http://aic.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.228308
+            }
+        },
+        {
+            "domain": "http://hr.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.476343
+            }
+        },
+        {
+            "domain": "https://zrzy.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.356232
+            }
+        },
+        {
+            "domain": "http://wsjsw.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.217178
+            }
+        },
+        {
+            "domain": "http://ddepb.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.445252
+            }
+        },
+        {
+            "domain": "https://fgw.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.60754
+            }
+        },
+        {
+            "domain": "https://minzhengju.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.552212
+            }
+        },
+        {
+            "domain": "http://ddsnyncj.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.275725
+            }
+        },
+        {
+            "domain": "http://bx.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 2.201946
+            }
+        },
+        {
+            "domain": "www.dlzs.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://www.dlzs.gov.cn",
+            "response_info": {
+                "is_redirect": true,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "http://dd110.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.073221
+            }
+        },
+        {
+            "domain": "http://www.qingyuan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.615961
+            }
+        },
+        {
+            "domain": "http://ddkjj.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.639697
+            }
+        },
+        {
+            "domain": "http://fssswj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.318094
+            }
+        },
+        {
+            "domain": "https://www.yuanbao.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.693209
+            }
+        },
+        {
+            "domain": "http://ddcredit.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.111669
+            }
+        },
+        {
+            "domain": "https://zwfw.benxi.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.089817
+            }
+        },
+        {
+            "domain": "http://www.cnmc.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.998365
+            }
+        },
+        {
+            "domain": "zwfw.fushun.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://fstjj.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.293208
+            }
+        },
+        {
+            "domain": "http://fsyb.fushun.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.315644
+            }
+        },
+        {
+            "domain": "http://www.nanfen.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.279621
+            }
+        },
+        {
+            "domain": "http://www.pingshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.059655
+            }
+        },
+        {
+            "domain": "http://ddpas.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.323343
+            }
+        },
+        {
+            "domain": "fsczj.fushun.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://fsczj.fushun.gov.cn",
+            "response_info": {
+                "is_redirect": true,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "https://xfj.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.634523
+            }
+        },
+        {
+            "domain": "https://www.lnkd.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.352408
+            }
+        },
+        {
+            "domain": "https://www.donggang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.327924
+            }
+        },
+        {
+            "domain": "http://stj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.285261
+            }
+        },
+        {
+            "domain": "http://fgw.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.334477
+            }
+        },
+        {
+            "domain": "http://sswj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.344233
+            }
+        },
+        {
+            "domain": "http://yjj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.288439
+            }
+        },
+        {
+            "domain": "http://gaj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.249383
+            }
+        },
+        {
+            "domain": "http://lcj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.348284
+            }
+        },
+        {
+            "domain": "http://wlgdj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.290662
+            }
+        },
+        {
+            "domain": "http://xfj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.332021
+            }
+        },
+        {
+            "domain": "http://zrzyj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.280515
+            }
+        },
+        {
+            "domain": "http://tjj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.280517
+            }
+        },
+        {
+            "domain": "ggzyjy.benxi.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://ggzyjy.benxi.gov.cn",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "http://ylbz.dandong.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.476312
+            }
+        },
+        {
+            "domain": "http://wjw.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.319786
+            }
+        },
+        {
+            "domain": "http://www.zhenxing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.314691
+            }
+        },
+        {
+            "domain": "http://www.zaq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.339316
+            }
+        },
+        {
+            "domain": "http://www.lnfc.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.297513
+            }
+        },
+        {
+            "domain": "http://gzw.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.281353
+            }
+        },
+        {
+            "domain": "http://kjj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.373628
+            }
+        },
+        {
+            "domain": "http://jyj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.262003
+            }
+        },
+        {
+            "domain": "http://nyncj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.272353
+            }
+        },
+        {
+            "domain": "http://gxj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.252281
+            }
+        },
+        {
+            "domain": "http://slj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.254455
+            }
+        },
+        {
+            "domain": "rsj.dandong.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://rsj.dandong.gov.cn",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "http://zjj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.197401
+            }
+        },
+        {
+            "domain": "http://www.jzbhxq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.264448
+            }
+        },
+        {
+            "domain": "http://czj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.291776
+            }
+        },
+        {
+            "domain": "http://www.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.222125
+            }
+        },
+        {
+            "domain": "http://scjg.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.285344
+            }
+        },
+        {
+            "domain": "http://sfj.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.213657
+            }
+        },
+        {
+            "domain": "http://www.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.20968
+            }
+        },
+        {
+            "domain": "http://ggzy.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.282815
+            }
+        },
+        {
+            "domain": "http://xy.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.247821
+            }
+        },
+        {
+            "domain": "http://ylbz.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.263726
+            }
+        },
+        {
+            "domain": "http://www.jzgtq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.360823
+            }
+        },
+        {
+            "domain": "http://www.jzlhqzf.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.230806
+            }
+        },
+        {
+            "domain": "http://zwfw.jz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.106983
+            }
+        },
+        {
+            "domain": "http://www.jzth.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.289925
+            }
+        },
+        {
+            "domain": "http://www.heishan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.304111
+            }
+        },
+        {
+            "domain": "http://www.lnyx.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.388009
+            }
+        },
+        {
+            "domain": "http://www.lnlh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.264718
+            }
+        },
+        {
+            "domain": "http://www.bzs.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.268147
+            }
+        },
+        {
+            "domain": "http://fgw.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.100882
+            }
+        },
+        {
+            "domain": "http://nyncj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.987484
+            }
+        },
+        {
+            "domain": "http://jrw.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.139389
+            }
+        },
+        {
+            "domain": "http://kjj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 28.940639
+            }
+        },
+        {
+            "domain": "http://sf.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.412597
+            }
+        },
+        {
+            "domain": "http://ftz.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.049757
+            }
+        },
+        {
+            "domain": "http://zrzyj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.697897
+            }
+        },
+        {
+            "domain": "http://gxj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.879471
+            }
+        },
+        {
+            "domain": "http://sjj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.872103
+            }
+        },
+        {
+            "domain": "http://gxs.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.803467
+            }
+        },
+        {
+            "domain": "http://scjgj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.798044
+            }
+        },
+        {
+            "domain": "http://swj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.637458
+            }
+        },
+        {
+            "domain": "http://czj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.874802
+            }
+        },
+        {
+            "domain": "http://ykga.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.908568
+            }
+        },
+        {
+            "domain": "http://rsj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.19436
+            }
+        },
+        {
+            "domain": "http://wlgd.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.833869
+            }
+        },
+        {
+            "domain": "http://xrd.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.816859
+            }
+        },
+        {
+            "domain": "http://sthjj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.170489
+            }
+        },
+        {
+            "domain": "http://jyj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.339139
+            }
+        },
+        {
+            "domain": "gjj.yingkou.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://jtj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.251985
+            }
+        },
+        {
+            "domain": "http://lycyj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.498255
+            }
+        },
+        {
+            "domain": "http://zjj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.47342
+            }
+        },
+        {
+            "domain": "http://ccgp.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.320018
+            }
+        },
+        {
+            "domain": "http://wjw.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.597365
+            }
+        },
+        {
+            "domain": "https://rsj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.298008
+            }
+        },
+        {
+            "domain": "http://mzj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 25.19242
+            }
+        },
+        {
+            "domain": "https://fgw.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.329916
+            }
+        },
+        {
+            "domain": "https://wsjk.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.513467
+            }
+        },
+        {
+            "domain": "http://bh.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.724515
+            }
+        },
+        {
+            "domain": "https://sthj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.344747
+            }
+        },
+        {
+            "domain": "http://yjglj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.497925
+            }
+        },
+        {
+            "domain": "http://fpb.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.420341
+            }
+        },
+        {
+            "domain": "https://whly.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.642208
+            }
+        },
+        {
+            "domain": "https://www.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.285896
+            }
+        },
+        {
+            "domain": "https://gaj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.353959
+            }
+        },
+        {
+            "domain": "https://zrzy.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.336762
+            }
+        },
+        {
+            "domain": "http://mzj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.265665
+            }
+        },
+        {
+            "domain": "http://lhkfq.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.262815
+            }
+        },
+        {
+            "domain": "http://www.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.445493
+            }
+        },
+        {
+            "domain": "http://gzw.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.480671
+            }
+        },
+        {
+            "domain": "http://yshjjsj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.522974
+            }
+        },
+        {
+            "domain": "https://sfj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.426344
+            }
+        },
+        {
+            "domain": "https://gxj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.430181
+            }
+        },
+        {
+            "domain": "https://zjj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.567593
+            }
+        },
+        {
+            "domain": "https://czj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.500213
+            }
+        },
+        {
+            "domain": "http://ykcyjd.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.117004
+            }
+        },
+        {
+            "domain": "https://jyj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.499006
+            }
+        },
+        {
+            "domain": "http://tjj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.827313
+            }
+        },
+        {
+            "domain": "http://tyjrj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.796273
+            }
+        },
+        {
+            "domain": "https://gxq.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.698668
+            }
+        },
+        {
+            "domain": "https://jtj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.602552
+            }
+        },
+        {
+            "domain": "https://yjgl.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.523404
+            }
+        },
+        {
+            "domain": "https://ysj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.541093
+            }
+        },
+        {
+            "domain": "http://scjg.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.426526
+            }
+        },
+        {
+            "domain": "http://ybj.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.712099
+            }
+        },
+        {
+            "domain": "https://www.fxhz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.66283
+            }
+        },
+        {
+            "domain": "https://www.fxqhm.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.535847
+            }
+        },
+        {
+            "domain": "https://www.fxxh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.808739
+            }
+        },
+        {
+            "domain": "https://www.fmx.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.564348
+            }
+        },
+        {
+            "domain": "https://www.zhangwu.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 2.567208
+            }
+        },
+        {
+            "domain": "http://czj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 2.469577
+            }
+        },
+        {
+            "domain": "http://www.ykzq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.548032
+            }
+        },
+        {
+            "domain": "http://www.ykxs.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.51599
+            }
+        },
+        {
+            "domain": "http://yjj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.33312
+            }
+        },
+        {
+            "domain": "http://www.ykdz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.970178
+            }
+        },
+        {
+            "domain": "http://zrzyj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.200928
+            }
+        },
+        {
+            "domain": "http://www.laobian.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.273992
+            }
+        },
+        {
+            "domain": "http://www.gaizhou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.340017
+            }
+        },
+        {
+            "domain": "http://www.dsq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.941315
+            }
+        },
+        {
+            "domain": "http://zwfw.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.045236
+            }
+        },
+        {
+            "domain": "http://mzj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.219132
+            }
+        },
+        {
+            "domain": "https://slj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.45976
+            }
+        },
+        {
+            "domain": "https://nync.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.507129
+            }
+        },
+        {
+            "domain": "https://swj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.429893
+            }
+        },
+        {
+            "domain": "http://zjj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.391432
+            }
+        },
+        {
+            "domain": "https://ybj.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.52474
+            }
+        },
+        {
+            "domain": "http://ggzy.fuxin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.371325
+            }
+        },
+        {
+            "domain": "credit.yingkou.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "https://www.fxtp.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.597435
+            }
+        },
+        {
+            "domain": "http://sthjj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.210495
+            }
+        },
+        {
+            "domain": "http://scjg.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.443182
+            }
+        },
+        {
+            "domain": "http://sfj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.280938
+            }
+        },
+        {
+            "domain": "http://nyncj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.29993
+            }
+        },
+        {
+            "domain": "http://zwfw.yingkou.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.084511
+            }
+        },
+        {
+            "domain": "http://wjw.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 3.418526
+            }
+        },
+        {
+            "domain": "http://rsj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.938631
+            }
+        },
+        {
+            "domain": "http://ylbzj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 2.059392
+            }
+        },
+        {
+            "domain": "http://kjj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.246651
+            }
+        },
+        {
+            "domain": "http://fgw.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.239535
+            }
+        },
+        {
+            "domain": "http://www.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.199933
+            }
+        },
+        {
+            "domain": "http://gaj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.225835
+            }
+        },
+        {
+            "domain": "http://tjj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.248668
+            }
+        },
+        {
+            "domain": "http://www.dengta.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.073617
+            }
+        },
+        {
+            "domain": "http://sjj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.256859
+            }
+        },
+        {
+            "domain": "http://jyj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.236848
+            }
+        },
+        {
+            "domain": "http://wlgdj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.484076
+            }
+        },
+        {
+            "domain": "http://gxj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.394335
+            }
+        },
+        {
+            "domain": "http://slj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.349141
+            }
+        },
+        {
+            "domain": "http://ggzyjy.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.205466
+            }
+        },
+        {
+            "domain": "http://jtysj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.219033
+            }
+        },
+        {
+            "domain": "http://www.fxxq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.276113
+            }
+        },
+        {
+            "domain": "credit.fuxin.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://zwfw.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.096495
+            }
+        },
+        {
+            "domain": "http://swj.liaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.152697
+            }
+        },
+        {
+            "domain": "http://www.lybtq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.44046
+            }
+        },
+        {
+            "domain": "http://www.wensheng.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.286687
+            }
+        },
+        {
+            "domain": "http://www.lyhw.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.422587
+            }
+        },
+        {
+            "domain": "http://www.lygcl.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.362196
+            }
+        },
+        {
+            "domain": "http://www.tzh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.323814
+            }
+        },
+        {
+            "domain": "http://www.liaoyangxian.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.318558
+            }
+        },
+        {
+            "domain": "gzw.liaoyang.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://gzw.liaoyang.gov.cn",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "www.lnlycredit.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://wjw.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.425133
+            }
+        },
+        {
+            "domain": "http://kjj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.345885
+            }
+        },
+        {
+            "domain": "http://tjj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.426126
+            }
+        },
+        {
+            "domain": "http://gxj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.469697
+            }
+        },
+        {
+            "domain": "http://gaj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.365503
+            }
+        },
+        {
+            "domain": "http://jyj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.434458
+            }
+        },
+        {
+            "domain": "http://nyncj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.460509
+            }
+        },
+        {
+            "domain": "http://www.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.53903
+            }
+        },
+        {
+            "domain": "http://rsj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.38145
+            }
+        },
+        {
+            "domain": "http://fgw.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.526369
+            }
+        },
+        {
+            "domain": "http://sjj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.462038
+            }
+        },
+        {
+            "domain": "http://slj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.455945
+            }
+        },
+        {
+            "domain": "http://yjglj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.430966
+            }
+        },
+        {
+            "domain": "http://czj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.436632
+            }
+        },
+        {
+            "domain": "http://sfj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.436107
+            }
+        },
+        {
+            "domain": "http://wlgdj.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.149527
+            }
+        },
+        {
+            "domain": "http://fgw.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.150751
+            }
+        },
+        {
+            "domain": "http://www.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.158724
+            }
+        },
+        {
+            "domain": "http://rsj.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.184089
+            }
+        },
+        {
+            "domain": "http://gaj.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.141397
+            }
+        },
+        {
+            "domain": "http://cgzfj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.447365
+            }
+        },
+        {
+            "domain": "http://zrzyj.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.169043
+            }
+        },
+        {
+            "domain": "http://jyj.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.148195
+            }
+        },
+        {
+            "domain": "http://zrzyj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.426102
+            }
+        },
+        {
+            "domain": "http://mzj.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.138609
+            }
+        },
+        {
+            "domain": "http://slj.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.169507
+            }
+        },
+        {
+            "domain": "http://wjw.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.104979
+            }
+        },
+        {
+            "domain": "http://hbj.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.142505
+            }
+        },
+        {
+            "domain": "http://scjg.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.13896
+            }
+        },
+        {
+            "domain": "zjw.tieling.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://xytl.tieling.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.292003
+            }
+        },
+        {
+            "domain": "http://www.tlyz.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.504707
+            }
+        },
+        {
+            "domain": "http://www.tlqh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.353671
+            }
+        },
+        {
+            "domain": "http://www.tielingxian.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.154042
+            }
+        },
+        {
+            "domain": "http://www.lntlxf.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.141006
+            }
+        },
+        {
+            "domain": "http://www.changtu.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.143964
+            }
+        },
+        {
+            "domain": "http://www.lnky.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.112042
+            }
+        },
+        {
+            "domain": "http://www.lndbss.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.148827
+            }
+        },
+        {
+            "domain": "http://zjj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.434095
+            }
+        },
+        {
+            "domain": "http://zwfw.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.078349
+            }
+        },
+        {
+            "domain": "http://credit.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.225248
+            }
+        },
+        {
+            "domain": "http://ldwxq.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.525569
+            }
+        },
+        {
+            "domain": "http://www.xlt.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.199576
+            }
+        },
+        {
+            "domain": "http://www.dawa.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.23278
+            }
+        },
+        {
+            "domain": "http://www.pjggcgjyzx.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.444876
+            }
+        },
+        {
+            "domain": "http://sthjj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.648982
+            }
+        },
+        {
+            "domain": "http://zjj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.23625
+            }
+        },
+        {
+            "domain": "http://nyncj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.258617
+            }
+        },
+        {
+            "domain": "http://fgw.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.203874
+            }
+        },
+        {
+            "domain": "http://zrzyj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.222982
+            }
+        },
+        {
+            "domain": "http://gzw.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.485048
+            }
+        },
+        {
+            "domain": "http://wjw.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.198432
+            }
+        },
+        {
+            "domain": "http://jtysj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.457173
+            }
+        },
+        {
+            "domain": "http://scjgj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.438867
+            }
+        },
+        {
+            "domain": "http://mzj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.485088
+            }
+        },
+        {
+            "domain": "http://jrfzj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.457171
+            }
+        },
+        {
+            "domain": "http://wlgdj.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.43523
+            }
+        },
+        {
+            "domain": "http://scjgj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.27572
+            }
+        },
+        {
+            "domain": "http://rsj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.236295
+            }
+        },
+        {
+            "domain": "http://www.stq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.506074
+            }
+        },
+        {
+            "domain": "http://jtysj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.255903
+            }
+        },
+        {
+            "domain": "http://gxq.panjin.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.441251
+            }
+        },
+        {
+            "domain": "http://www.panshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.428205
+            }
+        },
+        {
+            "domain": "http://wlgdj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.25357
+            }
+        },
+        {
+            "domain": "http://yjglj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.218643
+            }
+        },
+        {
+            "domain": "http://sthjj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.281911
+            }
+        },
+        {
+            "domain": "http://czj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.279881
+            }
+        },
+        {
+            "domain": "http://jyj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.230564
+            }
+        },
+        {
+            "domain": "http://gaj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.43397
+            }
+        },
+        {
+            "domain": "http://swj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.20371
+            }
+        },
+        {
+            "domain": "http://cgj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.21476
+            }
+        },
+        {
+            "domain": "http://www.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.229405
+            }
+        },
+        {
+            "domain": "http://mzj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.434927
+            }
+        },
+        {
+            "domain": "http://ggzy.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.274547
+            }
+        },
+        {
+            "domain": "http://ybj.chaoyang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.926746
+            }
+        },
+        {
+            "domain": "http://www.lnst.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 23.936457
+            }
+        },
+        {
+            "domain": "http://www.cylc.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.349546
+            }
+        },
+        {
+            "domain": "http://www.cyx.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 22.293902
+            }
+        },
+        {
+            "domain": "http://www.lnjp.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.168245
+            }
+        },
+        {
+            "domain": "http://www.kazuo.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.144031
+            }
+        },
+        {
+            "domain": "http://www.bp.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.186101
+            }
+        },
+        {
+            "domain": "http://www.lingyuan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.216014
+            }
+        },
+        {
+            "domain": "zwfw.chaoyang.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://rsj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.184727
+            }
+        },
+        {
+            "domain": "http://slj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.220919
+            }
+        },
+        {
+            "domain": "http://nync.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.198033
+            }
+        },
+        {
+            "domain": "http://whly.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.435609
+            }
+        },
+        {
+            "domain": "http://sjj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.417412
+            }
+        },
+        {
+            "domain": "http://zrzy.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 23.137047
+            }
+        },
+        {
+            "domain": "http://gxq.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.220061
+            }
+        },
+        {
+            "domain": "http://sfj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.210811
+            }
+        },
+        {
+            "domain": "http://czj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.383017
+            }
+        },
+        {
+            "domain": "http://yjgl.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.363525
+            }
+        },
+        {
+            "domain": "http://jtj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 21.434129
+            }
+        },
+        {
+            "domain": "http://wsjk.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.349959
+            }
+        },
+        {
+            "domain": "http://sthj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.351982
+            }
+        },
+        {
+            "domain": "scjg.hld.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://scjg.hld.gov.cn",
+            "response_info": {
+                "is_redirect": true,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "http://jyj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.347097
+            }
+        },
+        {
+            "domain": "http://yjzz.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.347825
+            }
+        },
+        {
+            "domain": "http://gaj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.371681
+            }
+        },
+        {
+            "domain": "xycy.chaoyang.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://zwfw.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.083502
+            }
+        },
+        {
+            "domain": "http://www.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.361709
+            }
+        },
+        {
+            "domain": "http://fgw.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.399036
+            }
+        },
+        {
+            "domain": "http://mzj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.354694
+            }
+        },
+        {
+            "domain": "http://zjj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.393439
+            }
+        },
+        {
+            "domain": "http://www.lgq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.206955
+            }
+        },
+        {
+            "domain": "http://www.lianshan.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.307152
+            }
+        },
+        {
+            "domain": "http://jjkfq.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.454547
+            }
+        },
+        {
+            "domain": "http://www.npq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.311509
+            }
+        },
+        {
+            "domain": "http://ddh.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.223283
+            }
+        },
+        {
+            "domain": "http://www.szx.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.257767
+            }
+        },
+        {
+            "domain": "http://www.jianchang.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.31305
+            }
+        },
+        {
+            "domain": "http://tjj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.379777
+            }
+        },
+        {
+            "domain": "http://www.zg-xc.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.334304
+            }
+        },
+        {
+            "domain": "http://gxj.hld.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 20.372427
+            }
+        },
+        {
+            "domain": "www.lnhldxy.cn",
+            "status": "dead",
+            "source": "selenium"
+        }
+    ]
+}

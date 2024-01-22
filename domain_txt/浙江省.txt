@@ -5,7 +5,7 @@ http://gjj.jgswj.zj.gov.cn/
 http://wsjkw.zj.gov.cn/
 http://lyj.zj.gov.cn
 http://gzw.zj.gov.cn/
-jxt.zj.gov.cn
+http://jxt.zj.gov.cn
 http://kjt.zj.gov.cn/
 http://fzggw.zj.gov.cn/
 http://jyt.zj.gov.cn/
@@ -28,7 +28,7 @@ http://czt.zj.gov.cn/
 http://zfcg.czt.zj.gov.cn/
 http://ybzx.ybj.zj.gov.cn/
 http://zjks.rlsbt.zj.gov.cn/
-www.zj.gov.cn
+http://www.zj.gov.cn
 http://www.zjzwfw.gov.cn/
 http://zcom.zj.gov.cn/
 http://gat.zj.gov.cn
@@ -95,7 +95,7 @@ http://www.xiaoshan.gov.cn
 http://www.yuhang.gov.cn
 http://www.tonglu.gov.cn
 http://www.qdh.gov.cn
-www.jiande.gov.cn
+http://www.jiande.gov.cn
 http://www.fuyang.gov.cn
 http://www.linan.gov.cn
 http://www.qiantang.gov.cn
@@ -216,7 +216,7 @@ http://slj.jiaxing.gov.cn/
 http://tyj.jiaxing.gov.cn
 http://tjj.jiaxing.gov.cn
 http://jxgq.jiaxing.gov.cn
-whgdlyj.jiaxing.gov.cn
+http://whgdlyj.jiaxing.gov.cn
 http://sthjj.jiaxing.gov.cn
 http://scjgj.jiaxing.gov.cn/
 http://swj.jiaxing.gov.cn/
@@ -238,7 +238,7 @@ http://kjj.jiaxing.gov.cn/
 http://rfb.jiaxing.gov.cn
 http://jxj.jiaxing.gov.cn/
 http://wb.jiaxing.gov.cn
-sjj.jiaxing.gov.cn
+http://sjj.jiaxing.gov.cn
 http://jyj.jiaxing.gov.cn
 http://gjj.jiaxing.gov.cn/
 https://www.jxcg.gov.cn
@@ -300,19 +300,19 @@ http://www.zjcx.gov.cn
 http://www.anji.gov.cn
 http://sxmz.sx.gov.cn
 http://sxwb.sx.gov.cn/
-ggb.sx.gov.cn
+http://ggb.sx.gov.cn
 http://ajj.sx.gov.cn
 http://sxwg.sx.gov.cn/
 http://rsj.sx.gov.cn/
 http://sxjxw.sx.gov.cn/
 http://ty.sx.gov.cn/
 http://sxgxs.sx.gov.cn/
-sfj.sx.gov.cn
+http://sfj.sx.gov.cn
 http://jgj.sx.gov.cn/
-sxbm.sx.gov.cn
+http://sxbm.sx.gov.cn
 http://sjj.sx.gov.cn/
-swj.sx.gov.cn
-jyj.sx.gov.cn
+http://swj.sx.gov.cn
+http://jyj.sx.gov.cn
 http://td.sx.gov.cn
 http://sxbh.sx.gov.cn
 http://tjj.sx.gov.cn
@@ -323,7 +323,7 @@ http://sxcs.sx.gov.cn/
 http://kjj.sx.gov.cn
 http://nyj.sx.gov.cn/
 http://gzw.sx.gov.cn
-ga.sx.gov.cn
+http://ga.sx.gov.cn
 http://gjj.sx.gov.cn/
 http://www.sx.gov.cn
 http://jtj.sx.gov.cn/
@@ -382,7 +382,7 @@ http://styjrswj.jinhua.gov.cn/
 http://ggzyjy.jinhua.gov.cn
 https://credit.jinhua.gov.cn/
 http://www.wuch.gov.cn
-www.jindong.gov.cn
+http://www.jindong.gov.cn
 http://www.zjwy.gov.cn/
 http://www.pj.gov.cn/
 http://www.panan.gov.cn/
@@ -464,7 +464,7 @@ http://wsb.zjtz.gov.cn
 http://sjj.zjtz.gov.cn
 http://sfj.zjtz.gov.cn
 https://www.taizhoumuseum.com
-wglt.zjtz.gov.cn
+http://wglt.zjtz.gov.cn
 http://www.tzwhg.net.wglt.zjtz.gov.cn
 http://www.tzlib.cn.wglt.zjtz.gov.cn
 http://kjj.zjtz.gov.cn

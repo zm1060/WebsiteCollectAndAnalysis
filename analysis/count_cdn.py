@@ -2,12 +2,13 @@ import json
 import os
 from urllib.parse import urlparse
 import subprocess
-import json
-
+import concurrent.futures
 from tqdm import tqdm
 
 
 def extract_domain(url):
+    if not url.startswith("http"):
+        url = "http://" + url
     parsed_url = urlparse(url)
     domain = parsed_url.netloc
     return domain
@@ -18,6 +19,9 @@ def extract_addresses(lines, start_index):
     for i in range(start_index, len(lines)):
         if lines[i].startswith('Addresses:'):
             address_part = lines[i].split('Addresses:')[1].strip()
+            addresses.extend(addr.strip() for addr in address_part.split())
+        elif lines[i].startswith('Address:'):
+            address_part = lines[i].split('Address:')[1].strip()
             addresses.extend(addr.strip() for addr in address_part.split())
         elif lines[i].startswith((' ', '\t')):
             addresses.extend(addr.strip() for addr in lines[i].split())
@@ -34,14 +38,13 @@ def extract_aliases(lines, start_index):
             aliases.extend(addr.strip() for addr in aliases_part.split(','))
         elif lines[i].startswith((' ', '\t')):
             aliases.extend(addr.strip() for addr in lines[i].split(','))
-        elif lines[i].startswith(('Name:', 'Addresses:')) or lines[i].strip() == '':
+        elif lines[i].startswith(('Name:', 'Addresses:', 'Address')) or lines[i].strip() == '':
             break
     return aliases
 
 
 def nslookup_domain(domain):
     result = subprocess.run(['nslookup', domain], capture_output=True, text=True)
-
     if result.returncode != 0:
         return {'error': result.stderr}
 
@@ -50,23 +53,34 @@ def nslookup_domain(domain):
     current_entry = {'Name': '', 'Addresses': [], 'Aliases': [], 'original_url': ''}
 
     for i in range(len(lines)):
-        # print(lines[i])
         if lines[i].startswith('名称:'):
             current_entry = {'Name': lines[i].split(':')[1].strip(), 'Addresses': [], 'Aliases': []}
-        elif lines[i].startswith('Addresses:'):
+        elif lines[i].startswith('Addresses:') or lines[i].startswith('Address:'):
             addresses = extract_addresses(lines, i)
+            if addresses == ['172.26.26.3']:
+                continue
             current_entry['Addresses'].extend(addresses)
         elif lines[i].startswith('Aliases:'):
             aliases = extract_aliases(lines, i)
             current_entry['Aliases'].extend(aliases)
 
-    # Adding the last entry after the loop
     if current_entry['Name']:
         return current_entry
 
-    return {'Name': '', 'Addresses': [], 'Aliases': [], 'original_url': ''}
+    return current_entry
 
-def get_all():
+
+def process_url(url):
+    try:
+        domain = extract_domain(url)
+        info = nslookup_domain(domain)
+        info['original_url'] = url
+        return info
+    except Exception as e:
+        return {}
+
+
+def get_all_concurrent():
     total_url_file = 'total.txt'
     output_file = './nslookup_info.json'
 
@@ -77,22 +91,20 @@ def get_all():
 
     result_list = []
 
-    for url in tqdm(total_urls, desc="Processing URLs", unit="URL"):
-        # Check if 'original_url' key is present in each existing_info
-        try:
-            domain = extract_domain(url)
-            info = nslookup_domain(domain)
-            info['original_url'] = url
-            result_list.append(info)
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        results = list(tqdm(executor.map(process_url, total_urls), desc="Processing URLs", unit="URL"))
 
-        except Exception as e:
-            pass
+    # Filter out empty results
+    result_list = [result for result in results if result]
 
-    # Write all results to the file
     with open(output_file, 'w', encoding='utf-8') as file:
         json.dump(result_list, file, ensure_ascii=False, indent=2)
 
-# get_all()
+
+# get_all_concurrent()
+
+# Example
+# print(nslookup_domain("www.gxdzj.gov.cn"))
 
 import json
 
@@ -126,25 +138,22 @@ for length in sorted(address_length_counts.keys()):
 # Print overall total count
 print(f"Overall total number of entries without null content: {total_entries}")
 print(f"Overall total number of entries with null content: {full_entries}")
-
-
-
-
-# Total number of entries with 0 Addresses: 606
-# Total number of entries with 2 Addresses: 9062
-# Total number of entries with 3 Addresses: 1264
-# Total number of entries with 4 Addresses: 1563
-# Total number of entries with 5 Addresses: 171
-# Total number of entries with 6 Addresses: 99
-# Total number of entries with 7 Addresses: 9
-# Total number of entries with 8 Addresses: 229
-# Total number of entries with 9 Addresses: 37
-# Total number of entries with 10 Addresses: 9
-# Total number of entries with 12 Addresses: 91
-# Total number of entries with 13 Addresses: 1
-# Total number of entries with 14 Addresses: 1
+#
+# Total number of entries with 1 Addresses: 607
+# Total number of entries with 2 Addresses: 9433
+# Total number of entries with 3 Addresses: 1509
+# Total number of entries with 4 Addresses: 1691
+# Total number of entries with 5 Addresses: 84
+# Total number of entries with 6 Addresses: 102
+# Total number of entries with 7 Addresses: 56
+# Total number of entries with 8 Addresses: 184
+# Total number of entries with 9 Addresses: 44
+# Total number of entries with 10 Addresses: 11
+# Total number of entries with 12 Addresses: 94
+# Total number of entries with 15 Addresses: 1
+# Total number of entries with 18 Addresses: 1
 # Total number of entries with 19 Addresses: 2
 # Total number of entries with 20 Addresses: 1
 # Total number of entries with 22 Addresses: 1
-# Overall total number of entries: 13146
-# Overall total number of entries with full info: 13998
+# Overall total number of entries without null content: 13821
+# Overall total number of entries with null content: 14000

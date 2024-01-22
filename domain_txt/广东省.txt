@@ -42,7 +42,7 @@ http://nr.gd.gov.cn
 http://djj.gd.gov.cn
 http://yjgl.gd.gov.cn/
 https://credit.gd.gov.cn/
-eea.gd.gov.cn
+http://eea.gd.gov.cn
 http://gdjr.gd.gov.cn/
 http://www.gdzwfw.gov.cn
 http://gdjdj.gd.gov.cn/
@@ -180,7 +180,7 @@ http://jtys.sz.gov.cn/
 http://gxj.sz.gov.cn
 http://meeb.sz.gov.cn/
 http://audit.sz.gov.cn/
-gzw.sz.gov.cn
+http://gzw.sz.gov.cn
 http://ka.sz.gov.cn/
 http://hrss.sz.gov.cn/
 http://wjw.sz.gov.cn

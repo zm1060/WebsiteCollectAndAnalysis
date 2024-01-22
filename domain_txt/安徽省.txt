@@ -146,7 +146,7 @@ http://wsjkw.wuhu.gov.cn/
 http://weda.wuhu.gov.cn
 http://sjzyj.wuhu.gov.cn
 http://zjw.wuhu.gov.cn/
-whfgw.wuhu.gov.cn
+http://whfgw.wuhu.gov.cn
 http://dzj.wuhu.gov.cn/
 http://jbq.wuhu.gov.cn
 http://ct.wuhu.gov.cn/
@@ -608,7 +608,7 @@ https://www.ahjs.gov.cn
 http://www.ahsz.gov.cn/
 http://canlian.ahsz.gov.cn/
 http://mofcom.ahsz.gov.cn/
-zrzyghj.ahsz.gov.cn
+http://zrzyghj.ahsz.gov.cn
 http://zjj.ahsz.gov.cn
 http://sjj.ahsz.gov.cn/
 http://cgj.ahsz.gov.cn/

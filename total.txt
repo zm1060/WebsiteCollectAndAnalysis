@@ -404,7 +404,8 @@ http://jl.tobacco.gov.cn
 http://hl.tobacco.gov.cn
 http://hlj.tobacco.gov.cn
 http://www.sh.tobacco.gov.cn/
-http://js.tobacco.gov.cn/https://zjyc.tobacco.gov.cn/
+http://js.tobacco.gov.cn/
+https://zjyc.tobacco.gov.cn/
 http://ah.tobacco.gov.cn/
 fj.tobacco.gov.cn
 http://jx.tobacco.gov.cn/
@@ -3368,7 +3369,8 @@ http://jshrss.jiangsu.gov.cn/
 http://jyt.jiangsu.gov.cn
 http://yjglt.jiangsu.gov.cn/
 http://jsszfhcxjst.jiangsu.gov.cn/index.html
-http://jtyst.jiangsu.gov.cn/http://td.jiangsu.gov.cn/
+http://jtyst.jiangsu.gov.cn/
+http://td.jiangsu.gov.cn/
 http://nynct.jiangsu.gov.cn
 http://sft.jiangsu.gov.cn/
 http://sthjt.jiangsu.gov.cn/
@@ -11464,7 +11466,7 @@ http://nyncj.lsz.gov.cn/
 http://tjj.lsz.gov.cn/
 http://kjj.lsz.gov.cn/
 http://rsj.lsz.gov.cn/
-http:/wjw.lsz.gov.cn/
+http://wjw.lsz.gov.cn/
 http://lsslj.lsz.gov.cn/
 http://sfj.lsz.gov.cn/
 http://lcj.lsz.gov.cn/
@@ -12441,7 +12443,7 @@ http://wjw.rikaze.gov.cn
 http://dzj.rikaze.gov.cn/
 http://fpb.rikaze.gov.cn
 http://tyjrswj.rikaze.gov.cn
-http://tjj.rikaz.gov.cv
+http://tjj.rikaz.gov.cn
 http://cgj.rikaze.gov.cn
 http://jkq.rikaze.gov.cn
 http://jxj.rikaze.gov.cn

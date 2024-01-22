@@ -116,23 +116,19 @@ def get_whois_info(domain):
 # 解析IP地址信息
 def get_ip_info(domain):
     try:
-        ip = socket.gethostbyname(domain)
-        ip_version = ipaddress.ip_address(ip).version
-        # 获取IP地址数量和运营商信息
-        # 注意：IP地址数量和运营商信息可能需要使用第三方API或数据库进行查询
-        # 对于IPv6的部署规模、地理位置等信息，也可以使用第三方服务进行查询
-        return ip, ip_version
+        ips = socket.gethostbyname_ex(domain)[2]
+        ip_info_list = [(ip, ipaddress.ip_address(ip).version) for ip in ips]
+        return ip_info_list
     except socket.gaierror:
-        return '', ''
+        return []
 
 
 # 解析CNAME记录
 def get_cname_info(domain):
     try:
         answers = resolver.resolve(domain, 'CNAME')
-        # 解析CNAME记录，判断是否使用CDN服务以及CDN服务商信息
-        # 注意：CDN服务商信息可能需要使用第三方API或数据库进行查询
-        return True, 'CDN服务商信息'
+        cname_info = [str(rdata) for rdata in answers]
+        return True, cname_info
     except resolver.NoAnswer:
         return False, ''
 
@@ -145,6 +141,19 @@ def get_ip_address_isp(ip):
     res = q.lookup(ip.strip())
 
     return res[0], res[1]
+
+
+def get_ipv6_address_isp(ip):
+    q = QQwry()
+    q.load_file('ipv6wry.db')
+    res = q.lookup(ip.strip())
+    return res[0], res[1]
+
+    # try:
+    #     ip = ipaddress.IPv6Address(ip)
+    #     return ip.is_global, ip.is_private
+    # except ValueError:
+    #     return False, False
 
 
 # 解析NS记录
@@ -254,4 +263,10 @@ def main():
 
 # 运行主函数
 if __name__ == '__main__':
-    main()
+    # main()
+    print(get_cname_info('www.baidu.com'))
+    print(get_ns_info('zuoming.website'))
+    print(get_ip_info('www.baidu.com'))
+    print(get_ptr_info('1.2.4.8'))
+    print(get_ip_address_isp('202.101.43.6'))
+    # print(get_ipv6_address_isp('2001:4860:4860::8888'))

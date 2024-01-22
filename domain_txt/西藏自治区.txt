@@ -16,8 +16,8 @@ http://www.xzly.gov.cn
 http://edu.xizang.gov.cn/
 http://zjt.xizang.gov.cn
 http://swt.xizang.gov.cn
-wsb.xizang.gov.cn
-lyfzt.xizang.gov.cn
+http://wsb.xizang.gov.cn
+http://lyfzt.xizang.gov.cn
 http://sti.xizang.gov.cn
 http://mzt.xizang.gov.cn/
 http://www.xizang.gov.cn/
@@ -217,7 +217,7 @@ http://wjw.rikaze.gov.cn
 http://dzj.rikaze.gov.cn/
 http://fpb.rikaze.gov.cn
 http://tyjrswj.rikaze.gov.cn
-http://tjj.rikaz.gov.cv
+http://tjj.rikaz.gov.cn
 http://cgj.rikaze.gov.cn
 http://jkq.rikaze.gov.cn
 http://jxj.rikaze.gov.cn
@@ -309,7 +309,7 @@ http://www.jyj.linzhi.gov.cn/
 http://www.swj.linzhi.gov.cn/
 http://www.lfj.linzhi.gov.cn/
 http://xzlz.spb.gov.cn/
-lzshgl.gov.cn
+http://lzshgl.gov.cn
 http://www.linzhi.gov.cn
 http://www.zjj.linzhi.gov.cn/
 http://www.tjj.linzhi.gov.cn

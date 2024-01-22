@@ -40,7 +40,7 @@ with open(csv_filename, 'w', newline='') as csv_file:
 
 print(f"Results written to {csv_filename}")
 
-with open('./domain_ip.json', 'r', encoding='utf-8') as f:
+with open('./nameserver_ip.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 ipv4_counts = []

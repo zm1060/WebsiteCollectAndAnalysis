@@ -204,7 +204,7 @@ http://xczx.zunyi.gov.cn/
 http://mzj.zunyi.gov.cn/
 http://tjj.zunyi.gov.cn/
 http://ggzyjy.zunyi.gov.cn/
-ksj.zunyi.gov.cn
+http://ksj.zunyi.gov.cn
 http://jjzd.zunyi.gov.cn
 http://fgw.zunyi.gov.cn
 http://lyj.zunyi.gov.cn/
@@ -296,7 +296,7 @@ http://ggzy.bijie.gov.cn/
 http://bjscx.bijie.gov.cn
 http://www.bjqixingguan.gov.cn
 http://www.gzdafang.gov.cn
-www.gzqianxi.gov.cn
+http://www.gzqianxi.gov.cn
 http://www.gzjinsha.gov.cn
 http://www.gzzhijin.gov.cn
 http://www.gznayong.gov.cn

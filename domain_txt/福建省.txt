@@ -1,6 +1,6 @@
 http://mzt.fujian.gov.cn/
 http://zrzyt.fujian.gov.cn
-yjj.scjgj.fujian.gov.cn
+http://yjj.scjgj.fujian.gov.cn
 http://yjt.fujian.gov.cn
 http://swt.fujian.gov.cn/
 http://slt.fujian.gov.cn/
@@ -356,11 +356,11 @@ http://csglj.np.gov.cn
 http://zfcg.np.gov.cn/
 http://www.ypzf.gov.cn
 http://www.fjsc.gov.cn
-www.pc.gov.cn
+http://www.pc.gov.cn
 http://www.guangze.gov.cn
 http://www.songxi.gov.cn/
-www.zhenghe.gov.cn
-www.shaowu.gov.cn
+http://www.zhenghe.gov.cn
+http://www.shaowu.gov.cn
 http://www.wys.gov.cn
 http://www.jo.gov.cn/
 http://www.fjjy.gov.cn/
@@ -431,7 +431,7 @@ http://sthjj.ningde.gov.cn/
 http://gaj.ningde.gov.cn
 http://jtj.ningde.gov.cn/
 http://sfj.ningde.gov.cn/
-yjj.ningde.gov.cn
+http://yjj.ningde.gov.cn
 http://gzw.ningde.gov.cn/
 http://wlj.ningde.gov.cn/
 http://mzj.ningde.gov.cn/

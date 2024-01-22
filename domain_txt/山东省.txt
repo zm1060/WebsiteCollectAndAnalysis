@@ -111,7 +111,7 @@ http://www.shanghe.gov.cn/
 http://www.jnzq.gov.cn
 http://csglj.qingdao.gov.cn
 https://amr.qingdao.gov.cn
-whlyj.qingdao.gov.cn
+http://whlyj.qingdao.gov.cn
 http://ajj.qingdao.gov.cn
 http://qdftz.qingdao.gov.cn
 http://wsjkw.qingdao.gov.cn
@@ -352,7 +352,7 @@ http://jgswj.yantai.gov.cn/
 http://jyj.yantai.gov.cn
 http://gtj.yantai.gov.cn/
 http://zjj.yantai.gov.cn
-gaj.yantai.gov.cn
+http://gaj.yantai.gov.cn
 http://ggzyjy.yantai.gov.cn
 http://ytzwfw.sd.gov.cn/yt/public/index
 http://bsgq.yantai.gov.cn/index.html
@@ -360,7 +360,7 @@ http://kys.yantai.gov.cn/
 http://www.ytgxq.gov.cn/
 http://ybj.yantai.gov.cn/
 https://dsjj.yantai.gov.cn
-credit.yantai.gov.cn
+http://credit.yantai.gov.cn
 http://gjj.yantai.gov.cn/
 http://ytftz.yantai.gov.cn
 http://data.yantai.gov.cn
@@ -503,7 +503,7 @@ http://yjglj.taian.gov.cn/
 http://xmzx.taian.gov.cn
 http://gl.taian.gov.cn
 http://kjj.taian.gov.cn/
-tsgw.taian.gov.cn
+http://tsgw.taian.gov.cn
 http://tyj.taian.gov.cn/index.html
 http://fg.taian.gov.cn
 http://gxq.taian.gov.cn/
@@ -572,7 +572,7 @@ http://wsjkw.weihai.gov.cn
 http://sfj.weihai.gov.cn
 http://czj.weihai.gov.cn
 http://sthjj.weihai.gov.cn/
-rfb.weihai.gov.cn
+http://rfb.weihai.gov.cn
 http://hyyy.weihai.gov.cn
 http://yjj.weihai.gov.cn/
 http://scjgj.weihai.gov.cn
@@ -748,11 +748,11 @@ http://www.laoling.gov.cn
 http://www.yuchengshi.gov.cn
 http://www.lckfq.gov.cn/
 http://zwzx.liaocheng.gov.cn
-gjj.liaocheng.gov.cn
+http://gjj.liaocheng.gov.cn
 http://czj.liaocheng.gov.cn/
 http://yjj.liaocheng.gov.cn/
 http://wsb.liaocheng.gov.cn/
-fgw.liaocheng.gov.cn
+http://fgw.liaocheng.gov.cn
 http://sthjj.liaocheng.gov.cn/
 http://slj.liaocheng.gov.cn
 http://zrzyhghj.liaocheng.gov.cn
@@ -767,11 +767,11 @@ http://www.lcgxq.gov.cn/
 http://swtzcjj.liaocheng.gov.cn/
 http://smzj.liaocheng.gov.cn/
 http://scjdglj.liaocheng.gov.cn/
-zjj.liaocheng.gov.cn/
+http://zjj.liaocheng.gov.cn/
 http://kjj.liaocheng.gov.cn/
 http://www.liaocheng.gov.cn
 http://jyty.liaocheng.gov.cn
-nyncj.liaocheng.gov.cn
+http://nyncj.liaocheng.gov.cn
 http://sfj.liaocheng.gov.cn/
 http://sjj.liaocheng.gov.cn/
 http://gaj.liaocheng.gov.cn/

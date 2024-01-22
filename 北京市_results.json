@@ -1,0 +1,769 @@
+{
+    "active_url_count": 75,
+    "dead_url_count": 2,
+    "total_url_count": 77,
+    "domains": [
+        {
+            "domain": "http://jtw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.059615
+            }
+        },
+        {
+            "domain": "https://sw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.603413
+            }
+        },
+        {
+            "domain": "http://bj.119.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.0266
+            }
+        },
+        {
+            "domain": "http://mzj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.734667
+            }
+        },
+        {
+            "domain": "http://ghzrzyw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.650192
+            }
+        },
+        {
+            "domain": "http://tjj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.048019
+            }
+        },
+        {
+            "domain": "http://cgj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.723382
+            }
+        },
+        {
+            "domain": "https://yjglj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.588297
+            }
+        },
+        {
+            "domain": "http://sfj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.122103
+            }
+        },
+        {
+            "domain": "http://wwj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.114088
+            }
+        },
+        {
+            "domain": "http://jrj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.002129
+            }
+        },
+        {
+            "domain": "http://fgw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.161756
+            }
+        },
+        {
+            "domain": "http://sjj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 1.122784
+            }
+        },
+        {
+            "domain": "http://gzw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.931237
+            }
+        },
+        {
+            "domain": "http://jxj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.931275
+            }
+        },
+        {
+            "domain": "http://zyj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.68324
+            }
+        },
+        {
+            "domain": "http://swj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.348475
+            }
+        },
+        {
+            "domain": "http://mzzjw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.231578
+            }
+        },
+        {
+            "domain": "http://rsj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.64069
+            }
+        },
+        {
+            "domain": "https://whsczfzd.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.357715
+            }
+        },
+        {
+            "domain": "https://www.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.35749
+            }
+        },
+        {
+            "domain": "https://csglw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.394809
+            }
+        },
+        {
+            "domain": "zgcgw.beijing.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "https://yllhj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.593024
+            }
+        },
+        {
+            "domain": "http://sthjj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.573042
+            }
+        },
+        {
+            "domain": "http://czj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.753092
+            }
+        },
+        {
+            "domain": "http://gdj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.724926
+            }
+        },
+        {
+            "domain": "http://invest.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.628819
+            }
+        },
+        {
+            "domain": "http://tamgw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.695249
+            }
+        },
+        {
+            "domain": "http://lsj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.601698
+            }
+        },
+        {
+            "domain": "http://wb.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.394391
+            }
+        },
+        {
+            "domain": "http://zjw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.408838
+            }
+        },
+        {
+            "domain": "http://jtgl.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.407157
+            }
+        },
+        {
+            "domain": "http://xfb.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.255208
+            }
+        },
+        {
+            "domain": "www.baic.gov.cn",
+            "status": "dead",
+            "source": "selenium"
+        },
+        {
+            "domain": "http://zscqj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.690134
+            }
+        },
+        {
+            "domain": "http://kfqgw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.69091
+            }
+        },
+        {
+            "domain": "http://wjw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.523615
+            }
+        },
+        {
+            "domain": "http://zdzqgw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.325115
+            }
+        },
+        {
+            "domain": "http://jyj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.764121
+            }
+        },
+        {
+            "domain": "http://gdb.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.325542
+            }
+        },
+        {
+            "domain": "https://data.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.37311
+            }
+        },
+        {
+            "domain": "https://zdb.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.532039
+            }
+        },
+        {
+            "domain": "http://gaj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.454133
+            }
+        },
+        {
+            "domain": "http://nyncj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.520614
+            }
+        },
+        {
+            "domain": "http://gygl.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.326089
+            }
+        },
+        {
+            "domain": "http://whlyj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.477215
+            }
+        },
+        {
+            "domain": "http://kw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.514686
+            }
+        },
+        {
+            "domain": "http://ybj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.531305
+            }
+        },
+        {
+            "domain": "http://gjj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.45731
+            }
+        },
+        {
+            "domain": "http://www.bjchy.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.220231
+            }
+        },
+        {
+            "domain": "http://tyjrswj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.485338
+            }
+        },
+        {
+            "domain": "http://yjj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.521985
+            }
+        },
+        {
+            "domain": "http://zyhzb.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.511015
+            }
+        },
+        {
+            "domain": "http://zwfwj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.454826
+            }
+        },
+        {
+            "domain": "http://www.bjxch.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.406446
+            }
+        },
+        {
+            "domain": "http://www.bjft.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.265707
+            }
+        },
+        {
+            "domain": "http://jgj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.374135
+            }
+        },
+        {
+            "domain": "http://www.bjmtg.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.145269
+            }
+        },
+        {
+            "domain": "https://www.bjhd.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.235119
+            }
+        },
+        {
+            "domain": "http://www.bjsjs.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.233328
+            }
+        },
+        {
+            "domain": "http://www.bjchp.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.235638
+            }
+        },
+        {
+            "domain": "http://hsc.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.557319
+            }
+        },
+        {
+            "domain": "http://www.bjmy.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.196552
+            }
+        },
+        {
+            "domain": "http://www.bjyq.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.197851
+            }
+        },
+        {
+            "domain": "http://www.bjtzh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.275984
+            }
+        },
+        {
+            "domain": "http://www.bjpg.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.186212
+            }
+        },
+        {
+            "domain": "http://www.bjdch.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.42794
+            }
+        },
+        {
+            "domain": "http://www.ncsti.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.572754
+            }
+        },
+        {
+            "domain": "http://www.bjshy.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.211291
+            }
+        },
+        {
+            "domain": "http://www.bjdx.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.24707
+            }
+        },
+        {
+            "domain": "http://www.bjfsh.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.293491
+            }
+        },
+        {
+            "domain": "http://www.bjhr.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.364557
+            }
+        },
+        {
+            "domain": "http://ggzyfw.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 0.553453
+            }
+        },
+        {
+            "domain": "open.beijing.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://open.beijing.gov.cn",
+            "response_info": {
+                "is_redirect": true,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "jw.beijing.gov.cn",
+            "status": "active",
+            "source": "selenium",
+            "success_url": "http://jw.beijing.gov.cn",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_ime": 0
+            }
+        },
+        {
+            "domain": "http://tyj.beijing.gov.cn",
+            "status": "active",
+            "source": "requests",
+            "response_info": {
+                "is_redirect": false,
+                "is_permanent_redirect": false,
+                "elapsed_time": 11.1825
+            }
+        }
+    ]
+}

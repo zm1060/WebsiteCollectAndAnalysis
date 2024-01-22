@@ -282,7 +282,7 @@ http://fugong.gov.cn
 https://www.gongshan.gov.cn/
 https://www.lanping.gov.cn/
 http://www.diqing.gov.cn
-dqzjyty.diqing.gov.cn
+http://dqzjyty.diqing.gov.cn
 http://credit.diqing.gov.cn
 http://xianggelila.diqing.gov.cn
 http://weixi.diqing.gov.cn

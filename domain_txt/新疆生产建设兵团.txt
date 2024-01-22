@@ -3,7 +3,7 @@ http://gyzc.xjbt.gov.cn/
 http://btwql.xjbt.gov.cn/
 http://tjj.xjbt.gov.cn/
 http://yjglj.xjbt.gov.cn/
-www.xjbt.gov.cn
+http://www.xjbt.gov.cn
 http://btslj.xjbt.gov.cn/
 http://sfj.xjbt.gov.cn/
 http://mzj.xjbt.gov.cn/

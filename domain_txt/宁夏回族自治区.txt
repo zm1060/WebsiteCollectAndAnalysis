@@ -24,10 +24,10 @@ http://zwfw.nx.gov.cn
 http://fzggw.nx.gov.cn/
 http://ggzyjyglj.nx.gov.cn/
 http://jrjgj.nx.gov.cn
-nynct.nx.gov.cn
+http://nynct.nx.gov.cn
 http://scjg.nx.gov.cn
 http://gdj.nx.gov.cn
-sjt.nx.gov.cn
+http://sjt.nx.gov.cn
 http://sport.nx.gov.cn
 http://nxyjglt.nx.gov.cn
 http://ningdong.nx.gov.cn
@@ -86,7 +86,7 @@ http://www.wuzhong.gov.cn
 http://credit.wuzhong.gov.cn/
 http://www.ltq.gov.cn/
 http://www.hongsibu.gov.cn
-www.yanchi.gov.cn
+http://www.yanchi.gov.cn
 http://www.tongxin.gov.cn/
 http://www.qtx.gov.cn/
 http://www.nxgy.gov.cn/

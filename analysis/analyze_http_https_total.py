@@ -64,6 +64,7 @@ print("Total number of domains:", len(domain_data))
 
 count = 0
 for domain in merged_domains:
+    # if domain['error'] and 'getaddr' not in domain['error'] and 'tlsv1' not in domain['error'] and '由于目标计算机积极拒绝，无法连接' not in domain['error'] and '422' not in domain['error'] and '500' not in domain['error'] and '404' not in domain['error'] and '403' not in domain['error'] and '400' not in domain['error']  and '[SSL: CERTIFICATE_VERIFY_FAILED]' not in domain['error'] and  'Connection aborted.' not in domain['error'] and 'match' not in domain['error'] and 'timed out' not in domain['error']:
     if domain['error']:
         print(domain)
         count += 1

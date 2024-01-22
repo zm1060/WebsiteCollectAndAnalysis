@@ -7,7 +7,7 @@ http://sasac.tj.gov.cn/
 http://fzgg.tj.gov.cn
 https://gfdy.tj.gov.cn/
 https://stats.tj.gov.cn/
-hrss.tj.gov.cn
+http://hrss.tj.gov.cn
 http://csgl.tj.gov.cn/
 http://ty.tj.gov.cn/
 http://sthj.tj.gov.cn/
@@ -21,7 +21,7 @@ http://zscq.tj.gov.cn/
 http://sf.tj.gov.cn
 http://whly.tj.gov.cn
 http://wsjk.tj.gov.cn/
-scjg.tj.gov.cn
+http://scjg.tj.gov.cn
 http://spaq.scjg.tj.gov.cn/
 http://jd.wsjk.tj.gov.cn
 http://www.tj.gov.cn/
@@ -29,10 +29,10 @@ http://ga.tj.gov.cn
 http://sj.tj.gov.cn
 http://shangwuju.tj.gov.cn/
 http://jtys.tj.gov.cn
-hzjl.tj.gov.cn
+http://hzjl.tj.gov.cn
 http://ghhzrzy.tj.gov.cn/
 http://credit.scjg.tj.gov.cn
-lswz.tj.gov.cn
+http://lswz.tj.gov.cn
 http://credit.fzgg.tj.gov.cn/
 http://mzzj.tj.gov.cn
 http://tyjrswj.tj.gov.cn
@@ -52,7 +52,7 @@ https://www.tjwq.gov.cn/
 http://www.tjbd.gov.cn
 http://www.tjbh.gov.cn
 http://jtj.tjbh.gov.cn/
-www.tjftz.gov.cn
+http://www.tjftz.gov.cn
 http://www.eco-city.gov.cn
 http://sthjj.tjbh.gov.cn/
 http://rsj.tjbh.gov.cn/

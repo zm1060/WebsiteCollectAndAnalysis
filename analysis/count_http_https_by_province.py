@@ -80,7 +80,10 @@ def main():
             total=len(open('../total.txt', 'r', encoding='utf-8').readlines())) as pbar:
         with open('../total.txt', 'r', encoding='utf-8') as file:
             for line in file:
-                executor.submit(process_url, line.strip())
+                url = line.strip()
+                if not url.startswith("http"):
+                    url = f"http://{url}"
+                executor.submit(process_url, url)
                 pbar.update(1)
                 time.sleep(0.1)
     with open('./http_https_results.json', 'w', encoding='utf-8') as json_file:
@@ -184,3 +187,24 @@ if __name__ == "__main__":
 #
 #
 #
+
+#
+# 403 94
+# 412 161   all https
+# 404 6个,经过检查发现,其url中包含了请求参数和非法路径，https://12345.zhangzhou.gov.cn/public/index/index.jsp?loginflag=false
+# 422 3个
+# 421 1个
+# 500 1个
+# 521 61个
+# getaddrinfo failed 172
+# timedout 67
+# has expired 6
+# get local issuer certificate 28
+# self signed certificate in certificate chain 8
+# self signed certificate 48
+# 由于目标计算机积极拒绝，无法连接 10
+# 远程主机强迫关闭了一个现有的连接 1
+# doesn\'t match  27
+# Remote end closed connection without response 1
+# SSLV3 1   http not https
+# OSError 1 http not https

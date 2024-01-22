@@ -273,11 +273,11 @@ http://ddpas.dandong.gov.cn
 http://ddedu.dandong.gov.cn
 http://jtj.dandong.gov.cn/
 http://sjj.dandong.gov.cn
-aic.dandong.gov.cn
+http://aic.dandong.gov.cn
 http://wsjsw.dandong.gov.cn
 https://zrzy.dandong.gov.cn/
 http://ddepb.dandong.gov.cn/
-dd110.dandong.gov.cn
+http://dd110.dandong.gov.cn
 https://fgw.dandong.gov.cn/
 http://ddsnyncj.dandong.gov.cn/
 https://minzhengju.dandong.gov.cn/
@@ -286,7 +286,7 @@ http://ddcredit.dandong.gov.cn
 http://ylbz.dandong.gov.cn
 https://xfj.dandong.gov.cn
 https://www.yuanbao.gov.cn
-www.zhenxing.gov.cn
+http://www.zhenxing.gov.cn
 http://www.zaq.gov.cn/
 https://www.lnkd.gov.cn
 https://www.donggang.gov.cn/
@@ -502,7 +502,7 @@ http://wjw.chaoyang.gov.cn
 http://scjgj.chaoyang.gov.cn
 http://rsj.chaoyang.gov.cn
 http://jtysj.chaoyang.gov.cn/
-zwfw.chaoyang.gov.cn
+http://zwfw.chaoyang.gov.cn
 http://wlgdj.chaoyang.gov.cn
 http://yjglj.chaoyang.gov.cn/
 http://sthjj.chaoyang.gov.cn/

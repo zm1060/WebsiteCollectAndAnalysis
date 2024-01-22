@@ -126,7 +126,7 @@ http://wsjkwyh.tangshan.gov.cn/
 http://jtysj.tangshan.gov.cn/
 http://xzspj.tangshan.gov.cn
 http://tsgjlyd.tangshan.gov.cn/
-www.tangshan.gov.cn
+http://www.tangshan.gov.cn
 http://chengguanju.tangshan.gov.cn
 http://nyncj.tangshan.gov.cn
 http://tyjrswj.tangshan.gov.cn/
@@ -156,12 +156,12 @@ http://gxj.qhd.gov.cn/
 http://xzspj.qhd.gov.cn
 http://jyj.qhd.gov.cn
 http://lyj.qhd.gov.cn
-www.qhdcoop.com
+http://www.qhdcoop.com
 http://tyj.qhd.gov.cn/
 http://yjgl.qhd.gov.cn
 http://lywgj.qhd.gov.cn
 http://sthj.qhd.gov.cn/
-www.qetdz.gov.cn
+http://www.qetdz.gov.cn
 http://fgw.qhd.gov.cn
 https://qhdrsj.gov.cn
 http://rsj.qhd.gov.cn
@@ -201,7 +201,7 @@ http://fgj.hd.gov.cn/
 http://nyncj.hd.gov.cn
 http://hdslj.hd.gov.cn
 http://sfj.hd.gov.cn
-www.hdkfq.gov.cn
+http://www.hdkfq.gov.cn
 http://sthj.hd.gov.cn
 http://smw.hd.gov.cn
 http://xczx.hd.gov.cn/
@@ -317,7 +317,7 @@ http://www.xiongxian.gov.cn
 http://www.zhuozhou.gov.cn
 http://www.dzs.gov.cn/
 http://www.anguo.gov.cn
-www.gaobeidian.gov.cn
+http://www.gaobeidian.gov.cn
 http://rfb.zjk.gov.cn
 http://czj.zjk.gov.cn/
 http://gaj.zjk.gov.cn/
@@ -325,7 +325,7 @@ http://ly.zjk.gov.cn
 http://www.zjk.gov.cn
 http://kjj.zjk.gov.cn
 http://jyj.zjk.gov.cn
-rsj.zjk.gov.cn
+http://rsj.zjk.gov.cn
 http://whgdly.zjk.gov.cn
 http://scjg.zjk.gov.cn
 http://swj.zjk.gov.cn
@@ -369,7 +369,7 @@ http://tjj.chengde.gov.cn
 http://www.chengde.gov.cn
 http://rsj.chengde.gov.cn
 http://wwj.chengde.gov.cn
-ga.chengde.gov.cn
+http://ga.chengde.gov.cn
 http://drc.chengde.gov.cn
 http://zrgh.chengde.gov.cn/
 http://shj.chengde.gov.cn

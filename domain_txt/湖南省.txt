@@ -538,10 +538,10 @@ http://www.jzx.gov.cn
 http://www.tongdao.gov.cn/
 http://www.hjs.gov.cn/
 http://sthjj.hnloudi.gov.cn/
-rsj.hnloudi.gov.cn
-jyj.hnloudi.gov.cn
+http://rsj.hnloudi.gov.cn
+http://jyj.hnloudi.gov.cn
 http://tjj.hnloudi.gov.cn
-ldmzj.hnloudi.gov.cn
+http://ldmzj.hnloudi.gov.cn
 http://gxj.hnloudi.gov.cn/
 http://xmscnj.hnloudi.gov.cn/
 http://glj.hnloudi.gov.cn/
@@ -570,7 +570,7 @@ https://credit.hnloudi.gov.cn/
 http://tyjrswj.hnloudi.gov.cn
 http://swj.hnloudi.gov.cn/
 http://ybj.hnloudi.gov.cn
-www.louxing.gov.cn
+http://www.louxing.gov.cn
 http://www.hnsf.gov.cn
 http://www.xinhua.gov.cn
 http://www.lsj.gov.cn/
@@ -610,7 +610,7 @@ http://credit.xxz.gov.cn/
 http://www.jishou.gov.cn/
 http://www.lxx.gov.cn
 http://www.fhzf.gov.cn/
-www.huayuan.gov.cn
+http://www.huayuan.gov.cn
 http://www.bjzf.gov.cn
 http://www.guzhang.gov.cn/
 http://www.ysx.gov.cn/

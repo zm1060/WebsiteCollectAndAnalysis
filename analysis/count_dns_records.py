@@ -28,6 +28,7 @@ def process_domain(domain):
     return parsed_url.netloc
 
 
+#
 def parse_output(dns_output):
     # Split the DNS output into sections
     sections = [section.strip() for section in re.split(r'\n\s*;;\s*', dns_output)]
@@ -35,33 +36,43 @@ def parse_output(dns_output):
     # Define a regular expression pattern to extract information from each entry
     entry_pattern = re.compile(r'(\S+)\s+(\d+)\s+IN\s+(\w+)\s+(\S+)')
 
-    # Create a dictionary to store records
-    records = []
+    # Create a set to store unique records based on "Name", "Type", and "Value"
+    unique_records = set()
 
-    # Parse and organize entries into records
+    # Create a dictionary to store the TTL for each unique record
+    ttl_dict = {}
+
+    # Parse and organize entries into records for ANSWER SECTION and ADDITIONAL SECTION
     for section in sections:
         if not section:
             continue
-
         section_lines = section.split('\n')
-        entries = entry_pattern.findall('\n'.join(section_lines[1:]))
 
-        for entry in entries:
-            name, ttl, record_type, value = entry
-            if name == '.' or name == 'cn.' or name == 'com.':
-                continue
+        # Check if the section is ANSWER SECTION or ADDITIONAL SECTION
+        if section_lines[0].startswith("ANSWER SECTION") or section_lines[0].startswith("ADDITIONAL SECTION") or \
+                section_lines[0].startswith("AUTHORITY SECTION"):
+            entries = entry_pattern.findall('\n'.join(section_lines[1:]))
 
-            records.append({
-                "Name": name,
-                "TTL": ttl,
-                "Type": record_type,
-                "Value": value
-            })
+            for entry in entries:
+                name, ttl, record_type, value = entry
+                if name == '.' or name == 'cn.' or name == 'com.':
+                    continue
 
-    # Print the organized records
-    for record in records:
+                # Check if the record is unique based on "Name", "Type", and "Value"
+                record_key = (name, record_type, value)
+                if record_key not in unique_records or int(ttl) > ttl_dict[record_key]:
+                    unique_records.add(record_key)
+                    ttl_dict[record_key] = int(ttl)
+
+    # Convert the set of unique records back to a list for further processing or printing
+    unique_records_list = [{"Name": name, "TTL": ttl, "Type": record_type, "Value": value} for
+                           (name, record_type, value), ttl in ttl_dict.items()]
+
+    # Print the organized unique records
+    for record in unique_records_list:
         print(f"Name: {record['Name']}, TTL: {record['TTL']}, Type: {record['Type']}, Value: {record['Value']}")
-    return records
+
+    return unique_records_list
 
 
 def count_dns_records(url):
@@ -74,6 +85,17 @@ def count_dns_records(url):
         try:
             # Basic query
             output = subprocess.check_output(['dig', '+noident', sdomain], text=True)
+            output += subprocess.check_output(['dig', '+noident', sdomain, 'A'], text=True)
+            output += subprocess.check_output(['dig', '+noident', sdomain, 'AAAA'], text=True)
+            output += subprocess.check_output(['dig', '+noident', sdomain, 'NS'], text=True)
+            output += subprocess.check_output(['dig', '+noident', sdomain, 'CNAME'], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'SRV'], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'SPF'], text=True)
+            output += subprocess.check_output(['dig', '+noident', sdomain, 'PTR'], text=True)
+            output += subprocess.check_output(['dig', '+noident', sdomain, 'MX'], text=True)
+            output += subprocess.check_output(['dig', '+noident', sdomain, 'TXT'], text=True)
+            output += subprocess.check_output(['dig', '+noident', sdomain, 'RRSIG'], text=True)
+
             parsed_output = parse_output(output)
             dns_info['records'] = parsed_output
             return dns_info
@@ -100,49 +122,6 @@ def process_txt_file(filename, directory):
         json.dump(results, json_file, ensure_ascii=False, indent=4)
 
 
-# def parse_output(dns_output):
-#     # Split the DNS output into sections
-#     sections = [section.strip() for section in re.split(r'\n\s*;;\s*', dns_output)]
-#
-#     # Define a regular expression pattern to extract information from each entry
-#     entry_pattern = re.compile(r'(\S+)\s+(\d+)\s+IN\s+(\w+)\s+(\S+)')
-#
-#     # Create a dictionary to store records
-#     records = {}
-#
-#     # Parse and organize entries into records
-#     for section in sections:
-#         if not section:
-#             continue
-#
-#         section_lines = section.split('\n')
-#         section_name = section_lines[0].strip(':')
-#
-#         records[section_name.lower()] = []
-#
-#         entries = entry_pattern.findall('\n'.join(section_lines[1:]))
-#
-#         for entry in entries:
-#             name, ttl, record_type, value = entry
-#             records[section_name.lower()].append({
-#                 "Name": name,
-#                 "TTL": ttl,
-#                 "Type": record_type,
-#                 "Value": value
-#             })
-#
-#     # Print the organized records
-#     for section_name, entries in records.items():
-#         print(section_name)
-#         print('-' * 60)
-#
-#         for entry in entries:
-#             print(f"Name: {entry['Name']}, TTL: {entry['TTL']}, Type: {entry['Type']}, Value: {entry['Value']}")
-#         print('-' * 60)
-#         print('\n')
-#     return records
-
-
 def main(directory):
     for filename in os.listdir(directory):
         if filename.endswith('.txt'):
@@ -153,14 +132,42 @@ def main(directory):
 # main('../domain_txt')
 
 
-# 示例用法
-# trace_output = subprocess.check_output(
-#     ['dig', '+nocmd', '+nocomments', '+stats', '+noquestion', '+noident', 'cgzf.sh.gov.cn'], text=True)
-# print(trace_output)
+# result = count_dns_records('www.sh.gov.cn')
+# print(result)
 
-
+# trace_output = subprocess.check_output(['dig', '+noident', 'www.sh.gov.cn'], text=True)
 # parsed_trace_result = parse_output(trace_output)
 # print(parsed_trace_result)
+
+
+# Example usage:
+# url_to_check = "baidu.com"
+# result = count_dns_records(url_to_check)
+#
+# # Print or use the results as needed
+# for record_type, record_info in result['records'].items():
+#     print(f"Record Type: {record_type}")
+#     if 'error' in record_info:
+#         print(f"Error: {record_info['error']}")
+#     else:
+#         for record in record_info:
+#             if record['Name']:
+#                 print(f"Name: {record['Name']}, TTL: {record['TTL']}, Type: {record['Type']}, Value: {record['Value']}")
+
+# Example usage:
+# url_to_check = "sh.gov.cn"
+# result = count_dns_records(url_to_check)
+#
+# # Print or use the results as needed
+# for record_type, record_data in result['records'].items():
+#     print(f"{record_type} Records:")
+#     if 'error' in record_data:
+#         print(f"Error: {record_data['error']}")
+#     else:
+#         for section_name, section_records in record_data.items():
+#             print(f"{section_name} SECTION:")
+#             for item in section_records:
+#                 print(f"Name: {item.get('Name', 'N/A')}, TTL: {item.get('TTL', 'N/A')}, Type: {item.get('Type', 'N/A')}, Value: {item.get('Value', 'N/A')}")
 
 
 # dig: couldn't get address for 'dns1.dazhou.gov.cn': no more
@@ -175,6 +182,7 @@ def analyze_dns_data(json_data):
     # Filter records with Type "CNAME" and extract the desired domain part
     cname_values = [
         extract_domain_part(record['Value'])
+        # record['Value']
         for entry in json_data
         if entry is not None
         for record in entry.get('records', [])
@@ -198,7 +206,10 @@ def analyze_dns_data(json_data):
     results = {
         'CNAME_Domain_Parts': {cname_value: count for cname_value, count in sorted_results}
     }
-
+    total_count = 0
+    for cname_value, count in sorted_results:
+        total_count += count
+    print(total_count)
     with open('dns_analysis_results_sorted.json', 'w', encoding='utf-8') as json_output_file:
         json.dump(results, json_output_file, ensure_ascii=False, indent=4)
 
@@ -214,8 +225,9 @@ def analyze_all():
 
     return all_records
 
+
 #
-# analyze_all()
+analyze_all()
 
 
 company_map = {
@@ -435,129 +447,130 @@ company_map = {
 # }
 data = {
     "saaswaf.com": 966,
-    "qaxcloudwaf.com": 694,
-    "v6lvs.com": 633,
-    "365cyd.cn": 589,
+    "qaxcloudwaf.com": 794,
+    "v6lvs.com": 710,
+    "365cyd.cn": 633,
     "glvs.com": 407,
-    "gov.cn": 264,
-    "dbappwaf.cn": 190,
+    "gov.cn": 300,
+    "icloudwaf.com": 173,
+
+    # "dbappwaf.cn": 173,
     "allsafeip.com": 140,
-    "rednetdns.com": 133,
+    "rednetdns.com": 131,
     "damddos.com": 131,
     "wswebpic.com": 117,
-    "jiashule.com": 115,
-    "wsssec.com": 94,
-    "aicdn.com": 91,
-    "jiasule.org": 90,
-    "icloudv6.com": 82,
-    "wswebcdn.com": 77,
-    "jx163-cname.com": 77,
-    "cdn20.com": 65,
-    "cdnhwc1.com": 65,
-    "360panyun.com": 61,
-    "bdydns.com": 61,
-    "jomodns.com": 61,
-    "ctacdn.cn": 52,
-    "nelcisp.cn": 52,
-    "xfsec.net": 52,
-    "ctdns.cn": 51,
-    "bsgslb.cn": 50,
-    "chinamobile.com": 50,
-    "icloudwaf.com": 49,
-    "cdn30.com": 44,
-    "bzwaf.com": 40,
-    "ddnsec.cn": 40,
-    "cloudcsp.com": 23,
-    "bsclink.cn": 18,
-    "cmecloud.cn": 18,
-    "pywqdns.cn": 17,
-    "qaxanyuv6.com": 16,
-    "yunduncname.com": 15,
-    "qtlcdn.com": 13,
-    "yjs-cdn.com": 10,
-    "trpcdn.net": 10,
-    "igtm-b101.com": 10,
-    "kunlunaq.com": 9,
-    "igtm-d101.com": 8,
-    "igtm-a101.com": 8,
-    "igtm-e101.com": 8,
-    "cdnhwcpsd13.com": 7,
-    "cdnhwcprh113.com": 7,
-    "ctadns.cn": 7,
-    "kunluncan.com": 6,
-    "jdcloudwaf.com": 6,
-    "yunduncdns.com": 5,
-    "kunlunca.com": 4,
-    "qcloudzygj.com": 4,
-    "hwwsdns.cn": 4,
-    "igtm-c101.com": 4,
-    "kunlunpi.com": 3,
-    "huaweicloudwaf.com": 3,
-    "wsglb0.com": 3,
-    "racetec.cn": 3,
-    "sangfordns.com": 3,
-    "nscloudwaf.com": 3,
-    "xacnnic.com": 3,
-    "ioiosafe.com": 2,
-    "yunjiasu-cdn.net": 2,
-    "qcloudwzgj.com": 2,
-    "wjgslb.com": 2,
-    "vvipcdn.com": 2,
-    "wscvip.cn": 2,
-    "dolfincdnx.com": 2,
-    "jcloudgslb.com": 2,
-    "jx163.com": 2,
-    "thefastcdns.com": 2,
-    "qcloudcdn.cn": 2,
-    "tdnsv12.com": 2,
-    "7cname.com": 2,
-    "cdnhwc2.com": 2,
-    "cmictonecity.cn": 2,
-    "cdngslb.com": 1,
-    "gfcname.com": 1,
-    "yundunwaf5.com": 1,
-    "cmccsecuritywaf.cn": 1,
-    "aliyunddos1026.com": 1,
-    "alikunlun.com": 1,
-    "queniuqy.com": 1,
-    "com.cn": 1,
-    "tdnsstic1.cn": 1,
-    "ho-wan.cn": 1,
-    "cdnhwc8.cn": 1,
-    "cdnhwcibv122.com": 1,
-    "cd23f.com": 1,
-    "kunlungr.com": 1,
-    "dayugslb.com": 1,
-    "cugslb.cn": 1,
-    "cdnhwc9.com": 1,
-    "cdnhwctnm107.com": 1,
-    "cas.cn": 1,
-    "wscdns.com": 1,
-    "cdnhwcbqs106.com": 1,
-    "sfndns.cn": 1,
-    "yourpage.cn": 1,
-    "t-0p.cn": 1,
-    "technames.com": 1,
-    "yundunwaf1.com": 1,
-    "yundunwaf4.com": 1,
-    "faipod.com": 1,
-    "ourwscs.cn": 1,
-    "wsdvs.com": 1,
-    "jiexidizhi.top": 1,
-    "365960.com": 1,
-    "tongdanet.com": 1,
-    "kld.wang": 1,
-    "cloudvhost.cn": 1,
-    "yundunwaf3.com": 1,
-    "bestv6.com": 1,
-    "17986.net": 1,
-    "hcnamecdns.com": 1,
-    "mcnamedns.com": 1,
-    "upln.cn": 1,
-    "gotoip4.com": 1,
-    "abc188.com": 1,
-    "vhostgo.com": 1,
-    "datasky360.cn": 1
+    "jiashule.com": 110,
+    "wsssec.com": 91,
+    "aicdn.com": 79,
+    "jiasule.org": 78,
+    "icloudv6.com": 73,
+    "wswebcdn.com": 70,
+    "jx163-cname.com": 61,
+    "cdn20.com": 55,
+    "cdnhwc1.com": 52,
+    # "360panyun.com": 61,
+    # "bdydns.com": 61,
+    # "jomodns.com": 61,
+    # "ctacdn.cn": 52,
+    # "nelcisp.cn": 52,
+    # "xfsec.net": 52,
+    # "ctdns.cn": 51,
+    # "bsgslb.cn": 50,
+    # "chinamobile.com": 50,
+    # "cdn30.com": 44,
+    # "bzwaf.com": 40,
+    # "ddnsec.cn": 40,
+    # "cloudcsp.com": 23,
+    # "bsclink.cn": 18,
+    # "cmecloud.cn": 18,
+    # "pywqdns.cn": 17,
+    # "qaxanyuv6.com": 16,
+    # "yunduncname.com": 15,
+    # "qtlcdn.com": 13,
+    # "yjs-cdn.com": 10,
+    # "trpcdn.net": 10,
+    # "igtm-b101.com": 10,
+    # "kunlunaq.com": 9,
+    # "igtm-d101.com": 8,
+    # "igtm-a101.com": 8,
+    # "igtm-e101.com": 8,
+    # "cdnhwcpsd13.com": 7,
+    # "cdnhwcprh113.com": 7,
+    # "ctadns.cn": 7,
+    # "kunluncan.com": 6,
+    # "jdcloudwaf.com": 6,
+    # "yunduncdns.com": 5,
+    # "kunlunca.com": 4,
+    # "qcloudzygj.com": 4,
+    # "hwwsdns.cn": 4,
+    # "igtm-c101.com": 4,
+    # "kunlunpi.com": 3,
+    # "huaweicloudwaf.com": 3,
+    # "wsglb0.com": 3,
+    # "racetec.cn": 3,
+    # "sangfordns.com": 3,
+    # "nscloudwaf.com": 3,
+    # "xacnnic.com": 3,
+    # "ioiosafe.com": 2,
+    # "yunjiasu-cdn.net": 2,
+    # "qcloudwzgj.com": 2,
+    # "wjgslb.com": 2,
+    # "vvipcdn.com": 2,
+    # "wscvip.cn": 2,
+    # "dolfincdnx.com": 2,
+    # "jcloudgslb.com": 2,
+    # "jx163.com": 2,
+    # "thefastcdns.com": 2,
+    # "qcloudcdn.cn": 2,
+    # "tdnsv12.com": 2,
+    # "7cname.com": 2,
+    # "cdnhwc2.com": 2,
+    # "cmictonecity.cn": 2,
+    # "cdngslb.com": 1,
+    # "gfcname.com": 1,
+    # "yundunwaf5.com": 1,
+    # "cmccsecuritywaf.cn": 1,
+    # "aliyunddos1026.com": 1,
+    # "alikunlun.com": 1,
+    # "queniuqy.com": 1,
+    # "com.cn": 1,
+    # "tdnsstic1.cn": 1,
+    # "ho-wan.cn": 1,
+    # "cdnhwc8.cn": 1,
+    # "cdnhwcibv122.com": 1,
+    # "cd23f.com": 1,
+    # "kunlungr.com": 1,
+    # "dayugslb.com": 1,
+    # "cugslb.cn": 1,
+    # "cdnhwc9.com": 1,
+    # "cdnhwctnm107.com": 1,
+    # "cas.cn": 1,
+    # "wscdns.com": 1,
+    # "cdnhwcbqs106.com": 1,
+    # "sfndns.cn": 1,
+    # "yourpage.cn": 1,
+    # "t-0p.cn": 1,
+    # "technames.com": 1,
+    # "yundunwaf1.com": 1,
+    # "yundunwaf4.com": 1,
+    # "faipod.com": 1,
+    # "ourwscs.cn": 1,
+    # "wsdvs.com": 1,
+    # "jiexidizhi.top": 1,
+    # "365960.com": 1,
+    # "tongdanet.com": 1,
+    # "kld.wang": 1,
+    # "cloudvhost.cn": 1,
+    # "yundunwaf3.com": 1,
+    # "bestv6.com": 1,
+    # "17986.net": 1,
+    # "hcnamecdns.com": 1,
+    # "mcnamedns.com": 1,
+    # "upln.cn": 1,
+    # "gotoip4.com": 1,
+    # "abc188.com": 1,
+    # "vhostgo.com": 1,
+    # "datasky360.cn": 1
 }
 #
 # 柱状图    数字
@@ -601,61 +614,61 @@ data = {
 # # Show the plot
 # plt.tight_layout()
 # plt.show()
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
-from matplotlib.ticker import FuncFormatter
-
-# Create a DataFrame
-df = pd.DataFrame(list(company_map.items()), columns=['Company', 'Company Name'])
-df['Domain Count'] = df['Company'].map(data.get)  # Use get method with a default value of 0
-
-# Sort DataFrame by Domain Count in descending order
-df = df.sort_values(by='Domain Count', ascending=False).reset_index(drop=True)
-
-# Save to Excel
-df.to_excel('company_data.xlsx', index=False)
-
-# Take only the top 20 companies
-df_top20 = df.head(20)
-
-# Set Seaborn style
-sns.set(style="white")
-
-# Define a function for formatting y-axis labels as percentages
-def percentage_formatter(x, pos):
-    return f'{(x / 5705) * 100:.2f}%'
-
-# Define a function for adding percentage labels above each bar
-def add_percentage_labels(ax):
-    for p in ax.patches:
-        height = p.get_height()
-        ax.annotate(f'{height / 5705 * 100:.2f}%',
-                    (p.get_x() + p.get_width() / 2., height),
-                    ha='center', va='center', fontsize=8, color='black', xytext=(0, 5),
-                    textcoords='offset points')
-
-# Create the formatter
-formatter = FuncFormatter(percentage_formatter)
-
-# Plot the bar chart for the top 20 companies
-plt.figure(figsize=(12, 8), dpi=500)
-ax = sns.barplot(x=df_top20.index + 1, y='Domain Count', data=df_top20, palette="viridis")
-
-# Set y-axis label format
-ax.yaxis.set_major_formatter(formatter)
-
-# Customize the plot
-plt.xlabel('Company Index', fontsize=14)
-plt.ylabel('Domain Counts (%)', fontsize=14)
-plt.title('Domain Counts per Company (Top 20)', fontsize=16)
-plt.xticks(rotation=0, ha='right', fontsize=10)
-plt.yticks(fontsize=12)
-
-# Add data labels above each bar
-add_percentage_labels(ax)
-
-# Show the plot
-plt.tight_layout()
-plt.show()
+##########################################################################
+# Yes
+# import matplotlib.pyplot as plt
+# import seaborn as sns
+# import pandas as pd
+# from matplotlib.ticker import FuncFormatter
+#
+# # Create a DataFrame
+# df = pd.DataFrame(list(company_map.items()), columns=['Company', 'Company Name'])
+# df['Domain Count'] = df['Company'].map(data.get)  # Use get method with a default value of 0
+#
+# # Sort DataFrame by Domain Count in descending order
+# df = df.sort_values(by='Domain Count', ascending=False).reset_index(drop=True)
+#
+# # Save to Excel
+# df.to_excel('company_data.xlsx', index=False)
+#
+# # Take only the top 20 companies
+# df_top20 = df.head(20)
+#
+# # Set Seaborn style
+# sns.set(style="white")
+#
+# # Define a function for formatting y-axis labels as percentages
+# def percentage_formatter(x, pos):
+#     return f'{(x / 5441) * 100:.2f}%'
+#
+# # Define a function for adding percentage labels above each bar
+# def add_percentage_labels(ax):
+#     for p in ax.patches:
+#         height = p.get_height()
+#         ax.annotate(f'{height / 5441 * 100:.2f}%',
+#                     (p.get_x() + p.get_width() / 2., height),
+#                     ha='center', va='center', fontsize=14, color='black', xytext=(0, 5),
+#                     textcoords='offset points')
+#
+# # Create the formatter
+# formatter = FuncFormatter(percentage_formatter)
+#
+# # Plot the bar chart for the top 20 companies
+# plt.figure(figsize=(12, 8), dpi=500)
+# ax = sns.barplot(x=df_top20.index + 1, y='Domain Count', data=df_top20, palette="viridis")
+#
+# # Set y-axis label format
+# ax.yaxis.set_major_formatter(formatter)
+#
+# # Customize the plot
+# plt.xlabel('Company Index', fontsize=18)
+# plt.ylabel('Domain Counts (%)', fontsize=18)
+# plt.xticks(rotation=0, ha='right', fontsize=18)
+# plt.yticks(fontsize=18)
+#
+# # Add data labels above each bar
+# add_percentage_labels(ax)
+#
+# # Show the plot
+# plt.tight_layout()
+# plt.show()
