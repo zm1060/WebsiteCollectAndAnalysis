@@ -2,7 +2,7 @@ import requests
 from urllib.parse import urlparse, urlunparse
 
 # Open the text file containing URLs
-with open('total.txt', 'r', encoding='utf-8') as file:
+with open('../total.txt', 'r', encoding='utf-8') as file:
     # Read the file line by line
     lines = file.readlines()
 
@@ -24,7 +24,7 @@ for line in lines:
         test_urls.append(default_url)
 
 # Create a new file to store the updated URLs
-with open('updated_urls.txt', 'w') as updated_file:
+with open('../updated_urls.txt', 'w') as updated_file:
     # Process URLs that are already valid
     for url in valid_urls:
         updated_file.write(url + '\n')

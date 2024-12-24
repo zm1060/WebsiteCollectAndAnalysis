@@ -43,5 +43,5 @@ for file in json_files:
 
 print(city_info)
 # Save city_info to result.json with Chinese characters displayed properly
-with open("../result.json", "w", encoding="utf-8") as outfile:
+with open("../other_tools/result.json", "w", encoding="utf-8") as outfile:
     json.dump(city_info, outfile, ensure_ascii=False)

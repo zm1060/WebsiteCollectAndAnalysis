@@ -52,7 +52,7 @@ def main():
     # response = requests.get(url)
     # html_content = response.text
 
-    file_path = "../government.html"
+    file_path = "government.html"
     with open(file_path, 'r') as file:
         html_content = file.read()
 

@@ -25,9 +25,9 @@ target_audits = [
     "http-status-code",
     "uses-http2",
     "is-on-https",
-    "third-party-summary",
-    "csp-xss",
-    "js-libraries",
+    # "third-party-summary",
+    # "csp-xss",
+    # "js-libraries",
     "geolocation-on-start",
     "notification-on-start",
 
@@ -52,7 +52,6 @@ target_audits = [
     "aria-valid-attr",
     "color-contrast",
     "duplicate-id-active",
-    "frame-title",
     "image-alt",
     "input-button-name",
     "meta-viewport",  # very important for mobile user!
@@ -75,7 +74,6 @@ target_audits = [
     "cumulative-layout-shift",
     "speed-index",
     "max-potential-fid",
-    "bootup-time",
     "unused-javascript",
 
 ]

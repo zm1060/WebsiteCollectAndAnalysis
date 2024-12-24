@@ -1,44 +1,48 @@
-# subject = {'subject': ((('countryName', 'CN'),), (('stateOrProvinceName', '上海'),), (('localityName', '上海'),), (('organizationName', '上海市大数据中心'),), (('commonName', '*.sh.gov.cn'),)), 'issuer': ((('countryName', 'CN'),), (('organizationName', 'UniTrust'),), (('commonName', 'SHECA OV Server CA G5'),)), 'version': 3, 'serialNumber': '5B45618D2A79207162F24F645DAE8217', 'notBefore': 'Jan 31 06:12:26 2023 GMT', 'notAfter': 'Feb 29 15:59:59 2024 GMT', 'subjectAltName': (('DNS', '*.sh.gov.cn'), ('DNS', 'sh.gov.cn')), 'OCSP': ('http://ocsp.global.sheca.com/ovscag5',), 'caIssuers': ('http://certs.global.sheca.com/ovscag5.cer',), 'crlDistributionPoints': ('http://crl.global.sheca.com/ovscag5.crl',)}
-#
-# for attr_list in subject['subject']:
-#     attr, value = attr_list[0]
-#     print(f'{attr}: {value}')
-import os
-from urllib.parse import urlparse
+import matplotlib.pyplot as plt
+import numpy as np
 
-total = 0
+# 数据
+labels_population = ['城镇人口', '乡村人口']
+sizes_population = [66.2, 33.8]
 
-for filename in os.listdir('domain_txt'):
-    if not filename.endswith('.txt'):
-        continue
+labels_employment = ['城镇就业人员', '乡村就业人员']
+sizes_employment = [63.5, 36.5]
 
-    province = filename.split('.')[0]
-    count = 0
+income_labels = ['城镇人均收入', '乡村人均收入']
+income_values = [51821, 21691]
 
-    with open(f'domain_txt/{filename}', 'r', encoding='utf-8') as f:
-        lines = f.readlines()
-        # f.seek(0)
-        # f.truncate()
+# 设置字体
+plt.rcParams['font.sans-serif'] = ['SimHei']
 
-        for line in lines:
-            original_line = line.strip()
-            parsed = urlparse(original_line)
+# 高级图1：人口分布
+fig, ax = plt.subplots(figsize=(8, 8))
+wedges, texts, autotexts = ax.pie(
+    sizes_population, labels=labels_population, autopct='%1.1f%%', startangle=90,
+    colors=['#4CAF50', '#FFC107'], textprops=dict(color="w"), explode=[0.1, 0]
+)
+ax.set_title('中国城乡人口分布（2023年）', fontsize=16, weight='bold')
+plt.setp(autotexts, size=12, weight='bold')
+plt.show()
 
-            # Add "http://" if the scheme is empty
-            # if not parsed.scheme:
-            #     modified_line = 'http://' + original_line
-            # else:
-            #     modified_line = original_line
-            #
-            # f.write(modified_line + '\n')
+# 高级图2：就业分布
+fig, ax = plt.subplots(figsize=(8, 8))
+wedges, texts, autotexts = ax.pie(
+    sizes_employment, labels=labels_employment, autopct='%1.1f%%', startangle=90,
+    colors=['#2196F3', '#FF5722'], textprops=dict(color="w"), explode=[0.1, 0]
+)
+ax.set_title('中国城乡就业分布（2023年）', fontsize=16, weight='bold')
+plt.setp(autotexts, size=12, weight='bold')
+plt.show()
 
-            domain = parsed.netloc + parsed.path
-            if domain:
-                count += 1
-            else:
-                print(original_line)
-
-    print(f'{province}: {count}')
-    total += count
-
-print(f'Total: {total}')
+# 高级图3：城乡人均收入比较
+x = np.arange(len(income_labels))
+fig, ax = plt.subplots(figsize=(10, 6))
+bars = ax.bar(x, income_values, color=['#673AB7', '#FF9800'], alpha=0.85)
+ax.set_title('中国城乡人均收入比较（2023年）', fontsize=16, weight='bold')
+ax.set_ylabel('人均收入（元）', fontsize=12)
+ax.set_xticks(x)
+ax.set_xticklabels(income_labels, fontsize=12)
+ax.bar_label(bars, fmt='%.0f', padding=3, fontsize=10, weight='bold')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()

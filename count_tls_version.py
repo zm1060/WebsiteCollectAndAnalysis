@@ -154,15 +154,18 @@ def process_file(file_path, province, output_directory):
                         parsed_info['NotBefore'] = cert_info.get('notBefore', '')
                         parsed_info['NotAfter'] = cert_info.get('notAfter', '')
 
-                        tls_info = {"TLS_Version": tls_version, "Certificate_Info": parsed_info, "Cipher": cipher, "Host": host}
+                        tls_info = {"TLS_Version": tls_version, "Certificate_Info": parsed_info, "Cipher": cipher,
+                                    "Host": host}
                         province_tls_info[province].append(tls_info)
                         print(f"TLS Info added for {province}: {tls_info}")
                     else:
                         if cipher:
-                            tls_info = {"TLS_Version": tls_version, "Certificate_Info": {}, "Cipher": cipher, "Host": host}
+                            tls_info = {"TLS_Version": tls_version, "Certificate_Info": {}, "Cipher": cipher,
+                                        "Host": host}
                             province_tls_info[province].append(tls_info)
                         else:
-                            tls_info = {"TLS_Version": tls_version, "Certificate_Info": {}, "Cipher": None, "Host": host}
+                            tls_info = {"TLS_Version": tls_version, "Certificate_Info": {}, "Cipher": None,
+                                        "Host": host}
                             print(f"TLS Info added for {province}: {tls_info}")
 
                 else:
@@ -206,6 +209,7 @@ def process_directory(directory, output_directory):
     overall_json_filepath = os.path.join(output_directory, "overall_result.json")
     with open(overall_json_filepath, 'w', encoding='utf-8') as overall_json_file:
         json.dump(overall_tls_info, overall_json_file, ensure_ascii=False, indent=2)
+
 
 
 if __name__ == "__main__":

@@ -84,17 +84,17 @@ def count_dns_records(url):
         # Use subprocess to call dig command
         try:
             # Basic query
-            output = subprocess.check_output(['dig', '+noident', sdomain], text=True)
-            output += subprocess.check_output(['dig', '+noident', sdomain, 'A'], text=True)
-            output += subprocess.check_output(['dig', '+noident', sdomain, 'AAAA'], text=True)
-            output += subprocess.check_output(['dig', '+noident', sdomain, 'NS'], text=True)
-            output += subprocess.check_output(['dig', '+noident', sdomain, 'CNAME'], text=True)
+            # output = subprocess.check_output(['dig', '+noident', sdomain], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'A'], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'AAAA'], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'NS'], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'CNAME'], text=True)
             # output += subprocess.check_output(['dig', '+noident', sdomain, 'SRV'], text=True)
             # output += subprocess.check_output(['dig', '+noident', sdomain, 'SPF'], text=True)
-            output += subprocess.check_output(['dig', '+noident', sdomain, 'PTR'], text=True)
-            output += subprocess.check_output(['dig', '+noident', sdomain, 'MX'], text=True)
-            output += subprocess.check_output(['dig', '+noident', sdomain, 'TXT'], text=True)
-            output += subprocess.check_output(['dig', '+noident', sdomain, 'RRSIG'], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'PTR'], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'MX'], text=True)
+            # output += subprocess.check_output(['dig', '+noident', sdomain, 'TXT'], text=True)
+            output = subprocess.check_output(['dig', '+noident', '+dnssec', sdomain, '@8.8.8.8'], text=True)
 
             parsed_output = parse_output(output)
             dns_info['records'] = parsed_output
@@ -105,7 +105,7 @@ def count_dns_records(url):
 
 def process_txt_file(filename, directory):
     unit_name = filename.split('.txt')[0]
-    output_filename = f"./dns_records/{unit_name}.json"
+    output_filename = f"./new_dns_records/{unit_name}.json"
     if os.path.exists(output_filename):
         return
     urls = []
@@ -115,9 +115,9 @@ def process_txt_file(filename, directory):
     with ThreadPoolExecutor() as executor:
         results = list(executor.map(count_dns_records, urls))
 
-    os.makedirs('./dns_records', exist_ok=True)
+    os.makedirs('./new_dns_records', exist_ok=True)
     # Save results to a JSON file named after the province
-    output_filename = f"./dns_records/{unit_name}.json"
+    output_filename = f"./new_dns_records/{unit_name}.json"
     with open(output_filename, 'w', encoding='utf-8') as json_file:
         json.dump(results, json_file, ensure_ascii=False, indent=4)
 
@@ -132,7 +132,7 @@ def main(directory):
 # main('../domain_txt')
 
 
-# result = count_dns_records('www.sh.gov.cn')
+# result = count_dns_records('bj.gov.cn')
 # print(result)
 
 # trace_output = subprocess.check_output(['dig', '+noident', 'www.sh.gov.cn'], text=True)
@@ -216,8 +216,8 @@ def analyze_dns_data(json_data):
 
 def analyze_all():
     all_records = []
-    for json_filename in os.listdir('./dns_records'):
-        with open(f'./dns_records/{json_filename}', 'r', encoding='utf-8') as json_file:
+    for json_filename in os.listdir('./new_dns_records'):
+        with open(f'./new_dns_records/{json_filename}', 'r', encoding='utf-8') as json_file:
             json_data = json.load(json_file)
             all_records.extend(json_data)  # Use extend to add records from the list
     print(len(all_records))

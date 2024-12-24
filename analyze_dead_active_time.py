@@ -133,16 +133,19 @@ for count, (patch, color) in zip(n, zip(patches, hist_colors)):
     patch.set_facecolor(color)
     height = patch.get_height()
     percentage = count / len(overall_elapsed_times)
-    ax.text(patch.get_x() + patch.get_width() / 2, height, f'{percentage:.2%}', ha='center', va='bottom')
+    ax.text(patch.get_x() + patch.get_width() / 2, height, f'{percentage:.2%}', ha='center', va='bottom', fontsize=18)
 
-ax.set_xlabel('Elapsed Time (s)')
-ax.set_ylabel('Frequency')
+ax.set_xlabel('Elapsed Time (s)', fontsize=18)
+ax.set_ylabel('Frequency', fontsize=18)
 
 # Set x-axis labels with bin edges
 ax.set_xticks(bins)
+
+# Set font size for x and y-axis ticks
+ax.tick_params(axis='both', labelsize=18)
+
 plt.tight_layout()
 plt.show()
-
 
 from statistics import mean
 

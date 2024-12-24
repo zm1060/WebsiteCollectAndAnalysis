@@ -47,7 +47,7 @@ def download_file(item):
 
 # Main function
 def main():
-    with open('../result.json', "r") as f:
+    with open('../other_tools/result.json', "r") as f:
         data_from_json = json.load(f)
     print(data_from_json)
     data = [("alldistrict", "地方所属网站"), ("shengmh", "省级门户")]

@@ -355,7 +355,11 @@ def plot_figure():
 
         percentages = {key: (value / total_overall) * 100 for key, value in top_counts.items()}
         return percentages
-
+    global_size = 18
+    # Set DPI to 500
+    plt.rcParams['figure.dpi'] = 500
+    # Set font size
+    plt.rcParams['font.size'] = global_size
     # Set DPI to 500
     plt.rcParams['figure.dpi'] = 500
 
@@ -373,14 +377,14 @@ def plot_figure():
 
     # Plot histogram of overall diversity scores with multiple colors
     plt.figure(figsize=(10, 6), dpi=500)
-    hist, bins, _ = plt.hist(overall_diversity_scores, bins=20, edgecolor='black', density=False)
+    hist, bins, _ = plt.hist(overall_diversity_scores, bins=10, edgecolor='black', density=False)
     # Iterate through bars and assign different colors
     for i, patch in enumerate(plt.gca().patches):
         plt.setp(patch, 'facecolor', custom_colors[(i + 1) % len(custom_colors)])
 
-    plt.xlabel('Diversity Score', fontproperties=font_properties)
-    plt.ylabel('Percentage', fontproperties=font_properties)
-    plt.xticks(bins)  # Set the x-axis ticks to match the bin edges
+    plt.xlabel('Diversity Score', fontproperties=font_properties, fontsize=global_size)
+    plt.ylabel('Percentage', fontproperties=font_properties, fontsize=global_size)
+    plt.xticks(bins, fontsize=global_size)  # Set the x-axis ticks to match the bin edges
     # Adding specific value labels
     total = 0
     for i, number in enumerate(hist):
@@ -388,20 +392,20 @@ def plot_figure():
     print(total)
     for i, percent in enumerate(hist):
         plt.text(bins[i] + 0.5 * (bins[1] - bins[0]), percent, f'{(percent / total) * 100:.2f}%', ha='center',
-                 va='bottom')
+                 va='bottom', fontsize=global_size)
 
     plt.tight_layout()
     plt.show()
 
     # Plot histogram of ip_address_score values with percentages
     plt.figure(figsize=(10, 6), dpi=500)
-    hist, bins, _ = plt.hist(overall_ip_address_scores, bins=20, edgecolor='black',
+    hist, bins, _ = plt.hist(overall_ip_address_scores, bins=10, edgecolor='black',
                              density=False)
     for i, patch in enumerate(plt.gca().patches):
         plt.setp(patch, 'facecolor', custom_colors[(i + 2) % len(custom_colors)])
-    plt.xlabel('IP Address Score', fontproperties=font_properties)
-    plt.ylabel('Percentage', fontproperties=font_properties)
-    plt.xticks(bins)  # Set the x-axis ticks to match the bin edges
+    plt.xlabel('IP Address Score', fontproperties=font_properties, fontsize=global_size)
+    plt.ylabel('Percentage', fontproperties=font_properties, fontsize=global_size)
+    plt.xticks(bins, fontsize=global_size)  # Set the x-axis ticks to match the bin edges
     total = 0
     for i, number in enumerate(hist):
         total += number
@@ -409,7 +413,7 @@ def plot_figure():
     # Adding specific value labels
     for i, percent in enumerate(hist):
         plt.text(bins[i] + 0.5 * (bins[1] - bins[0]), percent, f'{(percent / total) * 100:.2f}%', ha='center',
-                 va='bottom')
+                 va='bottom', fontsize=global_size)
 
     plt.tight_layout()
     plt.show()
@@ -420,18 +424,18 @@ def plot_figure():
     unique_lat_lng_counts = {size: unique_lat_lng_sizes_int.count(size) for size in set(unique_lat_lng_sizes_int)}
     percentages = counts_to_percentages(unique_lat_lng_counts)
     plt.bar(percentages.keys(), percentages.values(), edgecolor='black')
-    plt.xlabel('The number of geographical locations of the name server', fontproperties=font_properties)
-    plt.ylabel('Percentage', fontproperties=font_properties)
+    plt.xlabel('The number of geographical locations of the name server', fontproperties=font_properties, fontsize=global_size)
+    plt.ylabel('Percentage', fontproperties=font_properties, fontsize=global_size)
 
     # Set explicit x-axis ticks based on your data range
-    plt.xticks(range(min(percentages.keys()), max(percentages.keys()) + 1))
+    plt.xticks(range(min(percentages.keys()), max(percentages.keys()) + 1), fontsize=global_size)
 
     for i, patch in enumerate(plt.gca().patches):
         plt.setp(patch, 'facecolor', custom_colors[(i + 3) % len(custom_colors)])
 
     # Adding specific value labels
     for size, percent in percentages.items():
-        plt.text(size, percent, f'{percent:.2f}%', ha='center', va='bottom')
+        plt.text(size, percent, f'{percent:.2f}%', ha='center', va='bottom', fontsize=global_size)
 
     plt.tight_layout()
     plt.show()
@@ -443,18 +447,18 @@ def plot_figure():
                                        set(unique_country_prov_city_sizes_int)}
     percentages_country_prov_city = counts_to_percentages(unique_country_prov_city_counts)
     plt.bar(percentages_country_prov_city.keys(), percentages_country_prov_city.values(), edgecolor='black')
-    plt.xlabel('Number of different cities where the name server is deployed', fontproperties=font_properties)
-    plt.ylabel('Percentage', fontproperties=font_properties)
+    plt.xlabel('Number of different cities where the name server is deployed', fontproperties=font_properties, fontsize=global_size)
+    plt.ylabel('Percentage', fontproperties=font_properties, fontsize=global_size)
 
     # Set explicit x-axis ticks based on your data range
-    plt.xticks(range(min(percentages_country_prov_city.keys()), max(percentages_country_prov_city.keys()) + 1))
+    plt.xticks(range(min(percentages_country_prov_city.keys()), max(percentages_country_prov_city.keys()) + 1), fontsize=global_size)
 
     for i, patch in enumerate(plt.gca().patches):
         plt.setp(patch, 'facecolor', custom_colors[(i + 4) % len(custom_colors)])
 
     # Adding specific value labels
     for size, percent in percentages_country_prov_city.items():
-        plt.text(size, percent, f'{percent:.2f}%', ha='center', va='bottom')
+        plt.text(size, percent, f'{percent:.2f}%', ha='center', va='bottom', fontsize=global_size)
 
     plt.tight_layout()
     plt.show()
@@ -462,31 +466,32 @@ def plot_figure():
     # Plot top 10 ISPs in Overall Distribution with percentages
     plt.figure(figsize=(12, 6), dpi=500)
     percentages_top_isps = counts_to_percentage(top_isps, overall_isp_distribution)
-    plt.bar(percentages_top_isps.keys(), percentages_top_isps.values())
-    plt.xlabel('Name Server ISP', fontproperties=font_properties)
-    plt.ylabel('Percentage', fontproperties=font_properties)
-    plt.xticks(rotation=45, fontproperties=font_properties)
+
+    # Use barh for horizontal bar chart
+    plt.barh(list(percentages_top_isps.keys()), list(percentages_top_isps.values()))
+    plt.xlabel('Percentage', fontproperties=font_properties, fontsize=global_size)
+    plt.ylabel('Name Server ISP', fontproperties=font_properties, fontsize=global_size)
+    plt.yticks(fontproperties=font_properties, fontsize=global_size)  # Increase font size on y-axis
     for i, patch in enumerate(plt.gca().patches):
         plt.setp(patch, 'facecolor', custom_colors[(i + 3) % len(custom_colors)])
-    # Add values on top of the bars
+    # Add values next to the bars
     for isp, percent in percentages_top_isps.items():
-        plt.text(isp, percent, f'{percent:.2f}%', ha='center', va='bottom')
+        plt.text(percent, isp, f'{percent:.2f}%', va='center', ha='left', fontsize=global_size)
 
     plt.tight_layout()
     plt.show()
-
     # Plot top 10 ASNs in Overall Distribution with percentages
     plt.figure(figsize=(12, 6), dpi=500)
     percentages_top_asns = counts_to_percentage(top_asns, overall_asn_distribution)
     plt.bar(percentages_top_asns.keys(), percentages_top_asns.values())
-    plt.xlabel('Name Server ASN', fontproperties=font_properties)
-    plt.ylabel('Percentage', fontproperties=font_properties)
-    plt.xticks(rotation=45, fontproperties=font_properties)
+    plt.xlabel('Name Server ASN', fontproperties=font_properties, fontsize=global_size)
+    plt.ylabel('Percentage', fontproperties=font_properties, fontsize=global_size)
+    plt.xticks(rotation=45, fontproperties=font_properties, fontsize=global_size)
     for i, patch in enumerate(plt.gca().patches):
         plt.setp(patch, 'facecolor', custom_colors[(i + 2) % len(custom_colors)])
     # Add values on top of the bars
     for asn, percent in percentages_top_asns.items():
-        plt.text(asn, percent, f'{percent:.2f}%', ha='center', va='bottom')
+        plt.text(asn, percent, f'{percent:.2f}%', ha='center', va='bottom', fontsize=global_size)
 
     plt.tight_layout()
     plt.show()

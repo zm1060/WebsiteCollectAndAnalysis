@@ -118,7 +118,7 @@ def autolabel(rects, percentages):
     for rect, percentage in zip(rects, percentages):
         height = rect.get_height()
         plt.text(rect.get_x() + rect.get_width() / 2, height, f'{percentage:.2f}%', ha='center', va='bottom',
-                 fontsize=16)
+                 fontsize=18)
 
 
 def plot_distribution(title, records_counts, total_domains, dpi=500):
@@ -133,17 +133,17 @@ def plot_distribution(title, records_counts, total_domains, dpi=500):
     # Use a different color palette (e.g., 'viridis')
     bars = sns.barplot(x=counts, y=frequencies, palette='viridis')
 
-    plt.xlabel('Count', fontsize=16)
-    plt.ylabel('Frequency', fontsize=16)
-    plt.xticks(fontsize=16)
-    plt.yticks(fontsize=16)
+    plt.xlabel('Count', fontsize=18)
+    plt.ylabel('Frequency', fontsize=18)
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
     # plt.title(title, fontsize=16)
 
     # 在绘制条形图后调用autolabel函数，传递percentages
     autolabel(bars.patches, percentages)
 
     # 调整整体的字体大小
-    plt.rcParams.update({'font.size': 16})
+    plt.rcParams.update({'font.size': 18})
     plt.savefig(title, dpi=500)
     plt.show()
 

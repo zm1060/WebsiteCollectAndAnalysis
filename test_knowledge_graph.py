@@ -6,7 +6,7 @@ from py2neo import Graph, Node, Relationship
 graph = Graph("bolt://localhost:7687", auth=("neo4j", "password"))
 
 # 从文件中加载JSON报告
-with open('Total.json', 'r', encoding='utf-8') as report_file:
+with open('ZAP_Result.json', 'r', encoding='utf-8') as report_file:
     zap_report = json.load(report_file)
 
 json_data = zap_report

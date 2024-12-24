@@ -519,6 +519,7 @@ def get_certificate_info(domain, port=443):
         }
 
 
+
 async def get_certificate_info_async(domain, port=443):
     loop = asyncio.get_event_loop()
     return await loop.run_in_executor(None, get_certificate_info, domain, port)
@@ -584,4 +585,6 @@ def write_result_to_json(result, filename):
 
 
 if __name__ == "__main__":
-    asyncio.run(main_async())
+    # asyncio.run(main_async())
+    cert = get_certificate_info('www.baidu.com')
+    print(cert)
